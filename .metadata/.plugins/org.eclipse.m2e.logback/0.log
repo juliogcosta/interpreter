@@ -529,3 +529,4 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognise
 2025-06-09 18:59:22,654 [Worker-186: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
 2025-06-09 18:59:22,655 [Worker-186: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
 2025-06-09 18:59:22,656 [Worker-186: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 20:14:31,511 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

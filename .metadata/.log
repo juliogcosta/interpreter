@@ -792,3 +792,93 @@ java.net.UnknownHostException: docs.oracle.com
 
 !ENTRY com.genuitec.copilot4eclipse.chat 1 0 2025-06-09 20:04:31.678
 !MESSAGE [C4E] Internal server stopped: true
+!SESSION 2025-06-09 20:14:21.767 -----------------------------------------------
+eclipse.buildId=4.24.0.202407191504
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2025-06-09 20:14:24.291
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-06-09 20:14:25.544
+!MESSAGE Logback config file: /home/julio/Codes/Experiments/interpreter/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-06-09 20:14:26.273
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-09 20:14:26.273
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-06-09 20:14:26.772
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-09 20:14:26.772
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-09 20:14:30.819
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+/opt/sts-4.24.0.RELEASE/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.3.v20240426-1530/jre/bin/java
+-cp
+/opt/sts-4.24.0.RELEASE/plugins/org.springframework.tooling.boot.ls_1.56.0.202407191456/servers/spring-boot-language-server/BOOT-INF/classes:/opt/sts-4.24.0.RELEASE/plugins/org.springframework.tooling.boot.ls_1.56.0.202407191456/servers/spring-boot-language-server/BOOT-INF/lib/*
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:/opt/sts-4.24.0.RELEASE/plugins/org.springframework.tooling.boot.ls_1.56.0.202407191456/servers/spring-boot-language-server/BOOT-INF/classes/application.properties
+-XX:ErrorFile=/home/julio/Codes/Experiments/interpreter/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1749510870819
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-09 20:14:30.820
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-09 20:14:30.830
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 374501
+
+!ENTRY com.genuitec.copilot4eclipse 1 0 2025-06-09 20:14:31.339
+!MESSAGE [C4E] Copilot API proxy: native mode
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-09 20:14:31.639
+!MESSAGE Boot project ADDED: assistencia
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-09 20:14:31.640
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-09 20:14:31.644
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-09 20:14:31.656
+!MESSAGE Boot project ADDED: assistencia.atendimento
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-09 20:14:31.676
+!MESSAGE Boot project ADDED: assistencia.catalogo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-09 20:14:31.676
+!MESSAGE Boot project ADDED: core-common
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-09 20:14:31.682
+!MESSAGE Boot project ADDED: core-cqrs
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-09 20:14:31.691
+!MESSAGE Boot project ADDED: eureka
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-09 20:14:31.704
+!MESSAGE Boot project ADDED: gateway
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-09 20:14:31.718
+!MESSAGE Boot project ADDED: id
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-09 20:14:31.728
+!MESSAGE Boot project ADDED: id.autenticador
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-09 20:14:31.728
+!MESSAGE Boot project ADDED: yc.core-cqrs
+
+!ENTRY com.genuitec.copilot4eclipse 1 0 2025-06-09 20:14:33.354
+!MESSAGE Starting Copilot4Eclipse
+
+!ENTRY com.genuitec.copilot4eclipse 2 0 2025-06-09 20:14:36.250
+!MESSAGE Timeout while checking Copilot status
