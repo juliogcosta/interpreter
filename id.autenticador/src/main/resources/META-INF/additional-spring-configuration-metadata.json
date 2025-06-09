@@ -1,0 +1,127 @@
+{"properties": [
+  {
+    "name": "admin.key",
+    "type": "java.lang.String",
+    "description": "A description for 'admin.key'"
+  },
+  {
+    "name": "endpoints.shutdown.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'endpoints.shutdown.enabled'"
+  },
+  {
+    "name": "feign.client.config.default.connect-timeout",
+    "type": "java.lang.String",
+    "description": "A description for 'feign.client.config.default.connect-timeout'"
+  },
+  {
+    "name": "feign.client.config.default.readTimeout",
+    "type": "java.lang.String",
+    "description": "A description for 'feign.client.config.default.readTimeout'"
+  },
+  {
+    "name": "eureka.instance.instance-id",
+    "type": "java.lang.String",
+    "description": "A description for 'eureka.instance.instance-id'"
+  },
+  {
+    "name": "eureka.client.service-url.default-zone",
+    "type": "java.lang.String",
+    "description": "A description for 'eureka.client.service-url.default-zone'"
+  },
+  {
+    "name": "eureka.client.healthcheck.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'eureka.client.healthcheck.enabled'"
+  },
+  {
+    "name": "app.eureka.address",
+    "type": "java.lang.String",
+    "description": "A description for 'app.eureka.address'"
+  },
+  {
+    "name": "app.eureka.port",
+    "type": "java.lang.Integer",
+    "description": "A description for 'app.eureka.port'"
+  },
+  {
+    "name": "management.endpoint.health.show-details",
+    "type": "java.lang.String",
+    "description": "A description for 'management.endpoint.health.show-details'"
+  },
+  {
+    "name": "management.endpoint.shutdown.access",
+    "type": "java.lang.String",
+    "description": "A description for 'management.endpoint.shutdown.access'"
+  },
+  {
+    "name": "yc.security.keys.access-token.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'yc.security.keys.access-token.secret'"
+  },
+  {
+    "name": "yc.security.keys.access-token.expirationMinutes",
+    "type": "java.lang.String",
+    "description": "A description for 'yc.security.keys.access-token.expirationMinutes'"
+  },
+  {
+    "name": "app.id.name",
+    "type": "java.lang.String",
+    "description": "A description for 'app.id.name'"
+  },
+  {
+    "name": "app.id.address",
+    "type": "java.lang.String",
+    "description": "A description for 'app.id.address'"
+  },
+  {
+    "name": "app.id.port",
+    "type": "java.lang.Integer",
+    "description": "A description for 'app.id.port'"
+  },
+  {
+    "name": "feign.client.config.default.loggerLevel",
+    "type": "java.lang.String",
+    "description": "A description for 'feign.client.config.default.loggerLevel'"
+  },
+  {
+    "name": "feign.compression.response.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'feign.compression.response.enabled'"
+  },
+  {
+    "name": "feign.compression.request.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'feign.compression.request.enabled'"
+  },
+  {
+    "name": "yc.security.public-paths",
+    "type": "java.util.List<java.lang.String>",
+    "description": "A description for 'yc.security.public-paths'"
+  },
+  {
+    "name": "app.id-autenticador.address",
+    "type": "java.lang.String",
+    "description": "A description for 'app.id-autenticador.address'"
+  },
+  {
+    "name": "app.id-autenticador.port",
+    "type": "java.lang.String",
+    "description": "A description for 'app.id-autenticador.port'"
+  },
+  {
+    "name": "app.id-autenticador.name",
+    "type": "java.lang.String",
+    "description": "A description for 'app.id-autenticador.name'"
+  },
+  {
+    "name": "printStackTrace",
+    "type": "java.lang.String",
+    "description": "A description for 'printStackTrace'"
+  },
+  {
+    "name": "exception.handle.stack-trace",
+    "type": "java.lang.String",
+    "description": "A description for 'exception.handle.stack-trace'"
+  }
+]}

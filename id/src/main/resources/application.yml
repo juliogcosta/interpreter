@@ -1,0 +1,74 @@
+app:
+  eureka:
+    address: localhost
+    port: 8010
+  id:
+    address: localhost
+    port: 8040
+    name: id
+server:
+  port: ${app.id.port}
+spring:
+  application:
+    name: ${app.id.name}
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/experimenter_db}
+    username: ${DB_USER:experimenter_db_admin}
+    password: ${DB_PASSWORD:12345}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximumPoolSize: 5
+      minimumIdle: 1
+  jpa:
+    open-in-view: false
+    hibernate.ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        '[format_sql]': true
+        '[default_schema]': id
+  flyway.clean-disabled: false
+  flyway.schemas: id
+  flyway.default-schema: id
+  web:
+    resources:
+      add-mappings: false
+endpoints:
+  shutdown:
+    enabled: false
+management:
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      access: read-only
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 60000
+logging:
+  level:
+    '[com.zaxxer.hikari.pool.HikariPool]': INFO
+    '[org.springframework]': ERROR
+    '[org.hibernate]':
+      SQL: ERROR
+      '[type.descriptor.sql.BasicBinder]': ERROR
+  pattern:
+    console: "%clr(%d{HH:mm:ss}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(:){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n"
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    service-url.defaultZone: http://${app.eureka.address}:${app.eureka.port}/eureka
+    healthcheck.enabled: true
+
+admin.key: ${ADMIN_KEY:admin}
+exception:
+  handle:
+    stackTrace: print

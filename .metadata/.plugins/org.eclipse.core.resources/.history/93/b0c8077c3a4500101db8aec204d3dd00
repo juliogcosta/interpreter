@@ -1,0 +1,100 @@
+package br.com.comigo.assistencia.mapper.aggregate.cliente;
+
+import br.com.comigo.assistencia.adapter.aggregate.cliente.dto.VeiculoDTO;
+import br.com.comigo.assistencia.adapter.aggregate.cliente.outbound.JpaVeiculo;
+import br.com.comigo.assistencia.domain.aggregate.cliente.Veiculo;
+import javax.annotation.processing.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2025-06-07T12:24:16-0300",
+    comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.38.0.v20240524-2033, environment: Java 21.0.3 (Eclipse Adoptium)"
+)
+@Component
+public class VeiculoMapperImpl implements VeiculoMapper {
+
+    @Override
+    public Veiculo toDomain(VeiculoDTO veiculoDTO) {
+        if ( veiculoDTO == null ) {
+            return null;
+        }
+
+        String marca = null;
+        String modelo = null;
+        String placa = null;
+
+        marca = veiculoDTO.marca();
+        modelo = veiculoDTO.modelo();
+        placa = veiculoDTO.placa();
+
+        Veiculo veiculo = new Veiculo( marca, modelo, placa );
+
+        veiculo.setValidado( veiculoDTO.validado() );
+
+        return veiculo;
+    }
+
+    @Override
+    public VeiculoDTO toDto(Veiculo veiculo) {
+        if ( veiculo == null ) {
+            return null;
+        }
+
+        String marca = null;
+        String modelo = null;
+        String placa = null;
+        Boolean validado = null;
+
+        marca = veiculo.getMarca();
+        modelo = veiculo.getModelo();
+        placa = veiculo.getPlaca();
+        validado = veiculo.getValidado();
+
+        VeiculoDTO veiculoDTO = new VeiculoDTO( marca, modelo, placa, validado );
+
+        return veiculoDTO;
+    }
+
+    @Override
+    public Veiculo fromJpaToDomain(JpaVeiculo jpaVeiculo) {
+        if ( jpaVeiculo == null ) {
+            return null;
+        }
+
+        String marca = null;
+        String modelo = null;
+        String placa = null;
+
+        marca = jpaVeiculo.getMarca();
+        modelo = jpaVeiculo.getModelo();
+        placa = jpaVeiculo.getPlaca();
+
+        Veiculo veiculo = new Veiculo( marca, modelo, placa );
+
+        veiculo.setValidado( jpaVeiculo.getValidado() );
+
+        return veiculo;
+    }
+
+    @Override
+    public VeiculoDTO fromJpaToDto(JpaVeiculo jpaVeiculo) {
+        if ( jpaVeiculo == null ) {
+            return null;
+        }
+
+        String marca = null;
+        String modelo = null;
+        String placa = null;
+        Boolean validado = null;
+
+        marca = jpaVeiculo.getMarca();
+        modelo = jpaVeiculo.getModelo();
+        placa = jpaVeiculo.getPlaca();
+        validado = jpaVeiculo.getValidado();
+
+        VeiculoDTO veiculoDTO = new VeiculoDTO( marca, modelo, placa, validado );
+
+        return veiculoDTO;
+    }
+}

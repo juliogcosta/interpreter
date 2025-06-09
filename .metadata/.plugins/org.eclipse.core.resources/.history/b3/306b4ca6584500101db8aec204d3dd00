@@ -1,0 +1,182 @@
+package br.com.comigo.assistencia.adapter.inbound.aggregate.controller;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+
+import org.springframework.boot.configurationprocessor.json.JSONObject;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.yc.core.cqrs.application.service.command.CommandProcessor;
+import com.yc.core.cqrs.domain.command.Command;
+
+import br.com.comigo.assistencia.adapter.inbound.aggregate.dto.AtendimentoDTO;
+import br.com.comigo.assistencia.adapter.inbound.aggregate.dto.AtendimentoResponse;
+import br.com.comigo.assistencia.adapter.outbount.projection.JpaAtendimentoProjection;
+import br.com.comigo.assistencia.adapter.outbount.projection.respository.JpaAtendimentoProjectionRepository;
+import br.com.comigo.assistencia.adapter.outbount.restclient.AssistenciaService;
+import br.com.comigo.assistencia.adapter.outbount.util.JpaTelefone;
+import br.com.comigo.assistencia.domain.aggregate.command.AjustarAtendimentoCommand;
+import br.com.comigo.assistencia.domain.aggregate.command.CancelarAtendimentoCommand;
+import br.com.comigo.assistencia.domain.aggregate.command.ConfirmarAtendimentoCommand;
+import br.com.comigo.assistencia.domain.aggregate.command.FinalizarAtendimentoCommand;
+import br.com.comigo.assistencia.domain.aggregate.command.SolicitarAtendimentoCommand;
+import br.com.comigo.assistencia.domain.aggregate.entity.Atendimento;
+import br.com.comigo.assistencia.mapper.AtendimentoMapper;
+import br.com.comigo.common.infrastructure.exception.ControlledException;
+import br.com.comigo.common.infrastructure.exception.IncompleteRegisterException;
+import br.com.comigo.common.infrastructure.exception.RegisterNotFoundException;
+import br.com.comigo.common.model.records._assistencia.ServicoDePrestadorDTO;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@RestController
+@RequestMapping("/atendimento")
+@RequiredArgsConstructor
+public class AtendimentoController {
+
+	private final AssistenciaService assistenciaService;
+	private final AtendimentoMapper atendimentoMapper;
+	private final ObjectMapper objectMapper;
+	private final CommandProcessor commandProcessor;
+	private final JpaAtendimentoProjectionRepository jpaAtendimentoProjectionRepository;
+
+	@PostMapping
+	public ResponseEntity<JsonNode> comman(@RequestBody String body)
+			throws IOException, ControlledException, IncompleteRegisterException {
+
+		
+		
+        var order = this.commandProcessor.process(new Command(new JSONObject(body)));
+        
+		var atendimento = this.commandProcessor.process(new SolicitarAtendimentoCommand(atendimentoDTO));
+		return ResponseEntity.ok().body(null);
+	}
+
+	@PostMapping
+	public ResponseEntity<JsonNode> solicitar(@RequestBody AtendimentoDTO atendimentoDTO)
+			throws IOException, ControlledException, IncompleteRegisterException {
+		log.info(" >>> solicitar atendimentoDTO: {}", atendimentoDTO.toString());
+		var atendimento = this.commandProcessor.process(new SolicitarAtendimentoCommand(atendimentoDTO));
+		return ResponseEntity.ok().body(
+				this.objectMapper.createObjectNode().put("atendimentoId", atendimento.getAggregateId().toString()));
+	}
+
+	@PutMapping("/{id}/ajustar")
+	public ResponseEntity<JsonNode> ajustar(@PathVariable String id, @RequestBody AtendimentoDTO atendimentoDTO)
+			throws IOException, ControlledException, IncompleteRegisterException {
+		log.info(" >>> ajustar atendimentoDTO: {}", atendimentoDTO.toString());
+		this.commandProcessor.process(new AjustarAtendimentoCommand(UUID.fromString(id), atendimentoDTO));
+		return ResponseEntity.ok().build();
+	}
+
+	@PutMapping("/{id}/confirmar")
+	public ResponseEntity<Object> confirmar(@PathVariable UUID id, @RequestBody AtendimentoDTO atendimentoDTO) {
+		log.info(" >>> confirmar atendimentoDTO: {}", atendimentoDTO.toString());
+		this.commandProcessor.process(new ConfirmarAtendimentoCommand(id, atendimentoDTO));
+		return ResponseEntity.ok().build();
+	}
+
+	@PutMapping("/{id}/finalizar")
+	public ResponseEntity<Object> finalizar(@PathVariable UUID id, @RequestBody AtendimentoDTO atendimentoDTO) {
+		log.info(" >>> confirmar atendimentoDTO: {}", atendimentoDTO.toString());
+		this.commandProcessor.process(new FinalizarAtendimentoCommand(id));
+		return ResponseEntity.ok().build();
+	}
+
+	@PutMapping("/{id}/cancelar")
+	public ResponseEntity<Object> cancelar(@PathVariable UUID id, @RequestBody AtendimentoDTO atendimentoDTO) {
+		log.info(" >>> confirmar atendimentoDTO: {}", atendimentoDTO.toString());
+		this.commandProcessor.process(new CancelarAtendimentoCommand(id));
+		return ResponseEntity.ok().build();
+	}
+
+	@GetMapping("/{uuid}")
+	public ResponseEntity<AtendimentoResponse> getById(@PathVariable UUID uuid)
+			throws NumberFormatException, Exception {
+		JpaAtendimentoProjection jpaAtendimentoProjection = this.jpaAtendimentoProjectionRepository.findById(uuid)
+				.orElseThrow(() -> new RegisterNotFoundException("Registro não encontrado."));
+		System.out.println(" > jpaAtendimentoProjection: "+jpaAtendimentoProjection);
+
+		UUID servicoId = UUID.fromString(jpaAtendimentoProjection.getServicoId());
+		ServicoDePrestadorDTO servicoDePrestadorDTO = this.assistenciaService
+				.findServicoDePrestadorById(servicoId);
+		System.out.println(" > servicoDePrestadorDTO: "+servicoDePrestadorDTO);
+		AtendimentoResponse atendimentoResponse = this.atendimentoMapper.toResponse(jpaAtendimentoProjection,
+				servicoDePrestadorDTO);
+
+		return ResponseEntity.ok(atendimentoResponse);
+	}
+
+	@GetMapping("/docFiscal/{docFiscal}")
+	public ResponseEntity<List<AtendimentoResponse>> getByDocFiscal(@PathVariable String docFiscal)
+			throws NumberFormatException, Exception {
+		List<JpaAtendimentoProjection> jpaAtendimentoProjections = this.jpaAtendimentoProjectionRepository
+				.findByClienteDocFiscal(docFiscal);
+		return ResponseEntity.ok(this.map(jpaAtendimentoProjections));
+	}
+
+	@GetMapping("/status/{status}")
+	public ResponseEntity<List<AtendimentoResponse>> getByStatus(@PathVariable String status)
+			throws NumberFormatException, Exception {
+		List<JpaAtendimentoProjection> jpaAtendimentoProjections = this.jpaAtendimentoProjectionRepository
+				.findByStatus(Atendimento.Status.valueOf(status));
+		return ResponseEntity.ok(this.map(jpaAtendimentoProjections));
+	}
+
+	@GetMapping("/telefone/{telefone}")
+	public ResponseEntity<List<AtendimentoResponse>> getByTelefone(@PathVariable String telefone)
+			throws NumberFormatException, Exception {
+		List<JpaAtendimentoProjection> jpaAtendimentoProjections = this.jpaAtendimentoProjectionRepository
+				.findByClienteTelefone(new JpaTelefone(telefone, null));
+		return ResponseEntity.ok(this.map(jpaAtendimentoProjections));
+	}
+
+	@GetMapping("/tipoOcorrencia/{tipoOcorrencia}")
+	public ResponseEntity<List<AtendimentoResponse>> getByTipoOcorrencia(@PathVariable String tipoOcorrencia)
+			throws NumberFormatException, Exception {
+		List<JpaAtendimentoProjection> jpaAtendimentoProjections = this.jpaAtendimentoProjectionRepository
+				.findByTipoOcorrencia(tipoOcorrencia);
+		return ResponseEntity.ok(this.map(jpaAtendimentoProjections));
+	}
+
+	@GetMapping("/veiculoPlaca/{veiculoPlaca}")
+	public ResponseEntity<List<AtendimentoResponse>> getByVeiculoPlaca(@PathVariable String veiculoPlaca)
+			throws NumberFormatException, Exception {
+		List<JpaAtendimentoProjection> jpaAtendimentoProjections = this.jpaAtendimentoProjectionRepository
+				.findByVeiculoPlaca(veiculoPlaca);
+		return ResponseEntity.ok(this.map(jpaAtendimentoProjections));
+	}
+
+	private List<AtendimentoResponse> map(List<JpaAtendimentoProjection> jpaAtendimentoProjections) throws Exception {
+		List<ServicoDePrestadorDTO> servicoDePrestadorDTOs = this.assistenciaService
+				.findServicoDePrestadorsByIds(jpaAtendimentoProjections.stream()
+						.map(jpaAtendimentoProjection -> UUID.fromString(jpaAtendimentoProjection.getServicoId())).toList());
+		Map<UUID, ServicoDePrestadorDTO> map = new HashMap<>();
+		servicoDePrestadorDTOs.forEach(servicoDePrestador -> {
+			map.put(servicoDePrestador.id(), servicoDePrestador);
+		});
+		return jpaAtendimentoProjections.stream().map(jpaAtendimentoProjection -> {
+			try {
+				UUID servicoId = UUID.fromString(jpaAtendimentoProjection.getServicoId());
+				if (map.containsKey(servicoId)) {
+					return this.atendimentoMapper.toResponse(jpaAtendimentoProjection, map.get(servicoId));
+				} else throw new Exception("Falha de Integridade nos dados.");
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
+		}).toList();
+	}
+}

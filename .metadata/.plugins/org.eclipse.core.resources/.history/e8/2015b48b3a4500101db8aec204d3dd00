@@ -1,0 +1,84 @@
+package br.com.comigo.id.mapper.aggregate.usuario;
+
+import br.com.comigo.id.adapter.aggregate.usuario.dto.PapelDeUsuarioDTO;
+import br.com.comigo.id.adapter.aggregate.usuario.outbound.JpaPapelDeUsuario;
+import br.com.comigo.id.domain.aggregate.usuario.PapelDeUsuario;
+import javax.annotation.processing.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2025-06-07T12:25:37-0300",
+    comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.38.0.v20240524-2033, environment: Java 21.0.3 (Eclipse Adoptium)"
+)
+@Component
+public class PapelDeUsuarioMapperImpl implements PapelDeUsuarioMapper {
+
+    @Override
+    public PapelDeUsuario toDomain(PapelDeUsuarioDTO papelDeUsuarioDTO) {
+        if ( papelDeUsuarioDTO == null ) {
+            return null;
+        }
+
+        Long papelId = null;
+
+        papelId = papelDeUsuarioDTO.papelId();
+
+        Long id = null;
+
+        PapelDeUsuario papelDeUsuario = new PapelDeUsuario( id, papelId );
+
+        return papelDeUsuario;
+    }
+
+    @Override
+    public PapelDeUsuarioDTO toDto(PapelDeUsuario papelDeUsuario) {
+        if ( papelDeUsuario == null ) {
+            return null;
+        }
+
+        Long papelId = null;
+
+        papelId = papelDeUsuario.getPapelId();
+
+        Long id = null;
+
+        PapelDeUsuarioDTO papelDeUsuarioDTO = new PapelDeUsuarioDTO( id, papelId );
+
+        return papelDeUsuarioDTO;
+    }
+
+    @Override
+    public PapelDeUsuario fromJpaToDomain(JpaPapelDeUsuario jpaPapelDeUsuario) {
+        if ( jpaPapelDeUsuario == null ) {
+            return null;
+        }
+
+        Long id = null;
+        Long papelId = null;
+
+        id = jpaPapelDeUsuario.getId();
+        papelId = jpaPapelDeUsuario.getPapelId();
+
+        PapelDeUsuario papelDeUsuario = new PapelDeUsuario( id, papelId );
+
+        return papelDeUsuario;
+    }
+
+    @Override
+    public PapelDeUsuarioDTO fromJpaToDto(JpaPapelDeUsuario jpaPapelDeUsuario) {
+        if ( jpaPapelDeUsuario == null ) {
+            return null;
+        }
+
+        Long papelId = null;
+
+        papelId = jpaPapelDeUsuario.getPapelId();
+
+        Long id = null;
+
+        PapelDeUsuarioDTO papelDeUsuarioDTO = new PapelDeUsuarioDTO( id, papelId );
+
+        return papelDeUsuarioDTO;
+    }
+}

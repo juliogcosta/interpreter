@@ -1,0 +1,93 @@
+package br.com.comigo.id.mapper.aggregate.papel;
+
+import br.com.comigo.id.adapter.aggregate.papel.dto.PapelDTO;
+import br.com.comigo.id.adapter.aggregate.papel.outbound.JpaPapel;
+import br.com.comigo.id.domain.aggregate.papel.Papel;
+import br.com.comigo.id.domain.util.StatusDePapel;
+import javax.annotation.processing.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2025-06-07T12:25:37-0300",
+    comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.38.0.v20240524-2033, environment: Java 21.0.3 (Eclipse Adoptium)"
+)
+@Component
+public class PapelMapperImpl implements PapelMapper {
+
+    @Override
+    public Papel toDomain(PapelDTO papelDTO) {
+        if ( papelDTO == null ) {
+            return null;
+        }
+
+        Long id = null;
+        String nome = null;
+
+        id = papelDTO.id();
+        nome = papelDTO.nome();
+
+        Papel papel = new Papel( id, nome );
+
+        papel.setStatus( papelDTO.status() );
+
+        return papel;
+    }
+
+    @Override
+    public PapelDTO toDto(Papel papel) {
+        if ( papel == null ) {
+            return null;
+        }
+
+        Long id = null;
+        String nome = null;
+        StatusDePapel status = null;
+
+        id = papel.getId();
+        nome = papel.getNome();
+        status = papel.getStatus();
+
+        PapelDTO papelDTO = new PapelDTO( id, nome, status );
+
+        return papelDTO;
+    }
+
+    @Override
+    public Papel fromJpaToDomain(JpaPapel jpaPapel) {
+        if ( jpaPapel == null ) {
+            return null;
+        }
+
+        Long id = null;
+        String nome = null;
+
+        id = jpaPapel.getId();
+        nome = jpaPapel.getNome();
+
+        Papel papel = new Papel( id, nome );
+
+        papel.setStatus( jpaPapel.getStatus() );
+
+        return papel;
+    }
+
+    @Override
+    public PapelDTO fromJpaToDto(JpaPapel jpaPapel) {
+        if ( jpaPapel == null ) {
+            return null;
+        }
+
+        Long id = null;
+        String nome = null;
+        StatusDePapel status = null;
+
+        id = jpaPapel.getId();
+        nome = jpaPapel.getNome();
+        status = jpaPapel.getStatus();
+
+        PapelDTO papelDTO = new PapelDTO( id, nome, status );
+
+        return papelDTO;
+    }
+}

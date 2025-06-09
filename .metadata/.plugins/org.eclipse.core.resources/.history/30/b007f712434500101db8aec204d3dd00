@@ -1,0 +1,88 @@
+package com.yc.core.cqrs.application.service.event.txoutbox;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.yc.core.cqrs.adapter.outbound.repository.EventRepository;
+import com.yc.core.cqrs.adapter.outbound.repository.EventSubscriptionRepository;
+import com.yc.core.cqrs.application.service.event.handler.AsyncEventHandler;
+
+import br.com.comigo.core.domain.event.Event;
+import br.com.comigo.core.domain.event.EventWithId;
+
+import java.util.List;
+
+/*
+ * Detalhes Importantes:
+ * 
+ * 1. Concorrência e Locking:
+ * 
+ * O FOR UPDATE SKIP LOCKED garante que apenas uma instância 
+ * do processador bloqueie a subscription por vez, evitando 
+ * processamento duplicado em ambientes distribuídos.
+ * 
+ * O @Async permite que múltiplos handlers sejam processados 
+ * em paralelo (cada chamada a processNewEvents() do 
+ * EventSubscriptionProcessor roda em uma thread separada).
+ * 
+ * 
+ * 2. Transações:
+ * 
+ * @Transactional(Propagation.REQUIRES_NEW) no 
+ * EventSubscriptionProcessor garante que cada processamento
+ * ocorra em uma transação isolada.
+ * 
+ * Propagation.MANDATORY nos repositórios força o uso de uma 
+ * transação existente (garantindo atomicidade nas operações 
+ * de BD).
+ * 
+ * 
+ * 3. Checkpointing:
+ * 
+ * O sistema mantém o estado de processamento usando 
+ * LAST_TRANSACTION_ID e LAST_EVENT_ID, permitindo retomar 
+ * de onde parou após falhas.
+ * 
+ * 
+ * 4.Extensibilidade:
+ * 
+ * Novos handlers são adicionados simplesmente implementando 
+ * AsyncEventHandler e registrando o bean no Spring.
+ * 
+ */
+
+@Transactional(propagation = Propagation.REQUIRES_NEW)
+@Component
+@RequiredArgsConstructor
+@Slf4j
+public class EventSubscriptionProcessor {
+
+    private final EventSubscriptionRepository subscriptionRepository;
+    private final EventRepository eventRepository;
+
+    @Async("eventProcessingExecutor")
+    public void processNewEvents(String schemaName, AsyncEventHandler eventHandler, int batchSize) {
+        final String subscriptionName = eventHandler.getSubscriptionName();
+        log.debug("Handling new events for subscription {}", subscriptionName);
+
+        subscriptionRepository.createSubscriptionIfAbsent(schemaName, subscriptionName);
+        subscriptionRepository.readCheckpointAndLockSubscription(schemaName, subscriptionName)
+                .ifPresentOrElse(checkpoint -> {
+                    log.debug("Acquired lock on subscription {}, checkpoint = {}", subscriptionName, checkpoint);
+                    List<EventWithId<Event>> events = eventRepository.readEventsAfterCheckpoint(schemaName,
+                            eventHandler.getAggregateType(), checkpoint.lastProcessedTransactionId(),
+                            checkpoint.lastProcessedEventId(), batchSize);
+                    log.debug("Fetched {} new event(s) for subscription {}", events.size(), subscriptionName);
+                    if (!events.isEmpty()) {
+                        events.forEach(eventHandler::handleEvent);
+                        EventWithId<Event> lastEvent = events.get(events.size() - 1);
+                        subscriptionRepository.updateEventSubscription(schemaName, subscriptionName,
+                                lastEvent.transactionId(), lastEvent.id());
+                    }
+                }, () -> log.debug("Can't acquire lock on subscription {}", subscriptionName));
+    }
+}

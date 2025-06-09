@@ -1,0 +1,67 @@
+app:
+  eureka:
+    address: localhost
+    port: 8010
+  id-autenticador:
+    address: localhost
+    port: 8030
+    name: id-autenticador
+  id:
+    address: localhost
+    port: 8040
+    name: id
+server:
+  port: ${app.id-autenticador.port}
+spring:
+  application:
+    name: ${app.id-autenticador.name}
+endpoints:
+  shutdown:
+    enabled: false
+management:
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      access: read-only
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 60000
+        loggerLevel: full
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true
+logging:
+  level:
+    '[br.com.comigo.autenticador.adaper.outbound.restclient]': DEBUG
+    '[com.zaxxer.hikari.pool.HikariPool]': INFO
+    '[org.springframework]': ERROR
+    '[org.hibernate]':
+      SQL: ERROR
+      '[type.descriptor.sql.BasicBinder]': ERROR
+  pattern:
+    console: "%clr(%d{HH:mm:ss}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(:){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n"
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    service-url.defaultZone: http://${app.eureka.address}:${app.eureka.port}/eureka
+    healthcheck.enabled: true
+yc:
+  security:
+    keys:
+      accessToken:
+        secret: AR35cal3wrr8ZW80F7Rybj8QjdejPpl6BI7cYZBEN8UwcBWovpT25z8YRjkyQ1dwqj1uCT9SjI8KUWyoqzz8lQ
+        expirationMinutes: 259200
+exception:
+  handle:
+    stackTrace: print

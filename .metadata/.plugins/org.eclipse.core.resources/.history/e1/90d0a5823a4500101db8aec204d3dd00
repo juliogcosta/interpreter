@@ -1,0 +1,71 @@
+package br.com.comigo.assistencia.mapper.aggregate.prestador;
+
+import br.com.comigo.assistencia.adapter.aggregate.prestador.dto.PrestadorDTO;
+import br.com.comigo.assistencia.domain.aggregate.prestador.Prestador;
+import br.com.comigo.common.model.records.Cnpj;
+import br.com.comigo.common.model.records.Email;
+import br.com.comigo.common.model.records.Endereco;
+import br.com.comigo.common.model.records.Telefone;
+import javax.annotation.processing.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2025-06-07T12:24:16-0300",
+    comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.38.0.v20240524-2033, environment: Java 21.0.3 (Eclipse Adoptium)"
+)
+@Component
+public class PrestadorMapperImpl implements PrestadorMapper {
+
+    @Override
+    public Prestador toDomain(PrestadorDTO prestadorDTO) {
+        if ( prestadorDTO == null ) {
+            return null;
+        }
+
+        Prestador prestador = new Prestador();
+
+        prestador.setId( prestadorDTO.id() );
+        prestador.setNome( prestadorDTO.nome() );
+        prestador.setCnpj( prestadorDTO.cnpj() );
+        prestador.setTelefone( prestadorDTO.telefone() );
+        prestador.setWhatsapp( prestadorDTO.whatsapp() );
+        prestador.setEmail( prestadorDTO.email() );
+        prestador.setEndereco( prestadorDTO.endereco() );
+        prestador.setStatus( prestadorDTO.status() );
+        prestador.setTemCertificacaoIso( prestadorDTO.temCertificacaoIso() );
+
+        return prestador;
+    }
+
+    @Override
+    public PrestadorDTO toDto(Prestador prestador) {
+        if ( prestador == null ) {
+            return null;
+        }
+
+        Long id = null;
+        String nome = null;
+        Cnpj cnpj = null;
+        Telefone telefone = null;
+        Telefone whatsapp = null;
+        Email email = null;
+        Endereco endereco = null;
+        Boolean temCertificacaoIso = null;
+        Prestador.Status status = null;
+
+        id = prestador.getId();
+        nome = prestador.getNome();
+        cnpj = prestador.getCnpj();
+        telefone = prestador.getTelefone();
+        whatsapp = prestador.getWhatsapp();
+        email = prestador.getEmail();
+        endereco = prestador.getEndereco();
+        temCertificacaoIso = prestador.getTemCertificacaoIso();
+        status = prestador.getStatus();
+
+        PrestadorDTO prestadorDTO = new PrestadorDTO( id, nome, cnpj, telefone, whatsapp, email, endereco, status, temCertificacaoIso );
+
+        return prestadorDTO;
+    }
+}

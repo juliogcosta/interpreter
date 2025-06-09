@@ -1,0 +1,29 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: eureka
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://localhost:8010/eureka/
+  server:
+    evictionIntervalTimerInMs: 2000
+    enable-self-preservation: false
+    peer-node-connect-timeout-ms: 2000
+
+management:
+  endpoint:
+    shutdown:
+      access: read-only
+endpoints:
+  shutdown:
+    enabled: false
+
+logging:
+  level:
+    '[org.springframework]': ERROR
+  pattern:
+    console: "%clr(%d{HH:mm:ss}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(:){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n"

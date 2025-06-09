@@ -1,0 +1,531 @@
+2025-06-09 11:02:49,069 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-06-09 11:03:10,862 [Worker-3: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:assistencia:0.0.1 @ /home/julio/Codes/Experiments/interpreter/assistencia/pom.xml.
+2025-06-09 11:03:12,138 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:12,166 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 11:03:12,175 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia/src/test/resources
+2025-06-09 11:03:15,023 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:15,026 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 11:03:15,032 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia/src/test/resources
+2025-06-09 11:03:16,280 [Worker-8: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:assistencia.atendimento:0.0.1 @ /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/pom.xml.
+2025-06-09 11:03:17,077 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:17,080 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 11:03:17,085 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 11:03:18,256 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:18,259 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 11:03:18,265 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 11:03:19,143 [Worker-1: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:assistencia.catalogo:0.0.1 @ /home/julio/Codes/Experiments/interpreter/assistencia.catalogo/pom.xml.
+2025-06-09 11:03:19,831 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:19,833 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:19,837 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.catalogo/src/test/resources
+2025-06-09 11:03:20,392 [Worker-1: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:core-common:0.0.1 @ /home/julio/Codes/Experiments/interpreter/core-common/pom.xml.
+2025-06-09 11:03:22,818 [Worker-1: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:assistencia:0.0.1 @ /home/julio/Codes/Experiments/interpreter/assistencia/pom.xml.
+2025-06-09 11:03:23,097 [Worker-1: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier  to /core-common/target/classes
+2025-06-09 11:03:23,684 [Worker-1: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:assistencia.atendimento:0.0.1 @ /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/pom.xml.
+2025-06-09 11:03:23,730 [Worker-1: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier  to /core-common/target/classes
+2025-06-09 11:03:24,113 [Worker-1: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:assistencia.catalogo:0.0.1 @ /home/julio/Codes/Experiments/interpreter/assistencia.catalogo/pom.xml.
+2025-06-09 11:03:24,142 [Worker-1: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier  to /core-common/target/classes
+2025-06-09 11:03:24,568 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/main/resources
+2025-06-09 11:03:24,568 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/main/resources
+2025-06-09 11:03:24,571 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/test/resources
+2025-06-09 11:03:25,804 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:25,806 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 11:03:25,811 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia/src/test/resources
+2025-06-09 11:03:26,536 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:26,538 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 11:03:26,543 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 11:03:27,099 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:27,102 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:27,105 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.catalogo/src/test/resources
+2025-06-09 11:03:27,242 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/main/resources
+2025-06-09 11:03:27,242 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/main/resources
+2025-06-09 11:03:27,245 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/test/resources
+2025-06-09 11:03:28,311 [Worker-19: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:core-cqrs:0.0.1 @ /home/julio/Codes/Experiments/interpreter/core-cqrs/pom.xml.
+2025-06-09 11:03:28,724 [Worker-19: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:assistencia.atendimento:0.0.1 @ /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/pom.xml.
+2025-06-09 11:03:29,020 [Worker-19: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-cqrs: br.com.comigo:core-cqrs:0.0.1 with classifier  to /core-cqrs/target/classes
+2025-06-09 11:03:29,033 [Worker-19: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier  to /core-common/target/classes
+2025-06-09 11:03:29,627 [Worker-19: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:assistencia.catalogo:0.0.1 @ /home/julio/Codes/Experiments/interpreter/assistencia.catalogo/pom.xml.
+2025-06-09 11:03:29,685 [Worker-19: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-cqrs: br.com.comigo:core-cqrs:0.0.1 with classifier  to /core-cqrs/target/classes
+2025-06-09 11:03:29,716 [Worker-19: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier  to /core-common/target/classes
+2025-06-09 11:03:30,364 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-cqrs/src/main/resources
+2025-06-09 11:03:30,364 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-cqrs/src/main/resources
+2025-06-09 11:03:30,367 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-cqrs/src/test/resources
+2025-06-09 11:03:31,653 [Worker-19: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:eureka:0.0.1 @ /home/julio/Codes/Experiments/interpreter/eureka/pom.xml.
+2025-06-09 11:03:32,258 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:32,259 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:32,262 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/eureka/src/test/resources
+2025-06-09 11:03:33,236 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:33,238 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 11:03:33,242 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 11:03:33,418 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:33,419 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:33,422 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.catalogo/src/test/resources
+2025-06-09 11:03:33,622 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-cqrs/src/main/resources
+2025-06-09 11:03:33,622 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-cqrs/src/main/resources
+2025-06-09 11:03:33,625 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-cqrs/src/test/resources
+2025-06-09 11:03:33,705 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:33,706 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:33,708 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/eureka/src/test/resources
+2025-06-09 11:03:34,089 [Worker-47: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:gateway:0.0.1 @ /home/julio/Codes/Experiments/interpreter/gateway/pom.xml.
+2025-06-09 11:03:34,475 [Worker-47: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier  to /core-common/target/classes
+2025-06-09 11:03:34,567 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:34,570 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:34,573 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/gateway/src/test/resources
+2025-06-09 11:03:35,360 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:35,362 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:35,364 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/gateway/src/test/resources
+2025-06-09 11:03:35,934 [Worker-20: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:id:0.0.1 @ /home/julio/Codes/Experiments/interpreter/id/pom.xml.
+2025-06-09 11:03:36,214 [Worker-20: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier  to /core-common/target/classes
+2025-06-09 11:03:37,736 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:37,737 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 11:03:37,740 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/id/src/test/resources
+2025-06-09 11:03:38,062 [Worker-20: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:usuario.autenticador:0.0.1 @ /home/julio/Codes/Experiments/interpreter/id.autenticador/pom.xml.
+2025-06-09 11:03:38,354 [Worker-20: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier  to /core-common/target/classes
+2025-06-09 11:03:38,454 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:38,455 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:38,458 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/id.autenticador/src/test/resources
+2025-06-09 11:03:40,426 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:40,428 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 11:03:40,432 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/id/src/test/resources
+2025-06-09 11:03:40,596 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:40,597 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 11:03:40,599 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/id.autenticador/src/test/resources
+2025-06-09 11:12:54,564 [Worker-49: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:yc.core-cqrs:0.0.1 @ /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/pom.xml.
+2025-06-09 11:12:54,610 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:12:54,610 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:12:54,613 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:12:55,701 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:12:55,701 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:12:55,703 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:17:05,137 [Worker-5: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:yc.core-cqrs:0.0.1 @ /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/pom.xml.
+2025-06-09 11:18:07,664 [Worker-52: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:yc.core-cqrs:0.0.1 @ /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/pom.xml.
+2025-06-09 11:18:08,101 [Worker-52: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/json/json/20250107/json-20250107.pom
+2025-06-09 11:18:08,113 [Worker-52: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/json/json/20250107/json-20250107.pom
+2025-06-09 11:18:08,138 [Worker-52: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/json/json/20250107/json-20250107.jar
+2025-06-09 11:18:08,172 [Worker-52: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/json/json/20250107/json-20250107.jar
+2025-06-09 11:18:08,196 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:18:08,196 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:18:08,198 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:18:09,332 [Worker-52: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/json/json/20250107/json-20250107-sources.jar
+2025-06-09 11:18:09,346 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:18:09,350 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:18:09,353 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:18:09,389 [Worker-52: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/json/json/20250107/json-20250107-sources.jar
+2025-06-09 11:18:09,390 [Worker-52: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.json:json:20250107
+2025-06-09 11:21:07,088 [Worker-56: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:yc.core-cqrs:0.0.1 @ /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/pom.xml.
+2025-06-09 11:21:07,106 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:21:07,106 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:21:07,108 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:21:08,280 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:21:08,280 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:21:08,282 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:23:15,834 [Worker-58: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:yc.core-cqrs:0.0.1 @ /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/pom.xml.
+2025-06-09 11:23:15,858 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:23:15,858 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:23:15,860 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:23:17,018 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:23:17,018 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:23:17,020 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:25:35,265 [Worker-63: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:yc.core-cqrs:0.0.1 @ /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/pom.xml.
+2025-06-09 11:25:35,349 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:25:35,350 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:25:35,351 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:25:36,601 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:25:36,601 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:25:36,603 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:26:01,680 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:26:01,680 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:26:01,681 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:27:44,677 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:27:44,677 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:27:44,679 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:27:52,636 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:27:52,636 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:27:52,638 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:29:29,862 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:29:29,863 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:29:29,866 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:47:54,518 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:47:54,518 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:47:54,521 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:50:32,848 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:50:32,849 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:50:32,851 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:51:36,147 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:51:36,148 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:51:36,150 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:51:48,169 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:51:48,169 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:51:48,171 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:52:48,507 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:52:48,508 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:52:48,510 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:56:19,444 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:56:19,445 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:56:19,448 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:57:25,069 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:57:25,070 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:57:25,076 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 11:59:34,180 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:59:34,180 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 11:59:34,187 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 12:00:43,865 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 12:00:43,865 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 12:00:43,866 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 12:03:57,088 [Worker-76: Building Workspace] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 12:03:57,099 [Worker-76: Building Workspace] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 12:03:57,102 [Worker-76: Building Workspace] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 12:04:13,868 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 12:04:13,868 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 12:04:13,870 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 12:04:24,126 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 12:04:24,126 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 12:04:24,128 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 12:04:43,655 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 12:04:43,655 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 12:04:43,657 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 12:04:50,738 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 12:04:50,739 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 12:04:50,741 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 12:04:56,529 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 12:04:56,529 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 12:04:56,532 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 12:07:04,046 [Worker-77: Building] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Could not read pom.xml
+org.eclipse.core.runtime.CoreException: Could not read pom.xml
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readModel(IMavenToolbox.java:245)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:591)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:491)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:370)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:322)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:146)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:84)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:83)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:192)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.maven.model.io.ModelParseException: Unrecognised tag: 'dependency' (position: START_TAG seen ...</dependencies>\n\n\t\t<dependency>... @137:15) 
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:96)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:74)
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readModel(IMavenToolbox.java:243)
+	... 24 common frames omitted
+Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognised tag: 'dependency' (position: START_TAG seen ...</dependencies>\n\n\t\t<dependency>... @137:15) 
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.checkUnknownElement(MavenXpp3Reader.java:181)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseModel(MavenXpp3Reader.java:2392)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:623)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:654)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:93)
+	... 26 common frames omitted
+2025-06-09 12:07:05,389 [Worker-73: Building] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Could not read pom.xml
+org.eclipse.core.runtime.CoreException: Could not read pom.xml
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readModel(IMavenToolbox.java:245)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:591)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:491)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:370)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:322)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:146)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:84)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:83)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:192)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.maven.model.io.ModelParseException: Unrecognised tag: 'dependency' (position: START_TAG seen ...</dependencies>\n\n\t\t<dependency>... @137:15) 
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:96)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:74)
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readModel(IMavenToolbox.java:243)
+	... 24 common frames omitted
+Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognised tag: 'dependency' (position: START_TAG seen ...</dependencies>\n\n\t\t<dependency>... @137:15) 
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.checkUnknownElement(MavenXpp3Reader.java:181)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseModel(MavenXpp3Reader.java:2392)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:623)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:654)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:93)
+	... 26 common frames omitted
+2025-06-09 12:07:29,040 [Worker-76: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:assistencia.atendimento:0.0.1 @ /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/pom.xml.
+2025-06-09 12:07:29,426 [Worker-79: reload maven project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-cqrs: br.com.comigo:core-cqrs:0.0.1 with classifier  to /core-cqrs/target/classes
+2025-06-09 12:07:29,438 [Worker-79: reload maven project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier  to /core-common/target/classes
+2025-06-09 12:07:29,477 [Worker-76: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-cqrs: br.com.comigo:core-cqrs:0.0.1 with classifier  to /core-cqrs/target/classes
+2025-06-09 12:07:29,487 [Worker-76: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier  to /core-common/target/classes
+2025-06-09 12:07:29,621 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 12:07:29,623 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 12:07:29,625 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 12:07:31,054 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 12:07:31,055 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 12:07:31,058 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 12:08:15,828 [Worker-80: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:assistencia.atendimento:0.0.1 @ /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/pom.xml.
+2025-06-09 12:08:16,140 [Worker-80: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-cqrs: br.com.comigo:core-cqrs:0.0.1 with classifier  to /core-cqrs/target/classes
+2025-06-09 12:08:16,148 [Worker-80: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: br.com.comigo:yc.core-cqrs:0.0.1 with classifier  to /yc.core-cqrs/target/classes
+2025-06-09 12:08:16,148 [Worker-80: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier  to /core-common/target/classes
+2025-06-09 12:08:16,204 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-09 12:08:16,204 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-09 12:08:16,205 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 12:08:17,629 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 12:08:17,630 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 12:08:17,634 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 14:33:23,963 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:33:23,963 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:33:23,966 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 14:34:45,474 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:34:45,474 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:34:45,476 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 14:35:30,863 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 14:35:30,867 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 14:35:30,870 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 14:36:18,539 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 14:36:18,543 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 14:36:18,546 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 14:39:02,902 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:39:02,902 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:39:02,904 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 14:39:04,203 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:39:04,203 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:39:04,204 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 14:39:10,210 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 14:39:10,213 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 14:39:10,215 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 14:41:05,413 [Worker-101: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:assistencia.atendimento:0.0.1 @ /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/pom.xml.
+2025-06-09 14:41:05,892 [Worker-101: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-cqrs: br.com.comigo:core-cqrs:0.0.1 with classifier  to /core-cqrs/target/classes
+2025-06-09 14:41:05,906 [Worker-101: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: br.com.comigo:yc.core-cqrs:0.0.1 with classifier  to /yc.core-cqrs/target/classes
+2025-06-09 14:41:05,907 [Worker-101: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier  to /core-common/target/classes
+2025-06-09 14:41:06,023 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-09 14:41:06,024 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-09 14:41:06,026 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 14:41:07,402 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 14:41:07,404 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 14:41:07,407 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 14:41:13,561 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 14:41:13,564 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 14:41:13,566 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 14:42:03,675 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:42:03,676 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:42:03,677 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 14:46:25,699 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:46:25,699 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:46:25,701 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 14:50:11,027 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:50:11,027 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:50:11,029 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 14:50:17,793 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:50:17,793 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:50:17,794 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 14:50:24,452 [Worker-105: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:50:24,452 [Worker-105: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:50:24,454 [Worker-105: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 14:50:30,247 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:50:30,247 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 14:50:30,248 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 14:50:40,068 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 14:50:40,071 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 14:50:40,072 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 14:50:54,301 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 14:50:54,790 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 14:50:54,794 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 14:55:27,766 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 14:55:27,769 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 14:55:27,771 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 14:55:42,484 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 14:55:42,488 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 14:55:42,490 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 15:07:01,529 [Worker-109: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 15:07:01,529 [Worker-109: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 15:07:01,531 [Worker-109: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 15:09:14,263 [Worker-105: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 15:09:14,263 [Worker-105: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 15:09:14,265 [Worker-105: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 15:09:15,957 [Worker-111: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 15:09:15,957 [Worker-111: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 15:09:15,959 [Worker-111: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 15:48:49,719 [Worker-121: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/main/resources
+2025-06-09 15:48:49,719 [Worker-121: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/main/resources
+2025-06-09 15:48:49,722 [Worker-121: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/test/resources
+2025-06-09 15:49:26,687 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/main/resources
+2025-06-09 15:49:26,688 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/main/resources
+2025-06-09 15:49:26,691 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/test/resources
+2025-06-09 15:51:13,919 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 15:51:13,919 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 15:51:13,921 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 15:51:45,312 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 15:51:45,312 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 15:51:45,313 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 15:51:51,715 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 15:51:51,715 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 15:51:51,716 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 15:52:01,926 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 15:52:01,935 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 15:52:01,937 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 16:00:54,282 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/main/resources
+2025-06-09 16:00:54,282 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/main/resources
+2025-06-09 16:00:54,284 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/test/resources
+2025-06-09 16:02:02,719 [main] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/main/resources
+2025-06-09 16:02:02,720 [main] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/main/resources
+2025-06-09 16:02:02,721 [main] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/test/resources
+2025-06-09 16:02:04,104 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/main/resources
+2025-06-09 16:02:04,105 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/main/resources
+2025-06-09 16:02:04,109 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/test/resources
+2025-06-09 16:02:15,336 [Worker-121: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 16:02:15,339 [Worker-121: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 16:02:15,342 [Worker-121: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 16:03:35,139 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/main/resources
+2025-06-09 16:03:35,139 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/main/resources
+2025-06-09 16:03:35,141 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/core-common/src/test/resources
+2025-06-09 16:03:36,580 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 16:03:36,583 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 16:03:36,585 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 16:06:04,589 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 16:06:04,592 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 16:06:04,593 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 16:07:00,385 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 16:07:00,386 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 16:07:00,388 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 16:07:29,149 [Worker-121: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 16:07:29,149 [Worker-121: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 16:07:29,151 [Worker-121: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 16:07:40,403 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 16:07:40,403 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 16:07:40,406 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 16:19:06,243 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 16:19:06,243 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 16:19:06,244 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 16:20:51,815 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 16:20:51,815 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 16:20:51,817 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 16:22:03,310 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 16:22:03,311 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 16:22:03,312 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 16:22:07,397 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 16:22:07,397 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 16:22:07,442 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 16:22:13,099 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 16:22:13,099 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 16:22:13,101 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 16:22:29,062 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 16:22:29,062 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 16:22:29,067 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 16:26:28,338 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 16:26:28,341 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 16:26:28,343 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 16:26:38,246 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 16:26:38,249 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 16:26:38,251 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 16:27:07,194 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 16:27:07,206 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 16:27:07,214 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 17:30:41,206 [Worker-143: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 17:30:41,208 [Worker-143: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 17:30:41,210 [Worker-143: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 17:30:56,340 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 17:30:56,344 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 17:30:56,346 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 17:31:03,936 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 17:31:03,940 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 17:31:03,943 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 17:31:06,405 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 17:31:06,407 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 17:31:06,409 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 17:31:18,093 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 17:31:18,095 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 17:31:18,097 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 17:31:28,403 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 17:31:28,408 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 17:31:28,410 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 17:31:39,486 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 17:31:39,489 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 17:31:39,491 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 17:33:19,451 [Worker-147: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 17:33:19,455 [Worker-147: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 17:33:19,457 [Worker-147: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 17:33:34,252 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-09 17:33:34,256 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-09 17:33:34,258 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/src/test/resources
+2025-06-09 17:37:24,772 [Worker-145: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:yc.core-cqrs:0.0.1 @ /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/pom.xml.
+2025-06-09 17:37:25,002 [Worker-145: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier  to /core-common/target/classes
+2025-06-09 17:37:25,339 [Worker-145: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:assistencia.atendimento:0.0.1 @ /home/julio/Codes/Experiments/interpreter/assistencia.atendimento/pom.xml.
+2025-06-09 17:37:25,729 [Worker-145: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-cqrs: br.com.comigo:core-cqrs:0.0.1 with classifier  to /core-cqrs/target/classes
+2025-06-09 17:37:25,742 [Worker-145: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: br.com.comigo:yc.core-cqrs:0.0.1 with classifier  to /yc.core-cqrs/target/classes
+2025-06-09 17:37:25,742 [Worker-145: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier  to /core-common/target/classes
+2025-06-09 17:37:25,856 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 17:37:25,856 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 17:37:25,858 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 17:37:27,224 [Worker-153: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 17:37:27,225 [Worker-153: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 17:37:27,227 [Worker-153: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 17:38:03,893 [Worker-148: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 17:38:03,894 [Worker-148: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 17:38:03,895 [Worker-148: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 17:40:24,804 [Worker-153: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 17:40:24,804 [Worker-153: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 17:40:24,805 [Worker-153: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 18:01:28,635 [Worker-162: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:01:28,635 [Worker-162: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:01:28,637 [Worker-162: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 18:04:43,484 [Worker-161: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:04:43,484 [Worker-161: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:04:43,486 [Worker-161: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 18:10:30,448 [Worker-161: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:10:30,448 [Worker-161: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:10:30,450 [Worker-161: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 18:13:25,527 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:13:25,527 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:13:25,528 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 18:35:30,013 [Worker-171: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:35:30,014 [Worker-171: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:35:30,016 [Worker-171: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 18:36:14,665 [Worker-171: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:36:14,665 [Worker-171: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:36:14,667 [Worker-171: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 18:44:13,393 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:44:13,393 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:44:13,396 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 18:49:11,623 [Worker-172: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:49:11,624 [Worker-172: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:49:11,625 [Worker-172: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 18:49:28,904 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:49:28,904 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:49:28,906 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 18:50:03,986 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:50:03,986 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:50:03,987 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 18:52:21,743 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:52:21,743 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:52:21,745 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 18:52:45,814 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:52:45,814 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:52:45,816 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 18:54:53,618 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:54:53,619 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:54:53,620 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 18:59:08,457 [Worker-184: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:59:08,457 [Worker-184: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:59:08,459 [Worker-184: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 18:59:14,884 [Worker-185: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:59:14,884 [Worker-185: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:59:14,886 [Worker-185: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-09 18:59:22,654 [Worker-186: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:59:22,655 [Worker-186: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-09 18:59:22,656 [Worker-186: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources

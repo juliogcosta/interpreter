@@ -1,0 +1,262 @@
+{"properties": [
+  {
+    "name": "endpoints.shutdown.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'endpoints.shutdown.enabled'"
+  },
+  {
+    "name": "feign.client.config.default.connect-timeout",
+    "type": "java.lang.String",
+    "description": "A description for 'feign.client.config.default.connect-timeout'"
+  },
+  {
+    "name": "feign.client.config.default.readTimeout",
+    "type": "java.lang.String",
+    "description": "A description for 'feign.client.config.default.readTimeout'"
+  },
+  {
+    "name": "eureka.client.service-url.defaultZone",
+    "type": "java.lang.String",
+    "description": "A description for 'eureka.client.service-url.defaultZone'"
+  },
+  {
+    "name": "app.eureka.address",
+    "type": "java.lang.String",
+    "description": "A description for 'app.eureka.address'"
+  },
+  {
+    "name": "app.eureka.port",
+    "type": "java.lang.Integer",
+    "description": "A description for 'app.eureka.port'"
+  },
+  {
+    "name": "yc.api.management.client.user.name",
+    "type": "java.lang.String",
+    "description": "A description for 'yc.api.management.client.user.name'"
+  },
+  {
+    "name": "yc.api.management.server.user.name",
+    "type": "java.lang.String",
+    "description": "A description for 'yc.api.management.server.user.name'"
+  },
+  {
+    "name": "yc.api.management.client.user.password",
+    "type": "java.lang.String",
+    "description": "A description for 'yc.api.management.client.user.password'"
+  },
+  {
+    "name": "yc.api.gateway.cache.request-limit.ttl",
+    "type": "java.lang.String",
+    "description": "A description for 'yc.api.gateway.cache.request-limit.ttl'"
+  },
+  {
+    "name": "yc.api.management.server.user.password",
+    "type": "java.lang.String",
+    "description": "A description for 'yc.api.management.server.user.password'"
+  },
+  {
+    "name": "yc.api.gateway.cache.request-limit.ttl-increment",
+    "type": "java.lang.String",
+    "description": "A description for 'yc.api.gateway.cache.request-limit.ttl-increment'"
+  },
+  {
+    "name": "yc.api.gateway.cache.contract-query.offset",
+    "type": "java.lang.String",
+    "description": "A description for 'yc.api.gateway.cache.contract-query.offset'"
+  },
+  {
+    "name": "app.gateway.address",
+    "type": "java.lang.String",
+    "description": "A description for 'app.gateway.address'"
+  },
+  {
+    "name": "app.gateway.port",
+    "type": "java.lang.Integer",
+    "description": "A description for 'app.gateway.port'"
+  },
+  {
+    "name": "app.gateway.name",
+    "type": "java.lang.String",
+    "description": "A description for 'app.gateway.name'"
+  },
+  {
+    "name": "feign.circuitbreaker.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'feign.circuitbreaker.enabled'"
+  },
+  {
+    "name": "feign.circuitbreaker.alphanumeric-ids.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'feign.circuitbreaker.alphanumeric-ids.enabled'"
+  },
+  {
+    "name": "spring.boot.admin.client.url",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.boot.admin.client.url'"
+  },
+  {
+    "name": "spring.boot.admin.client.url",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.boot.admin.client.url'"
+  },
+  {
+    "name": "spring.boot.admin.client.username",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.boot.admin.client.username'"
+  },
+  {
+    "name": "spring.boot.admin.client.password",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.boot.admin.client.password'"
+  },
+  {
+    "name": "spring.sleuth.trace-id128",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.sleuth.trace-id128'"
+  },
+  {
+    "name": "spring.sleuth.sampler.probability",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.sleuth.sampler.probability'"
+  },
+  {
+    "name": "spring.sleuth.propagation.type",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.sleuth.propagation.type'"
+  },
+  {
+    "name": "spring.sleuth.supports-join",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.sleuth.supports-join'"
+  },
+  {
+    "name": "spring.web.resources.static-locations[0]",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.web.resources.static-locations[0]'"
+  },
+  {
+    "name": "spring.web.resources.static-locations[1]",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.web.resources.static-locations[1]'"
+  },
+  {
+    "name": "spring.cloud.gateway.filter.request-rate-limiter.deny-empty-key",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.cloud.gateway.filter.request-rate-limiter.deny-empty-key'"
+  },
+  {
+    "name": "app.id.name",
+    "type": "java.lang.String",
+    "description": "A description for 'app.id.name'"
+  },
+  {
+    "name": "app.id.address",
+    "type": "java.lang.String",
+    "description": "A description for 'app.id.address'"
+  },
+  {
+    "name": "app.id.port",
+    "type": "java.lang.Integer",
+    "description": "A description for 'app.id.port'"
+  },
+  {
+    "name": "app.assistencia.name",
+    "type": "java.lang.String",
+    "description": "A description for 'app.assistencia.name'"
+  },
+  {
+    "name": "app.assistencia.address",
+    "type": "java.lang.String",
+    "description": "A description for 'app.assistencia.address'"
+  },
+  {
+    "name": "app.assistencia.port",
+    "type": "java.lang.Integer",
+    "description": "A description for 'app.assistencia.port'"
+  },
+  {
+    "name": "app.id-autenticador.name",
+    "type": "java.lang.String",
+    "description": "A description for 'app.id-autenticador.name'"
+  },
+  {
+    "name": "app.id-autenticador.address",
+    "type": "java.lang.String",
+    "description": "A description for 'app.id-autenticador.address'"
+  },
+  {
+    "name": "app.id-autenticador.port",
+    "type": "java.lang.Integer",
+    "description": "A description for 'app.id-autenticador.port'"
+  },
+  {
+    "name": "yc.api.management.log.trace.enable",
+    "type": "java.lang.String",
+    "description": "A description for 'yc.api.management.log.trace.enable'"
+  },
+  {
+    "name": "yc.security.keys.access-token.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'yc.security.keys.access-token.secret'"
+  },
+  {
+    "name": "yc.security.keys.access-token.expirationMinutes",
+    "type": "java.lang.String",
+    "description": "A description for 'yc.security.keys.access-token.expirationMinutes'"
+  },
+  {
+    "name": "yc.security.public-paths",
+    "type": "java.util.List<java.lang.String>",
+    "description": "A description for 'yc.security.public-paths'"
+  },
+  {
+    "name": "app.eureka.name",
+    "type": "java.lang.String",
+    "description": "A description for 'app.eureka.name'"
+  },
+  {
+    "name": "yc.security.rules",
+    "type": "java.lang.String",
+    "description": "A description for 'yc.security.rules"
+  },
+  {
+    "name": "app.assistencia-atendimento.name",
+    "type": "java.lang.String",
+    "description": "A description for 'app.assistencia-atendimento.name'"
+  },
+  {
+    "name": "app.assistencia-atendimento.address",
+    "type": "java.lang.String",
+    "description": "A description for 'app.assistencia-atendimento.address'"
+  },
+  {
+    "name": "app.assistencia-atendimento.port",
+    "type": "java.lang.String",
+    "description": "A description for 'app.assistencia-atendimento.port'"
+  },
+  {
+    "name": "app.assistencia-catalogo.address",
+    "type": "java.lang.String",
+    "description": "A description for 'app.assistencia-catalogo.address'"
+  },
+  {
+    "name": "app.assistencia-catalogo.port",
+    "type": "java.lang.String",
+    "description": "A description for 'app.assistencia-catalogo.port'"
+  },
+  {
+    "name": "app.assistencia-catalogo.name",
+    "type": "java.lang.String",
+    "description": "A description for 'app.assistencia-catalogo.name'"
+  },
+  {
+    "name": "printStackTrace",
+    "type": "java.lang.String",
+    "description": "A description for 'printStackTrace'"
+  },
+  {
+    "name": "exception.handle.stack-trace",
+    "type": "java.lang.String",
+    "description": "A description for 'exception.handle.stack-trace'"
+  }
+]}

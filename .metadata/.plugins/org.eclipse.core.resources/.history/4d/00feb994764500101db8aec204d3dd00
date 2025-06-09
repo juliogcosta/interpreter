@@ -1,0 +1,35 @@
+package com.yc.core.cqrs.domain.event;
+
+import java.sql.Timestamp;
+import java.util.UUID;
+
+import org.json.JSONObject;
+
+import com.fasterxml.jackson.databind.JsonNode;
+
+import lombok.Getter;
+import lombok.ToString;
+
+@Getter
+@ToString
+public class Event {
+
+    protected final UUID aggregateId;
+	protected final String eventType;
+    protected final JsonNode eventData;
+    protected final JsonNode eventModel;
+    protected final int version;
+    protected final Timestamp createdDate = new Timestamp(System.currentTimeMillis());
+
+    public Event(UUID aggregateId, JsonNode eventModel, JsonNode eventData, int version) {
+		this.aggregateId = aggregateId;
+		this.eventType = eventModel.asText("eventModel");
+		this.eventData = eventData.deepCopy();
+		this.eventModel = eventModel;
+		this.version = version;
+	}
+    
+    public String getEventType() {
+    	return this.eventType;
+    };
+}

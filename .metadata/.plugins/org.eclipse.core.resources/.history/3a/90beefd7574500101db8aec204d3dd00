@@ -1,0 +1,25 @@
+package com.yc.core.cqrs.domain.command;
+
+import java.util.UUID;
+
+import org.json.JSONObject;
+
+import lombok.Getter;
+import lombok.ToString;
+
+@Getter
+@ToString
+public class Command {
+
+    protected final UUID aggregateId;
+    protected final JSONObject subDataSet;
+
+    public Command(UUID aggregateId, JSONObject subDataSet) {
+		this.aggregateId = aggregateId;
+		this.subDataSet = subDataSet;
+	}
+    
+    final public String getAggregateType() {
+    	return this.subDataSet.getString("aggregateType");
+    }
+}

@@ -1,0 +1,25 @@
+package com.yc.core.cqrs.application.service.command.handler;
+
+import jakarta.annotation.Nonnull;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
+
+import br.com.comigo.core.application.usecase.CommandHandler;
+import br.com.comigo.core.domain.Aggregate;
+import br.com.comigo.core.domain.command.Command;
+
+@Component
+@Slf4j
+public class DefaultCommandHandlerImpl implements CommandHandler<Command> {
+
+    @Override
+    public void handle(Aggregate aggregate, Command command) {
+        aggregate.process(command);
+    }
+
+    @Nonnull
+    @Override
+    public Class<Command> getCommandType() {
+        return Command.class;
+    }
+}

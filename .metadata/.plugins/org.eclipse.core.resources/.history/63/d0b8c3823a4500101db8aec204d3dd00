@@ -1,0 +1,117 @@
+package br.com.comigo.assistencia.mapper.aggregate.cliente;
+
+import br.com.comigo.assistencia.adapter.aggregate.cliente.dto.ClienteDTO;
+import br.com.comigo.assistencia.adapter.aggregate.cliente.dto.VeiculoDTO;
+import br.com.comigo.assistencia.domain.aggregate.cliente.Cliente;
+import br.com.comigo.assistencia.domain.aggregate.cliente.Veiculo;
+import br.com.comigo.common.model.records.Cpf;
+import br.com.comigo.common.model.records.Email;
+import br.com.comigo.common.model.records.Endereco;
+import br.com.comigo.common.model.records.Telefone;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import javax.annotation.processing.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2025-06-07T12:24:16-0300",
+    comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.38.0.v20240524-2033, environment: Java 21.0.3 (Eclipse Adoptium)"
+)
+@Component
+public class ClienteMapperImpl implements ClienteMapper {
+
+    @Override
+    public Cliente toDomain(ClienteDTO clienteDTO) {
+        if ( clienteDTO == null ) {
+            return null;
+        }
+
+        Long id = null;
+        String nome = null;
+        Cpf cpf = null;
+        Telefone telefone = null;
+        Telefone whatsapp = null;
+        Email email = null;
+        Endereco endereco = null;
+        Date dataNascimento = null;
+
+        id = clienteDTO.id();
+        nome = clienteDTO.nome();
+        cpf = clienteDTO.cpf();
+        telefone = clienteDTO.telefone();
+        whatsapp = clienteDTO.whatsapp();
+        email = clienteDTO.email();
+        endereco = clienteDTO.endereco();
+        dataNascimento = clienteDTO.dataNascimento();
+
+        Cliente cliente = new Cliente( id, nome, cpf, telefone, whatsapp, email, endereco, dataNascimento );
+
+        return cliente;
+    }
+
+    @Override
+    public ClienteDTO toDto(Cliente cliente) {
+        if ( cliente == null ) {
+            return null;
+        }
+
+        Long id = null;
+        String nome = null;
+        Cpf cpf = null;
+        Telefone telefone = null;
+        Telefone whatsapp = null;
+        Email email = null;
+        Endereco endereco = null;
+        Date dataNascimento = null;
+        List<VeiculoDTO> veiculos = null;
+
+        id = cliente.getId();
+        nome = cliente.getNome();
+        cpf = cliente.getCpf();
+        telefone = cliente.getTelefone();
+        whatsapp = cliente.getWhatsapp();
+        email = cliente.getEmail();
+        endereco = cliente.getEndereco();
+        dataNascimento = cliente.getDataNascimento();
+        veiculos = veiculoListToVeiculoDTOList( cliente.getVeiculos() );
+
+        ClienteDTO clienteDTO = new ClienteDTO( id, nome, cpf, telefone, whatsapp, email, endereco, dataNascimento, veiculos );
+
+        return clienteDTO;
+    }
+
+    protected VeiculoDTO veiculoToVeiculoDTO(Veiculo veiculo) {
+        if ( veiculo == null ) {
+            return null;
+        }
+
+        String marca = null;
+        String modelo = null;
+        String placa = null;
+        Boolean validado = null;
+
+        marca = veiculo.getMarca();
+        modelo = veiculo.getModelo();
+        placa = veiculo.getPlaca();
+        validado = veiculo.getValidado();
+
+        VeiculoDTO veiculoDTO = new VeiculoDTO( marca, modelo, placa, validado );
+
+        return veiculoDTO;
+    }
+
+    protected List<VeiculoDTO> veiculoListToVeiculoDTOList(List<Veiculo> list) {
+        if ( list == null ) {
+            return null;
+        }
+
+        List<VeiculoDTO> list1 = new ArrayList<VeiculoDTO>( list.size() );
+        for ( Veiculo veiculo : list ) {
+            list1.add( veiculoToVeiculoDTO( veiculo ) );
+        }
+
+        return list1;
+    }
+}

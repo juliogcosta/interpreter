@@ -1,0 +1,34 @@
+package com.yc.core.cqrs.domain.command;
+
+import java.util.UUID;
+
+import org.json.JSONObject;
+
+public class Command {
+
+    protected final UUID aggregateId;
+    protected final JSONObject data;
+    protected final JSONObject model;
+
+    public Command(JSONObject data, JSONObject model) {
+		this.aggregateId = UUID.fromString(data.getJSONObject("data").getString("id"));
+		this.model = model;
+		this.data = data.getJSONObject("data");
+	}
+    
+    final public String getAggregateType() {
+    	return this.data.getString("type");
+    }
+
+    final public UUID getAggregateId() {
+		return aggregateId;
+	}
+    
+    final public JSONObject getData() {
+		return data;
+	}
+    
+    final public JSONObject getModel() {
+    	return this.model;
+    }
+}

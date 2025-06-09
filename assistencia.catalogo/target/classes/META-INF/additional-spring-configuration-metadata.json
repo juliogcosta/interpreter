@@ -1,0 +1,117 @@
+{"properties": [
+  {
+    "name": "db.schema",
+    "type": "java.lang.String",
+    "description": "A description for 'db.schema'"
+  },
+  {
+    "name": "app.eureka.address",
+    "type": "java.lang.String",
+    "description": "A description for 'app.eureka.address'"
+  },
+  {
+    "name": "app.eureka.port",
+    "type": "java.lang.String",
+    "description": "A description for 'app.eureka.port'"
+  },
+  {
+    "name": "app.assistencia-catalogo.address",
+    "type": "java.lang.String",
+    "description": "A description for 'app.assistencia-catalogo.address'"
+  },
+  {
+    "name": "app.assistencia-catalogo.port",
+    "type": "java.lang.String",
+    "description": "A description for 'app.assistencia-catalogo.port'"
+  },
+  {
+    "name": "app.assistencia-catalogo.name",
+    "type": "java.lang.String",
+    "description": "A description for 'app.assistencia-catalogo.name'"
+  },
+  {
+    "name": "endpoints.shutdown.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'endpoints.shutdown.enabled'"
+  },
+  {
+    "name": "event-sourcing.polling-subscriptions.polling-initial-delay",
+    "type": "java.lang.String",
+    "description": "A description for 'event-sourcing.polling-subscriptions.polling-initial-delay'"
+  },
+  {
+    "name": "event-sourcing.subscriptions",
+    "type": "java.lang.String",
+    "description": "A description for 'event-sourcing.subscriptions'"
+  },
+  {
+    "name": "event-sourcing.polling-subscriptions.polling-interval",
+    "type": "java.lang.String",
+    "description": "A description for 'event-sourcing.polling-subscriptions.polling-interval'"
+  },
+  {
+    "name": "event-sourcing.polling-subscriptions.batch-size",
+    "type": "java.lang.String",
+    "description": "A description for 'event-sourcing.polling-subscriptions.batch-size'"
+  },
+  {
+    "name": "event-sourcing.snapshotting.catalogo.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'event-sourcing.snapshotting.catalogo.enabled'"
+  },
+  {
+    "name": "event-sourcing.snapshotting.catalogo.nth-event",
+    "type": "java.lang.String",
+    "description": "A description for 'event-sourcing.snapshotting.catalogo.nth-event'"
+  },
+  {
+    "name": "spring.rabbitmq.assistencia-catalogo.servico.events.view-update.routing-key",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.rabbitmq.assistencia-catalogo.servico.events.view-update.routing-key'"
+  },
+  {
+    "name": "spring.rabbitmq.assistencia-catalogo.servico.commands.disponibilizar.routing-key",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.rabbitmq.assistencia-catalogo.servico.commands.disponibilizar.routing-key'"
+  },
+  {
+    "name": "spring.rabbitmq.assistencia-catalogo.servico.exchange",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.rabbitmq.assistencia-catalogo.servico.exchange'"
+  },
+  {
+    "name": "spring.rabbitmq.assistencia-catalogo.servico.commands.disponibilizar.queue-dlq",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.rabbitmq.assistencia-catalogo.servico.commands.disponibilizar.queue-dlq'"
+  },
+  {
+    "name": "spring.rabbitmq.assistencia-catalogo.servico.commands.disponibilizar.queue",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.rabbitmq.assistencia-catalogo.servico.commands.disponibilizar.queue'"
+  },
+  {
+    "name": "spring.rabbitmq.assistencia-catalogo.servico.events.view-update.queue",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.rabbitmq.assistencia-catalogo.servico.events.view-update.queue'"
+  },
+  {
+    "name": "spring.rabbitmq.assistencia-catalogo.servico.events.view-update.queue-dlq",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.rabbitmq.assistencia-catalogo.servico.events.view-update.queue-dlq'"
+  },
+  {
+    "name": "eureka.client.service-url.defaultZone",
+    "type": "java.lang.String",
+    "description": "A description for 'eureka.client.service-url.defaultZone'"
+  },
+  {
+    "name": "management.endpoint.shutdown.access",
+    "type": "java.lang.String",
+    "description": "A description for 'management.endpoint.shutdown.access'"
+  },
+  {
+    "name": "exception.handle.stack-trace",
+    "type": "java.lang.String",
+    "description": "A description for 'exception.handle.stack-trace'"
+  }
+]}

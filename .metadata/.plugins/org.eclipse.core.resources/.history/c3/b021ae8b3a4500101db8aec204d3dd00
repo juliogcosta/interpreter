@@ -1,0 +1,107 @@
+package br.com.comigo.id.mapper.aggregate.usuario;
+
+import br.com.comigo.common.model.records.Email;
+import br.com.comigo.common.model.records.Telefone;
+import br.com.comigo.id.adapter.aggregate.usuario.dto.PapelDeUsuarioDTO;
+import br.com.comigo.id.adapter.aggregate.usuario.dto.UsuarioDTO;
+import br.com.comigo.id.domain.aggregate.usuario.PapelDeUsuario;
+import br.com.comigo.id.domain.aggregate.usuario.Usuario;
+import br.com.comigo.id.domain.util.StatusDeUsuario;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.processing.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2025-06-07T12:25:37-0300",
+    comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.38.0.v20240524-2033, environment: Java 21.0.3 (Eclipse Adoptium)"
+)
+@Component
+public class UsuarioMapperImpl implements UsuarioMapper {
+
+    @Override
+    public Usuario toDomain(UsuarioDTO usuarioDTO) {
+        if ( usuarioDTO == null ) {
+            return null;
+        }
+
+        Long id = null;
+        String nome = null;
+        String username = null;
+        Telefone telefone = null;
+        Email email = null;
+        StatusDeUsuario status = null;
+
+        id = usuarioDTO.id();
+        nome = usuarioDTO.nome();
+        username = usuarioDTO.username();
+        telefone = usuarioDTO.telefone();
+        email = usuarioDTO.email();
+        status = usuarioDTO.status();
+
+        Usuario usuario = new Usuario( id, username, nome, telefone, email, status );
+
+        usuario.setPassword( usuarioDTO.password() );
+
+        return usuario;
+    }
+
+    @Override
+    public UsuarioDTO toDto(Usuario usuario) {
+        if ( usuario == null ) {
+            return null;
+        }
+
+        Long id = null;
+        String nome = null;
+        String username = null;
+        String password = null;
+        Telefone telefone = null;
+        Email email = null;
+        StatusDeUsuario status = null;
+        List<PapelDeUsuarioDTO> papelDeUsuarios = null;
+
+        id = usuario.getId();
+        nome = usuario.getNome();
+        username = usuario.getUsername();
+        password = usuario.getPassword();
+        telefone = usuario.getTelefone();
+        email = usuario.getEmail();
+        status = usuario.getStatus();
+        papelDeUsuarios = papelDeUsuarioListToPapelDeUsuarioDTOList( usuario.getPapelDeUsuarios() );
+
+        UsuarioDTO usuarioDTO = new UsuarioDTO( id, username, password, nome, telefone, email, status, papelDeUsuarios );
+
+        return usuarioDTO;
+    }
+
+    protected PapelDeUsuarioDTO papelDeUsuarioToPapelDeUsuarioDTO(PapelDeUsuario papelDeUsuario) {
+        if ( papelDeUsuario == null ) {
+            return null;
+        }
+
+        Long id = null;
+        Long papelId = null;
+
+        id = papelDeUsuario.getId();
+        papelId = papelDeUsuario.getPapelId();
+
+        PapelDeUsuarioDTO papelDeUsuarioDTO = new PapelDeUsuarioDTO( id, papelId );
+
+        return papelDeUsuarioDTO;
+    }
+
+    protected List<PapelDeUsuarioDTO> papelDeUsuarioListToPapelDeUsuarioDTOList(List<PapelDeUsuario> list) {
+        if ( list == null ) {
+            return null;
+        }
+
+        List<PapelDeUsuarioDTO> list1 = new ArrayList<PapelDeUsuarioDTO>( list.size() );
+        for ( PapelDeUsuario papelDeUsuario : list ) {
+            list1.add( papelDeUsuarioToPapelDeUsuarioDTO( papelDeUsuario ) );
+        }
+
+        return list1;
+    }
+}

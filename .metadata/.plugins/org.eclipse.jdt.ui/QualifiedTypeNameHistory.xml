@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.json.JSONArray"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.InvocationTargetException"/>
+    <fullyQualifiedTypeName name="com.yc.core.cqrs.application.service.command.CommandProcessor"/>
+    <fullyQualifiedTypeName name="com.yc.core.cqrs.domain.command.Command"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.configurationprocessor.json.JSONObject"/>
+    <fullyQualifiedTypeName name="org.json.JSONObject"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.util.IllegalFormatException"/>
+    <fullyQualifiedTypeName name="br.com.comigo.common.infrastructure.exception.IllegalRequestFormatException"/>
+    <fullyQualifiedTypeName name="java.lang.annotation.IncompleteAnnotationException"/>
+    <fullyQualifiedTypeName name="br.com.comigo.common.infrastructure.exception.IncompleteRegisterException"/>
+    <fullyQualifiedTypeName name="java.util.stream.StreamSupport"/>
+    <fullyQualifiedTypeName name="com.yc.core.cqrs.error.AggregateStateException"/>
+    <fullyQualifiedTypeName name="com.yc.core.cqrs.domain.event.Event"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.JsonNode"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.node.ObjectNode"/>
+</qualifiedTypeNameHistroy>

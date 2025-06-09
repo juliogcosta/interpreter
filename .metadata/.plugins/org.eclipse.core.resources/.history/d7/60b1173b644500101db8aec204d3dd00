@@ -1,0 +1,12 @@
+package br.com.comigo.common.infrastructure.exception;
+
+public class IllegalRequestFormatException extends Exception {
+
+	public IllegalRequestFormatException(Exception e) {
+		super(e);
+	}
+
+	public IllegalRequestFormatException(String message, Exception e) {
+		super(message, e);
+	}
+}

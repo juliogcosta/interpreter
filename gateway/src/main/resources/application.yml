@@ -1,0 +1,229 @@
+app:
+  eureka:
+    name: eureka
+    address: localhost
+    port: 8010
+  gateway:
+    name: gateway
+    address: localhost
+    port: 8020
+  id-autenticador:
+    name: id-autenticador
+    address: localhost
+    port: 8030
+  id:
+    name: id
+    address: localhost
+    port: 8040
+  assistencia:
+    name: assistencia
+    address: localhost
+    port: 8050
+  assistencia-atendimento:
+    name: assistencia-atendimento
+    address: localhost
+    port: 8051
+  assistencia-catalogo:
+    address: localhost
+    port: 8052
+    name: assistencia-catalogo
+
+exception:
+  handle:
+    stackTrace: print
+
+server:
+  port: ${app.gateway.port}
+  error:
+    include-stacktrace: never
+spring:
+  application:
+    name: ${app.gateway.name}
+  sleuth:
+    trace-id128: true
+    sampler:
+      probability: 1.0
+    propagation:
+      type: w3c, b3
+    supports-join: false
+  web:
+    resources:
+      static-locations[0]: file:src/main/resources/static/
+      static-locations[1]: classpath:/static/
+  cloud:
+    gateway:
+      filter:
+        request-rate-limiter:
+          deny-empty-key: false
+      routes:
+        - id: deny-service
+          uri: no://op
+          predicates:
+            - Path=/unsec/**
+          filters:
+            - SetStatus=404
+        - id: ${app.id-autenticador.name}-service
+          uri: lb://${app.id-autenticador.name}
+          predicates:
+            - Path=/api/${app.id-autenticador.name}/**
+            - Method=POST,GET,PUT,DELETE,OPTIONS
+          filters:
+            - AddRequestHeader=X-Client,web
+            - RewritePath=/api/${app.id-autenticador.name}/(?<segment>.*),/$\{segment}
+            - name: Retry
+              args:
+                retries: 3
+                methods: POST,GET,PUT,DELETE,OPTIONS
+                backoff:
+                  firstBackoff: 50ms
+                  maxBackoff: 500ms
+        - id: ${app.id.name}-service
+          uri: lb://${app.id.name}
+          predicates:
+            - Path=/api/${app.id.name}/**
+            - Method=POST,GET,PUT,DELETE,OPTIONS
+          filters:
+            - AddRequestHeader=X-Client,web
+            - RewritePath=/api/${app.id.name}/(?<segment>.*),/$\{segment}
+            - name: Retry
+              args:
+                retries: 3
+                methods: POST,GET,PUT,DELETE,OPTIONS
+                backoff:
+                  firstBackoff: 50ms
+                  maxBackoff: 500ms
+        - id: ${app.assistencia.name}-service
+          uri: lb://${app.assistencia.name}
+          predicates:
+            - Path=/api/${app.assistencia.name}/**
+            - Method=POST,GET,PUT,DELETE,OPTIONS
+          filters:
+            - AddRequestHeader=X-Client,web
+            - RewritePath=/api/${app.assistencia.name}/(?<segment>.*),/$\{segment}
+            - name: Retry
+              args:
+                retries: 3
+                methods: POST,GET,PUT,DELETE,OPTIONS
+                backoff:
+                  firstBackoff: 50ms
+                  maxBackoff: 500ms
+        - id: ${app.assistencia-atendimento.name}-service
+          uri: lb://${app.assistencia-atendimento.name}
+          predicates:
+            - Path=/api/${app.assistencia-atendimento.name}/**
+            - Method=POST,GET,PUT,DELETE,OPTIONS
+          filters:
+            - AddRequestHeader=X-Client,web
+            - RewritePath=/api/${app.assistencia-atendimento.name}/(?<segment>.*),/$\{segment}
+            - name: Retry
+              args:
+                retries: 3
+                methods: POST,GET,PUT,DELETE,OPTIONS
+                backoff:
+                  firstBackoff: 50ms
+                  maxBackoff: 500ms
+        - id: ${app.assistencia-catalogo.name}-service
+          uri: lb://${app.assistencia-catalogo.name}
+          predicates:
+            - Path=/api/${app.assistencia-catalogo.name}/**
+            - Method=POST,GET,PUT,DELETE,OPTIONS
+          filters:
+            - AddRequestHeader=X-Client,web
+            - RewritePath=/api/${app.assistencia-catalogo.name}/(?<segment>.*),/$\{segment}
+            - name: Retry
+              args:
+                retries: 3
+                methods: POST,GET,PUT,DELETE,OPTIONS
+                backoff:
+                  firstBackoff: 50ms
+                  maxBackoff: 500ms
+
+endpoints:
+  shutdown:
+    enabled: false
+management:
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      access: read-only
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 60000
+  circuitbreaker:
+    enabled: true
+    alphanumeric-ids:
+      enabled: true
+logging:
+  level:
+    '[org.springframework]': ERROR
+    '[br.com.comigo.gateway.service]': DEBUG
+  pattern:
+    console: "%clr(%d{HH:mm:ss}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(:){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n"
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    service-url.defaultZone: http://${app.eureka.address}:${app.eureka.port}/eureka
+    healthcheck.enabled: true
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        register-health-indicator: true
+        wait-duration-in-open-state: 60s
+        permitted-number-of-calls-in-half-open-state: 10
+        sliding-window-type: count-based
+        sliding-window-size: 60
+        minimum-number-of-calls: 100
+        slow-call-duration-threshold: 60s
+        slow-call-rate-threshold: 100
+        failure-rate-threshold: 50
+        max-wait-duration-in-half-open-state: 5s
+        writable-stack-trace-enabled: true
+        automatic-transition-from-open-to-half-open-enabled: true
+yc:
+  api:
+    management:
+      log:
+        trace:
+          enable: false
+    gateway:
+      cache:
+        request-limit:
+          ttl: 86400
+          ttl-increment: 7200
+        contract-query:
+          offset: 30
+  security:
+    keys:
+      accessToken:
+        secret: AR35cal3wrr8ZW80F7Rybj8QjdejPpl6BI7cYZBEN8UwcBWovpT25z8YRjkyQ1dwqj1uCT9SjI8KUWyoqzz8lQ
+        expirationMinutes: 259200
+    public-paths:
+      - "/api/id-autenticador/sign-in"
+      - "/api/assistencia-catalogo/publico/**"
+    rules:
+      path-roles:
+        - path: "/api/id/"
+          roles:
+            - "GERENTE"
+        - path: "/api/assistencia/"
+          roles:
+            - "GERENTE"
+            - "CLIENTE"
+        - path: "/api/assistencia-atendimento/"
+          roles: 
+            - "GERENTE"
+            - "ATENDENTE"
+        - path: "/api/assistencia-catalogo/"
+          roles: 
+            - "GERENTE"
+            - "ATENDENTE"
