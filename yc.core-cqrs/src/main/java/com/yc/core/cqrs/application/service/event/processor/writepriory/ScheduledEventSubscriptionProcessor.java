@@ -1,0 +1,58 @@
+package com.yc.core.cqrs.application.service.event.processor.writepriory;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+
+import com.yc.core.cqrs.application.service.event.AsyncEventHandler;
+import com.yc.core.cqrs.application.service.event.processor.EventSubscriptionProcessor;
+
+import java.util.List;
+
+/**
+ * Essa classe implementa um Bean, a ser gerenciado pelo spring e que será
+ * invocado por meio de processNewEvents(). A periodicidade da invocação do
+ * método é dado por propriedade de ambiente: event-sourcing.subscriptions
+ * 
+ */
+
+@Component
+@ConditionalOnProperty(name = "event-sourcing.subscriptions", havingValue = "polling")
+@RequiredArgsConstructor
+@Slf4j
+public class ScheduledEventSubscriptionProcessor {
+
+    /**
+     * batchSize: informa o tamanho do batch de eventos a serem processados. Isso
+     * evita que se torne um problema de eficiência grave no sistema se um handler
+     * novo for adicionado (caso seja obrigado) a processar todos os eventos de um
+     * agregado, sendo muitos.
+     * 
+     */
+    @Value("${event-sourcing.polling-subscriptions.batch-size}")
+    private int batchSize;
+
+    /*@Value("${db.schema}")
+    private String schemaName;*/
+
+    private final List<AsyncEventHandler> eventHandlers;
+    private final EventSubscriptionProcessor eventSubscriptionProcessor;
+
+    @Scheduled(fixedDelayString = "${event-sourcing.polling-subscriptions.polling-interval}", initialDelayString = "${event-sourcing.polling-subscriptions.polling-initial-delay}")
+    public void processNewEvents() {
+        eventHandlers.forEach(this::processNewEvents);
+    }
+
+    private void processNewEvents(AsyncEventHandler eventHandler) {
+        try {
+            eventSubscriptionProcessor.processNewEvents(schemaName, eventHandler, this.batchSize);
+        } catch (Exception e) {
+            log.warn("Failed to handle new events for subscription %s".formatted(eventHandler.getSubscriptionName()),
+                    e);
+        }
+    }
+}
