@@ -2,8 +2,8 @@ package br.com.comigo.assistencia.adapter.inbound.aggregate.controller;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.yc.core.cqrs.error.AggregateStateException;
 
-import br.com.comigo.core.error.AggregateStateException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

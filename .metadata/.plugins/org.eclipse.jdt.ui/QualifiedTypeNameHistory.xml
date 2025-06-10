@@ -25,10 +25,16 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="com.yc.core.cqrs.adapter.inbound.model.ModelService"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.JsonNode"/>
-    <fullyQualifiedTypeName name="com.yc.core.cqrs.adapter.outbound.model.ModelService"/>
     <fullyQualifiedTypeName name="lombok.RequiredArgsConstructor"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.node.ObjectNode"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="lombok.extern.slf4j.Slf4j"/>
+    <fullyQualifiedTypeName name="com.yc.core.cqrs.application.service.event.SyncEventHandler"/>
+    <fullyQualifiedTypeName name="com.yc.core.cqrs.adapter.outbound.model.ModelService"/>
+    <fullyQualifiedTypeName name="com.yc.core.cqrs.application.service.event.processor.EventSubscriptionProcessor"/>
+    <fullyQualifiedTypeName name="com.yc.core.cqrs.application.service.event.AsyncEventHandler"/>
+    <fullyQualifiedTypeName name="com.yc.core.cqrs.domain.store.AggregateStore"/>
 </qualifiedTypeNameHistroy>

@@ -16,7 +16,7 @@ import br.com.comigo.common.model.records.Telefone;
 @Mapper(componentModel = "spring")
 public interface PrestadorMapper {
 
-	@Mappings({ 
+	@Mappings({
 			@Mapping(source = "prestadorDTO.id", target = "id"),
 			@Mapping(source = "prestadorDTO.nome", target = "nome"),
 			@Mapping(source = "prestadorDTO.cnpj", target = "cnpj"),
@@ -29,8 +29,8 @@ public interface PrestadorMapper {
 			@Mapping(target = "servicoDePrestadors", ignore = true) })
 	Prestador toDomain(PrestadorDTO prestadorDTO);
 
-	@Mappings({ 
-			@Mapping(source = "prestador.id", target = "id"), 
+	@Mappings({
+			@Mapping(source = "prestador.id", target = "id"),
 			@Mapping(source = "prestador.nome", target = "nome"),
 			@Mapping(source = "prestador.cnpj", target = "cnpj"),
 			@Mapping(source = "prestador.telefone", target = "telefone"),
@@ -69,7 +69,8 @@ public interface PrestadorMapper {
 				jpaPrestador.getEndereco().getBairro(), jpaPrestador.getEndereco().getCidade(),
 				jpaPrestador.getEndereco().getEstado(), jpaPrestador.getEndereco().getCep());
 
-		Prestador prestador = new Prestador(jpaPrestador.getId(), jpaPrestador.getNome(), jpaPrestador.getStatus(), cnpj, telefone, whatsapp,
+		Prestador prestador = new Prestador(jpaPrestador.getId(), jpaPrestador.getNome(), jpaPrestador.getStatus(), cnpj,
+				telefone, whatsapp,
 				email, endereco, jpaPrestador.getTemCertificacaoIso());
 
 		return prestador;

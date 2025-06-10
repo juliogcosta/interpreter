@@ -55,14 +55,14 @@
         </dependencies>
     </dependencyManagement>
     <modules>
-        <module>core-common</module>
-        <module>core-cqrs</module>
         <module>gateway</module>
         <module>eureka</module>
-        <module>usuario</module>
-        <module>usuario.autenticador</module>
+        <module>id</module>
+        <module>id.autenticador</module>
+        <module>core-common</module>
         <module>assistencia</module>
-        <module>assistencia.atendimento</module>
+        <module>yc.core-cqrs</module>
         <module>assistencia.catalogo</module>
+        <module>assistencia.atendimento</module>
     </modules>
 </project>

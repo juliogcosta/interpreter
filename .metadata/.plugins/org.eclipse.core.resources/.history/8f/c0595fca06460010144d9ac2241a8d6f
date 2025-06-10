@@ -1,5 +1,0 @@
-package com.yc.core.cqrs.adapter.inbound.model;
-
-public interface ModelService {
-
-}

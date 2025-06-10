@@ -1,17 +1,17 @@
 package com.yc.core.cqrs.application.service.event.processor.writepriory;
 
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import com.yc.core.cqrs.adapter.outbound.model.ModelService;
 import com.yc.core.cqrs.application.service.event.AsyncEventHandler;
 import com.yc.core.cqrs.application.service.event.processor.EventSubscriptionProcessor;
 
-import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Essa classe implementa um Bean, a ser gerenciado pelo spring e que será
@@ -22,7 +22,6 @@ import java.util.List;
 
 @Component
 @ConditionalOnProperty(name = "event-sourcing.subscriptions", havingValue = "polling")
-@RequiredArgsConstructor
 @Slf4j
 public class ScheduledEventSubscriptionProcessor {
 
@@ -39,17 +38,25 @@ public class ScheduledEventSubscriptionProcessor {
     /*@Value("${db.schema}")
     private String schemaName;*/
 
+    private final ModelService modelService;
     private final List<AsyncEventHandler> eventHandlers;
     private final EventSubscriptionProcessor eventSubscriptionProcessor;
 
+    public ScheduledEventSubscriptionProcessor(ModelService modelService, List<AsyncEventHandler> eventHandlers, EventSubscriptionProcessor eventSubscriptionProcessor) {
+		this.modelService = modelService;
+		this.eventHandlers = eventHandlers;
+		this.eventSubscriptionProcessor = eventSubscriptionProcessor;
+	}
+    
+    
     @Scheduled(fixedDelayString = "${event-sourcing.polling-subscriptions.polling-interval}", initialDelayString = "${event-sourcing.polling-subscriptions.polling-initial-delay}")
     public void processNewEvents() {
-        eventHandlers.forEach(this::processNewEvents);
+    	this.eventHandlers.forEach(this::processNewEvents);
     }
 
     private void processNewEvents(AsyncEventHandler eventHandler) {
         try {
-            eventSubscriptionProcessor.processNewEvents(schemaName, eventHandler, this.batchSize);
+            this.eventSubscriptionProcessor.processNewEvents(this.modelService.getModel("tenant").asText("schemaName"), eventHandler, this.batchSize);
         } catch (Exception e) {
             log.warn("Failed to handle new events for subscription %s".formatted(eventHandler.getSubscriptionName()),
                     e);

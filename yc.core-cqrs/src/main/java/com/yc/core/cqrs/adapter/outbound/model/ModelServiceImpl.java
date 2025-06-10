@@ -178,6 +178,7 @@ public class ModelServiceImpl implements ModelService {
 		
 		ObjectNode solicitarAtendimento = this.objectMapper.createObjectNode();
 		solicitarAtendimento.set("attribute", attributes);
+		solicitarAtendimento.put("aggregateType", "Atendimento");
 		
 		ObjectNode commandNode = this.objectMapper.createObjectNode();
 		commandNode.set("SolicitarAtendimento", solicitarAtendimento);

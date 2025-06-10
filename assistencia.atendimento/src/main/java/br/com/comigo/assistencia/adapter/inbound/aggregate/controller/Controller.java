@@ -34,13 +34,13 @@ public class Controller {
 			throws IOException, ControlledException, IncompleteRegisterException, IllegalRequestFormatException {
 		if (!request.has("command")) {
 			throw new IllegalRequestFormatException("É preciso informar o commando.");
-		} else if (!request.has("aggregate")) {
+		} else if (!request.has("data")) {
 			throw new IllegalRequestFormatException("É preciso informar o agregado.");
 		}
 
 		JsonNode model = this.objectMapper.readTree("");
 		JsonNode commandModel = model.get("command").get(request.asText("command"));
-        var aggregate = this.commandProcessor.process(new Command(request.get("aggregate"), commandModel));
+        var aggregate = this.commandProcessor.process(new Command(request.get("data"), commandModel));
         return ResponseEntity.ok()
                 .body(this.objectMapper.createObjectNode().put("id", aggregate.getAggregateId().toString()));
 	}

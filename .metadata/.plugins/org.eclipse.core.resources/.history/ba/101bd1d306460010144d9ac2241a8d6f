@@ -1,8 +1,0 @@
-package com.yc.core.cqrs.adapter.inbound.model;
-
-import org.springframework.stereotype.Service;
-
-@Service
-public class ModelServiceImpl {
-
-}

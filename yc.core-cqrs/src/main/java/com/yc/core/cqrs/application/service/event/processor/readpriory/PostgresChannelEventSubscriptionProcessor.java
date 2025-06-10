@@ -19,6 +19,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.scheduling.concurrent.CustomizableThreadFactory;
 import org.springframework.stereotype.Component;
 
+import com.yc.core.cqrs.adapter.outbound.model.ModelService;
 import com.yc.core.cqrs.application.service.event.AsyncEventHandler;
 import com.yc.core.cqrs.application.service.event.processor.EventSubscriptionProcessor;
 
@@ -49,7 +50,8 @@ public class PostgresChannelEventSubscriptionProcessor {
     private final List<AsyncEventHandler> eventHandlers;
     
     private final EventSubscriptionProcessor eventSubscriptionProcessor;
-    
+
+    private final ModelService modelService;
     private final DataSourceProperties dataSourceProperties;
     private final ExecutorService executor = newExecutor();
     private CountDownLatch latch = new CountDownLatch(0);
@@ -120,7 +122,7 @@ public class PostgresChannelEventSubscriptionProcessor {
                         }
 
                         this.eventHandlers.forEach(handler -> PostgresChannelEventSubscriptionProcessor.this
-                                .processNewEvents(this.schemaName, handler));
+                                .processNewEvents(this.modelService.getModel("tenant").asText("schemaName"), handler));
 
                         try {
                         	//log.info(" > 1");
@@ -143,7 +145,7 @@ public class PostgresChannelEventSubscriptionProcessor {
                                         this.eventHandlers.stream().filter(
                                                 eventHandler -> eventHandler.getAggregateType().equals(parameter))
                                                 .forEach(handler -> PostgresChannelEventSubscriptionProcessor.this
-                                                        .processNewEvents(this.schemaName, handler));
+                                                        .processNewEvents(this.modelService.getModel("tenant").asText("schemaName"), handler));
                                     }
                                 }
                             }

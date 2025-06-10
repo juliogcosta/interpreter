@@ -1,31 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>br.com.comigo</groupId>
 		<artifactId>modulos</artifactId>
 		<version>0.0.1</version>
 	</parent>
-    <!-- groupId>br.com.comigo</groupId -->
+	<!-- groupId>br.com.comigo</groupId -->
 	<artifactId>assistencia.atendimento</artifactId>
-    <!-- version>0.0.1</version -->
+	<!-- version>0.0.1</version -->
 	<name>assistencia.atendimento</name>
 	<properties>
 	</properties>
 	<dependencies>
-		<!-- Dependência do módulo core -->
-		<dependency>
-			<groupId>br.com.comigo</groupId>
-			<artifactId>core-cqrs</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-
 		<!-- Dependências do Spring Boot -->
 		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -35,18 +27,18 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-circuitbreaker-reactor-resilience4j</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-circuitbreaker-reactor-resilience4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -76,7 +68,7 @@
 			<artifactId>json</artifactId>
 			<version>20250107</version>
 		</dependency>
-		
+
 		<!-- Flyway para migrações de banco de dados -->
 		<dependency>
 			<groupId>org.flywaydb</groupId>
@@ -136,6 +128,10 @@
 				<exclusion>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-starter-security</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>br.com.comigo</groupId>
+					<artifactId>core-common</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>

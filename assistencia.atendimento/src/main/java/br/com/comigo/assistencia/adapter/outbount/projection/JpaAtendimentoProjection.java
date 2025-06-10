@@ -2,9 +2,9 @@ package br.com.comigo.assistencia.adapter.outbount.projection;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import br.com.comigo.assistencia.adapter.inbound.aggregate.dto.AtendimentoResponse.Status;
 import br.com.comigo.assistencia.adapter.outbount.util.JpaEndereco;
 import br.com.comigo.assistencia.adapter.outbount.util.JpaTelefone;
-import br.com.comigo.assistencia.domain.aggregate.entity.Atendimento.Status;
 import br.com.comigo.common.model.records.TipoDeDocFiscal;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -52,7 +52,7 @@ public class JpaAtendimentoProjection implements Persistable<UUID>, Serializable
 	private TipoDeDocFiscal clienteTipoDeDocFiscal;
 
 	@Column(nullable = false)
-    private String clienteDocFiscal;
+	private String clienteDocFiscal;
 
 	@Column(nullable = false)
 	private String clienteNome;
@@ -95,7 +95,7 @@ public class JpaAtendimentoProjection implements Persistable<UUID>, Serializable
 
 	@Column(nullable = false)
 	@Embedded
-	@AttributeOverrides({ 
+	@AttributeOverrides({
 			@AttributeOverride(name = "logradouro", column = @Column(name = "base_endereco_logradouro")),
 			@AttributeOverride(name = "numero", column = @Column(name = "base_endereco_numero")),
 			@AttributeOverride(name = "complemento", column = @Column(name = "base_endereco_complemento")),

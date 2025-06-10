@@ -5,8 +5,10 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.yc.core.cqrs.adapter.outbound.model.ModelService;
 import com.yc.core.cqrs.application.service.command.CommandHandlerImpl;
+import com.yc.core.cqrs.application.service.event.AsyncEventHandler;
 import com.yc.core.cqrs.application.service.event.SyncEventHandler;
 import com.yc.core.cqrs.domain.Aggregate;
 import com.yc.core.cqrs.domain.command.Command;
@@ -34,43 +36,44 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class CommandProcessor {
 
-	private final ModelService modelService;
+    private final ModelService modelService;
     private final AggregateStore aggregateStore;
     private final CommandHandlerImpl defaultCommandHandler;
-    private final List<SyncEventHandler> aggregateChangesHandlers;
+    private final SyncEventHandler syncEventHandler;
 
-    /*@Value("${db.schema}")
-    private String schemaName;*/
-
+    /**
+     * Processa um comando, recuperando o agregado associado, aplicando as regras de
+     * negócio e persistindo os eventos resultantes.
+     * 
+     * @param command O comando a ser processado.
+     * @return O agregado atualizado após o processamento do comando.
+     */
     public Aggregate process(@NonNull Command command) {
         log.info("\n > Starting command processor [Command: {}]", command);
 
         /**
-         * A invocação de "readAggregate" implica a recuperação do agregado a partid do 
+         * A invocação de "readAggregate" implica a recuperação do agregado a partid do
          * banco de dados e seus eventos associados. isso feito, o estado atual do
          * agregado será reconstituído a partir da aplicação sucessiva de cada evento
          * (atualizações) ocorridas ao longo do ciclo de vida do agregados.
          * 
          */
         String schemaName = this.modelService.getModel("tenant").asText("schemaName");
-        Aggregate aggregate = this.aggregateStore.readAggregate(schemaName, command.getAggregateType(), command.getAggregateId());
+        Aggregate aggregate = this.aggregateStore.readAggregate(schemaName, command.getAggregateType(),
+                command.getAggregateId());
         log.info("\n > Aggregate read: {}", aggregate);
-        
+
         if (command.getCommandModel().has("handler")) {
-        	/**
-        	 * Oportunidade para a invocação de funções que executam regras de negócio, etc.
-        	 * 
-        	 */
-        } else CommandProcessor.this.defaultCommandHandler.handle(aggregate, command);
-        
+            /**
+             * Oportunidade para a invocação de funções que executam regras de negócio, etc.
+             * 
+             */
+        } else
+            CommandProcessor.this.defaultCommandHandler.handle(aggregate, command);
+
         List<EventWithId> events = this.aggregateStore.saveAggregate(schemaName, aggregate);
-        this.aggregateChangesHandlers.stream()
-                .filter(handler -> handler.getAggregateType().equals(command.getAggregateType()))
-                .forEach(handler -> {
-                	log.info("\n> Trying to handle events {} for {}\n", events, aggregate);
-                	handler.handleEvents(events, aggregate);
-                });
-        
+        this.syncEventHandler.handleEvents(events, aggregate);
+
         return aggregate;
     }
 }

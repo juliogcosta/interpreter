@@ -20,31 +20,27 @@ public class Command {
     protected final JsonNode commandData;
     protected final JsonNode commandModel;
 
-    public Command(JsonNode aggregate, JsonNode commandModel) throws IncompleteRegisterException {
-        this.validateDataAgainstModel(aggregate.get("data"), commandModel);
+    public Command(JsonNode data, JsonNode commandModel) throws IncompleteRegisterException {
+        this.validateDataAgainstModel(data, commandModel);
 
-        ObjectNode aggregateCopy = aggregate.deepCopy();
-
-        aggregateCopy.fieldNames().forEachRemaining(field -> {
+        ObjectNode dataCopy = data.deepCopy();
+        dataCopy.fieldNames().forEachRemaining(field -> {
             if (!"id".equals(field) && "type".equals(field) && !"data".equals(field)) {
-                aggregateCopy.remove(field);
+                dataCopy.remove(field);
             }
         });
 
-        if (aggregateCopy.has("data") && aggregateCopy.get("data").isObject()) {
-            ObjectNode dataNode = (ObjectNode) aggregateCopy.get("data");
-            Iterator<String> fieldNames = dataNode.fieldNames();
-            while (fieldNames.hasNext()) {
-                String fieldName = fieldNames.next();
-                if (!commandModel.has(fieldName) && !"type".equals(fieldName)) {
-                    fieldNames.remove();
-                }
-            }
+        Iterator<String> fieldNames = dataCopy.fieldNames();
+        while (fieldNames.hasNext()) {
+            String fieldName = fieldNames.next();
+            if (commandModel.get("attribute").has(fieldName)) {
+            	
+            } else dataCopy.remove(fieldName); 
         }
 
-        this.aggregateId = UUID.fromString(aggregateCopy.asText("id"));
-        this.aggregateType = aggregateCopy.asText("type");
-        this.commandData = aggregateCopy.get("data");
+        this.aggregateId = UUID.fromString(dataCopy.asText("id"));
+        this.aggregateType = commandModel.asText("aggregateType");
+        this.commandData = dataCopy;
         this.commandModel = commandModel;
 	}
     

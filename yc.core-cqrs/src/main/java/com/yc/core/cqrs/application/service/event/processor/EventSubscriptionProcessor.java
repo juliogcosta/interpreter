@@ -68,8 +68,8 @@ public class EventSubscriptionProcessor {
         final String subscriptionName = eventHandler.getSubscriptionName();
         log.debug("Handling new events for subscription {}", subscriptionName);
 
-        subscriptionRepository.createSubscriptionIfAbsent(schemaName, subscriptionName);
-        subscriptionRepository.readCheckpointAndLockSubscription(schemaName, subscriptionName)
+        this.subscriptionRepository.createSubscriptionIfAbsent(schemaName, subscriptionName);
+        this.subscriptionRepository.readCheckpointAndLockSubscription(schemaName, subscriptionName)
                 .ifPresentOrElse(checkpoint -> {
                     log.debug("Acquired lock on subscription {}, checkpoint = {}", subscriptionName, checkpoint);
                     List<EventWithId> events = EventSubscriptionProcessor.this.eventRepository.readEventsAfterCheckpoint(schemaName,
