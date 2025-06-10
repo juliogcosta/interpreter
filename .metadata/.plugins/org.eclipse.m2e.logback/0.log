@@ -868,3 +868,5 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognise
 2025-06-10 13:08:37,586 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
 2025-06-10 13:08:37,587 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/main/resources
 2025-06-10 13:08:37,589 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-10 13:16:10,195 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@2360273c{STOPPING}[12.0.9,sto=0]
+2025-06-10 13:16:10,197 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@25810113{HTTP/1.1, (http/1.1)}{127.0.0.1:0}

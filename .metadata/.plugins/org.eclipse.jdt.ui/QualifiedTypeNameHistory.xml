@@ -7,7 +7,6 @@
     <fullyQualifiedTypeName name="org.springframework.boot.configurationprocessor.json.JSONObject"/>
     <fullyQualifiedTypeName name="org.json.JSONObject"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
-    <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.util.IllegalFormatException"/>
     <fullyQualifiedTypeName name="br.com.comigo.common.infrastructure.exception.IllegalRequestFormatException"/>
@@ -15,9 +14,21 @@
     <fullyQualifiedTypeName name="br.com.comigo.common.infrastructure.exception.IncompleteRegisterException"/>
     <fullyQualifiedTypeName name="java.util.stream.StreamSupport"/>
     <fullyQualifiedTypeName name="com.yc.core.cqrs.error.AggregateStateException"/>
-    <fullyQualifiedTypeName name="com.yc.core.cqrs.domain.event.Event"/>
-    <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.JsonNode"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.sql.Types"/>
+    <fullyQualifiedTypeName name="org.springframework.lang.NonNull"/>
+    <fullyQualifiedTypeName name="java.util.UUID"/>
+    <fullyQualifiedTypeName name="org.springframework.lang.Nullable"/>
+    <fullyQualifiedTypeName name="com.yc.core.cqrs.domain.event.EventSubscriptionCheckpoint"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnore"/>
+    <fullyQualifiedTypeName name="com.yc.core.cqrs.domain.event.Event"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="com.yc.core.cqrs.adapter.inbound.model.ModelService"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.JsonNode"/>
+    <fullyQualifiedTypeName name="com.yc.core.cqrs.adapter.outbound.model.ModelService"/>
+    <fullyQualifiedTypeName name="lombok.RequiredArgsConstructor"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.node.ObjectNode"/>
 </qualifiedTypeNameHistroy>
