@@ -1,0 +1,62 @@
+package br.com.comigo.assistencia.adapter.inbound.aggregate.controller;
+
+import java.io.IOException;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.yc.core.cqrs.application.service.command.CommandProcessor;
+import com.yc.core.cqrs.domain.command.Command;
+
+import br.com.comigo.common.infrastructure.exception.ControlledException;
+import br.com.comigo.common.infrastructure.exception.IllegalRequestFormatException;
+import br.com.comigo.common.infrastructure.exception.IncompleteRegisterException;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@RestController
+@RequestMapping
+@RequiredArgsConstructor
+public class Controller {
+	
+	private final ObjectMapper objectMapper;
+	private final CommandProcessor commandProcessor;
+	
+	@PostMapping
+	public ResponseEntity<JsonNode> createCommand(@RequestBody JsonNode request)
+			throws IOException, ControlledException, IncompleteRegisterException, IllegalRequestFormatException {
+		if (!request.has("command")) {
+			throw new IllegalRequestFormatException("É preciso informar o commando.");
+		} else if (!request.has("aggregate")) {
+			throw new IllegalRequestFormatException("É preciso informar o agregado.");
+		}
+
+		JsonNode model = this.objectMapper.readTree("");
+		JsonNode commandModel = model.get("command").get(request.asText("command"));
+        var aggregate = this.commandProcessor.process(new Command(request.get("aggregate"), commandModel));
+        return ResponseEntity.ok()
+                .body(this.objectMapper.createObjectNode().put("id", aggregate.getAggregateId().toString()));
+	}
+	
+	@PutMapping
+	public ResponseEntity<JsonNode> updateCommand(@RequestBody JsonNode request)
+			throws IOException, ControlledException, IncompleteRegisterException, IllegalRequestFormatException {
+		JsonNode model = this.objectMapper.readTree("");
+		if (!request.has("command")) {
+			throw new IllegalRequestFormatException("É preciso informar o commando.");
+		} else if (!request.has("aggregate")) {
+			throw new IllegalRequestFormatException("É preciso informar o agregado.");
+		}
+		
+		JsonNode commandModel = model.get("command").get(request.asText("command"));
+        this.commandProcessor.process(new Command(request.get("aggregate"), commandModel));
+        return ResponseEntity.ok().build();
+	}
+}

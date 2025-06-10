@@ -26,65 +26,65 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class AggregateRepository {
 
-        private final NamedParameterJdbcTemplate jdbcTemplate;
-        private final ObjectMapper objectMapper;
-        private final AggregateTypeMapper aggregateTypeMapper;
+    private final NamedParameterJdbcTemplate jdbcTemplate;
+    private final ObjectMapper objectMapper;
+    private final AggregateTypeMapper aggregateTypeMapper;
 
-        public void createAggregateIfAbsent(String schemaName, @NonNull String aggregateType,
-                        @NonNull UUID aggregateId) {
-                String command = String.format("""
-                                INSERT INTO %s.ES_AGGREGATE (ID, VERSION, AGGREGATE_TYPE)
-                                VALUES (:aggregateId, 0, :aggregateType)
-                                ON CONFLICT DO NOTHING
-                                """, schemaName);
-                jdbcTemplate.update(command, Map.of("aggregateId", aggregateId, "aggregateType", aggregateType));
-        }
+    public void createAggregateIfAbsent(String schemaName, @NonNull String aggregateType,
+            @NonNull UUID aggregateId) {
+        String command = String.format("""
+                        INSERT INTO %s.ES_AGGREGATE (ID, VERSION, AGGREGATE_TYPE)
+                        VALUES (:aggregateId, 0, :aggregateType)
+                        ON CONFLICT DO NOTHING
+                        """, schemaName);
+        this.jdbcTemplate.update(command, Map.of("aggregateId", aggregateId, "aggregateType", aggregateType));
+    }
 
-        public boolean checkAndUpdateAggregateVersion(String schemaName, @NonNull UUID aggregateId, int expectedVersion,
-                        int newVersion) {
-                int updatedRows = jdbcTemplate.update(String.format("""
-                                UPDATE %s.ES_AGGREGATE
-                                   SET VERSION = :newVersion
-                                 WHERE ID = :aggregateId
-                                   AND VERSION = :expectedVersion
-                                """, schemaName), Map.of("newVersion", newVersion, "aggregateId", aggregateId,
-                                "expectedVersion", expectedVersion));
-                return updatedRows > 0;
-        }
+    public boolean checkAndUpdateAggregateVersion(String schemaName, @NonNull UUID aggregateId, int expectedVersion,
+            int newVersion) {
+        int updatedRows = this.jdbcTemplate.update(String.format("""
+                        UPDATE %s.ES_AGGREGATE
+                           SET VERSION = :newVersion
+                         WHERE ID = :aggregateId
+                           AND VERSION = :expectedVersion
+                        """, schemaName), Map.of("newVersion", newVersion, "aggregateId", aggregateId,
+                        "expectedVersion", expectedVersion));
+        return updatedRows > 0;
+    }
 
-        @SneakyThrows
-        public void createAggregateSnapshot(String schemaName, @NonNull Aggregate aggregate) {
-                jdbcTemplate.update(String.format("""
-                                INSERT INTO %s.ES_AGGREGATE_SNAPSHOT (AGGREGATE_ID, VERSION, JSON_DATA)
-                                VALUES (:aggregateId, :version, :jsonObj::json)
-                                """, schemaName), Map.of("aggregateId", aggregate.getAggregateId(), "version",
-                                aggregate.getVersion(), "jsonObj", objectMapper.writeValueAsString(aggregate)));
-        }
+    @SneakyThrows
+    public void createAggregateSnapshot(String schemaName, @NonNull Aggregate aggregate) {
+        this.jdbcTemplate.update(String.format("""
+                        INSERT INTO %s.ES_AGGREGATE_SNAPSHOT (AGGREGATE_ID, VERSION, JSON_DATA)
+                        VALUES (:aggregateId, :version, :jsonObj::json)
+                        """, schemaName), Map.of("aggregateId", aggregate.getAggregateId(), "version",
+                        aggregate.getVersion(), "jsonObj", objectMapper.writeValueAsString(aggregate)));
+    }
 
-        public Optional<Aggregate> readAggregateSnapshot(String schemaName, @NonNull UUID aggregateId,
-                        @Nullable Integer version) {
-                MapSqlParameterSource parameters = new MapSqlParameterSource();
-                parameters.addValue("aggregateId", aggregateId);
-                parameters.addValue("version", version, Types.INTEGER);
+    public Optional<Aggregate> readAggregateSnapshot(String schemaName, @NonNull UUID aggregateId,
+            @Nullable Integer version) {
+        MapSqlParameterSource parameters = new MapSqlParameterSource();
+        parameters.addValue("aggregateId", aggregateId);
+        parameters.addValue("version", version, Types.INTEGER);
 
-                return jdbcTemplate.query(String.format("""
-                                SELECT a.AGGREGATE_TYPE,
-                                       s.JSON_DATA
-                                  FROM %s.ES_AGGREGATE_SNAPSHOT s
-                                  JOIN %s.ES_AGGREGATE a ON a.ID = s.AGGREGATE_ID
-                                 WHERE s.AGGREGATE_ID = :aggregateId
-                                   AND (:version IS NULL OR s.VERSION <= :version)
-                                 ORDER BY s.VERSION DESC
-                                 LIMIT 1
-                                """, schemaName, schemaName), parameters, this::toAggregate).stream().findFirst();
-        }
+        return jdbcTemplate.query(String.format("""
+                        SELECT a.AGGREGATE_TYPE,
+                               s.JSON_DATA
+                          FROM %s.ES_AGGREGATE_SNAPSHOT s
+                          JOIN %s.ES_AGGREGATE a ON a.ID = s.AGGREGATE_ID
+                         WHERE s.AGGREGATE_ID = :aggregateId
+                           AND (:version IS NULL OR s.VERSION <= :version)
+                         ORDER BY s.VERSION DESC
+                         LIMIT 1
+                        """, schemaName, schemaName), parameters, this::toAggregate).stream().findFirst();
+    }
 
-        @SneakyThrows
-        private Aggregate toAggregate(ResultSet rs, int rowNum) {
-                String aggregateType = rs.getString("AGGREGATE_TYPE");
-                PGobject jsonObj = (PGobject) rs.getObject("JSON_DATA");
-                String json = jsonObj.getValue();
-                Class<? extends Aggregate> aggregateClass = aggregateTypeMapper.getClassByAggregateType(aggregateType);
-                return objectMapper.readValue(json, aggregateClass);
-        }
+    @SneakyThrows
+    private Aggregate toAggregate(ResultSet rs, int rowNum) {
+        String aggregateType = rs.getString("AGGREGATE_TYPE");
+        PGobject jsonObj = (PGobject) rs.getObject("JSON_DATA");
+        String json = jsonObj.getValue();
+        Class<? extends Aggregate> aggregateClass = aggregateTypeMapper.getClassByAggregateType(aggregateType);
+        return objectMapper.readValue(json, aggregateClass);
+    }
 }

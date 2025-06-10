@@ -1,0 +1,16 @@
+package com.yc.core.cqrs.adapter.outbound.model;
+
+import org.springframework.stereotype.Service;
+
+import com.fasterxml.jackson.databind.JsonNode;
+
+@Service
+public class ModelServiceImpl implements ModelService {
+
+	@Override
+	public JsonNode getModel(String tenant) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -24,3 +24,25 @@
 1749496048988	Rename local variable 'model'
 1749496059942	Rename local variable 'data'
 1749503810479	Rename field 'dataSet'
+1749565477635	Rename type 'ModelService'
+1749566196366	Move compilation units
+1749566199503	Delete element
+1749567059129	Rename field 'data'
+1749568065908	Delete element
+1749568153814	Move compilation unit
+1749568202338	Rename package 'com.yc.core.cqrs.domain.repository'
+1749568314798	Move compilation unit
+1749568319873	Move compilation unit
+1749568323296	Delete element
+1749568328748	Delete element
+1749568340880	Rename type 'DefaultCommandHandlerImpl'
+1749568378950	Move compilation units
+1749568382548	Delete element
+1749568386216	Delete element
+1749568760239	Rename package 'com.yc.core.cqrs.application.service.event.txoutbox.readpriory'
+1749568778928	Rename package 'com.yc.core.cqrs.application.service.event.txoutbox'
+1749570470710	Rename local variable 'field'
+1749570602694	Rename local variable 'clienteIdField'
+1749571688500	Rename local variable 'fields'
+1749571706016	Rename local variable 'fields'
+1749571711871	Rename local variable 'field'

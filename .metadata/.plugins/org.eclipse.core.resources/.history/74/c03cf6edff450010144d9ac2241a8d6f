@@ -1,0 +1,130 @@
+package com.yc.core.cqrs.adapter.outbound.repository;
+
+import java.math.BigInteger;
+import java.sql.ResultSet;
+import java.sql.Types;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+
+import org.postgresql.util.PGobject;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.lang.NonNull;
+import org.springframework.lang.Nullable;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.yc.core.cqrs.domain.event.Event;
+import com.yc.core.cqrs.domain.event.EventTypeMapper;
+import com.yc.core.cqrs.domain.event.EventWithId;
+
+import lombok.RequiredArgsConstructor;
+import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Transactional(propagation = Propagation.MANDATORY)
+@Repository
+@RequiredArgsConstructor
+public class EventRepository {
+
+    private final NamedParameterJdbcTemplate jdbcTemplate;
+    private final ObjectMapper objectMapper;
+    private final EventTypeMapper eventTypeMapper;
+
+    @SneakyThrows
+    public <T extends Event> EventWithId<T> appendEvent(String schemaName, @NonNull Event event) {
+        if (!schemaName.matches("[a-zA-Z0-9_]+")) { // Permite apenas letras, números e _
+                throw new IllegalArgumentException("Nome de schema inválido: " + schemaName);
+        }
+        List<EventWithId<T>> result = this.jdbcTemplate.query(String.format("""
+                        INSERT INTO %s.ES_EVENT (TRANSACTION_ID, AGGREGATE_ID, VERSION, EVENT_TYPE, JSON_DATA)
+                        VALUES (pg_current_xact_id(), :aggregateId, :version, :eventType, :jsonObj::json)
+                        RETURNING ID, TRANSACTION_ID::text, EVENT_TYPE, JSON_DATA
+                        """, schemaName),
+                        Map.of("aggregateId", event.getAggregateId(), "version", event.getVersion(),
+                                        "eventType", event.getEventType(), "jsonObj",
+                                        this.objectMapper.writeValueAsString(event)),
+                        this::toEvent);
+        return result.get(0);
+    }
+
+    public List<EventWithId<Event>> readEvents(String schemaName, @NonNull UUID aggregateId,
+            final @Nullable Integer fromVersion, final @Nullable Integer toVersion) {
+        if (!schemaName.matches("[a-zA-Z0-9_]+")) { // Permite apenas letras, números e _
+                throw new IllegalArgumentException("Nome de schema inválido: " + schemaName);
+        }
+        MapSqlParameterSource parameters = new MapSqlParameterSource();
+        parameters.addValue("aggregateId", aggregateId);
+        parameters.addValue("fromVersion", fromVersion, Types.INTEGER);
+        parameters.addValue("toVersion", toVersion, Types.INTEGER);
+
+        return this.jdbcTemplate.query(String.format("""
+                        SELECT ID,
+                               TRANSACTION_ID::text,
+                               EVENT_TYPE,
+                               JSON_DATA
+                          FROM %s.ES_EVENT
+                         WHERE AGGREGATE_ID = :aggregateId
+                           AND (:fromVersion IS NULL OR VERSION > :fromVersion)
+                           AND (:toVersion IS NULL OR VERSION <= :toVersion)
+                         ORDER BY VERSION ASC
+                        """, schemaName), parameters, this::toEvent);
+    }
+
+    public List<EventWithId<Event>> readEventsAfterCheckpoint(String schemaName, @NonNull String aggregateType,
+            @NonNull BigInteger lastProcessedTransactionId, long lastProcessedEventId, int batchSize) {
+        if (!schemaName.matches("[a-zA-Z0-9_]+")) { // Permite apenas letras, números e _
+            throw new IllegalArgumentException("Nome de schema inválido: " + schemaName);
+        }
+        return this.jdbcTemplate.query(
+                String.format("""
+                                SELECT e.ID,
+                                       e.TRANSACTION_ID::text,
+                                       e.EVENT_TYPE,
+                                       e.JSON_DATA
+                                  FROM %s.ES_EVENT e
+                                  JOIN %s.ES_AGGREGATE a on a.ID = e.AGGREGATE_ID
+                                 WHERE a.AGGREGATE_TYPE = :aggregateType
+                                   AND (e.TRANSACTION_ID, e.ID) > (:lastProcessedTransactionId::xid8, :lastProcessedEventId)
+                                   AND e.TRANSACTION_ID < pg_snapshot_xmin(pg_current_snapshot())
+                                 ORDER BY e.TRANSACTION_ID ASC, e.ID ASC
+                                 LIMIT :batchSize
+                                """,
+                                schemaName, schemaName),
+                Map.of("aggregateType", aggregateType, "lastProcessedTransactionId",
+                                lastProcessedTransactionId.toString(), "lastProcessedEventId",
+                                lastProcessedEventId, "batchSize", batchSize),
+                this::toEvent);
+    }
+
+    /**
+     * CREATE TABLE IF NOT EXISTS ATENDIMENTO_ES.ES_EVENT (
+     * ID BIGSERIAL PRIMARY KEY,
+     * TRANSACTION_ID XID8 NOT NULL,
+     * AGGREGATE_ID UUID NOT NULL REFERENCES ATENDIMENTO_ES.ES_AGGREGATE (ID),
+     * VERSION INTEGER NOT NULL,
+     * EVENT_TYPE TEXT NOT NULL,
+     * JSON_DATA JSON NOT NULL,
+     * UNIQUE (AGGREGATE_ID, VERSION)
+     * );
+     */
+
+    @SuppressWarnings("unchecked")
+    @SneakyThrows
+    private <T extends Event> EventWithId<T> toEvent(ResultSet rs, int rowNum) {
+        long id = rs.getLong("ID");
+        String transactionId = rs.getString("TRANSACTION_ID");
+        String eventType = rs.getString("EVENT_TYPE");
+        PGobject jsonObj = (PGobject) rs.getObject("JSON_DATA");
+        String json = jsonObj.getValue();
+        log.info(" > json: {}", json);
+        Class<? extends Event> eventClass = this.eventTypeMapper.getClassByEventType(eventType);
+        Event event = this.objectMapper.readValue(json, eventClass);
+        log.info(" > event loaded: {}", event);
+        return new EventWithId<>(id, new BigInteger(transactionId), (T) event);
+    }
+}
