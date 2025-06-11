@@ -1,8 +1,5 @@
 package br.com.comigo.assistencia.application.service.event;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -15,7 +12,6 @@ import com.yc.core.cqrs.domain.event.Event;
 import com.yc.core.cqrs.domain.event.EventWithId;
 import com.yc.core.cqrs.domain.store.AggregateStore;
 
-import jakarta.annotation.Nonnull;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -41,21 +37,19 @@ public class AsyncEventHandlerImpl implements AsyncEventHandler {
     @Override
     public void handleEvent(EventWithId eventWithId) {
         Event event = eventWithId.event();
-        Aggregate aggregate = this.aggregateStore.readAggregate(this.schemaName, "ATENDIMENTO", event.getAggregateId(),
-                event.getVersion());
+        Aggregate aggregate = this.aggregateStore.readAggregate(this.schemaName, event.getAggregateType(), event.getAggregateId(), event.getVersion());
 
-        this.sendAtendimentoMessage(aggregate.getAggregateData());
+        this.sendMessage(aggregate.getAggregateData());
     }
 
     @SneakyThrows
-    private void sendAtendimentoMessage(ObjectNode data) {
+    private void sendMessage(ObjectNode data) {
         this.rabbitTemplate.convertAndSend(this.exchange, this.routingKey, new ObjectMapper().writeValueAsString(data));
         log.info("With routingKey {}, sent Order message {}, to exchange {}", this.routingKey, data, this.exchange);
     }
 
-    @Nonnull
-    @Override
-    public String getAggregateType() {
-        return AggregateType.ATENDIMENTO.toString();
-    }
+	@Override
+	public String getSubscriptionName() {
+		return null;
+	}
 }

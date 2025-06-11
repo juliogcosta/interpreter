@@ -26,7 +26,7 @@ public class Aggregate {
     protected final UUID aggregateId;
     protected ObjectNode aggregateData;
 
-    protected final JsonNode model;
+    protected final JsonNode aggregateModel;
 
     @JsonIgnore
     protected final List<Event> occurredEvents = new ArrayList<>();
@@ -36,15 +36,15 @@ public class Aggregate {
     @JsonIgnore
     protected int baseVersion;
 
-    public Aggregate(@NonNull UUID aggregateId, int version, JsonNode model) {
+    public Aggregate(@NonNull UUID aggregateId, int version, JsonNode aggregateModel) {
         this.aggregateId = aggregateId;
         this.baseVersion = this.version = version;
-        this.model = model;
+        this.aggregateModel = aggregateModel;
         this.aggregateData = new ObjectMapper().createObjectNode();
     }
 
     public String getAggregateType() {
-    	return this.model.asText("aggregateType");
+    	return this.aggregateModel.asText("aggregateType");
     }
     
     public void loadFromHistory(List<Event> events) {
@@ -97,7 +97,7 @@ public class Aggregate {
             } else throw new AggregateStateException("O status %s não pode ser ajustado", status);
         }
         
-        JsonNode eventModel = model.get("events").get(command.getCommandModel().asText("end-state"));
-        this.applyChange(new Event(this.aggregateId, eventModel, this.aggregateData, this.baseVersion));
+        JsonNode eventModel = this.aggregateModel.get("events").get(command.getCommandModel().asText("end-state"));
+        this.applyChange(new Event(this.aggregateId, this.getAggregateType(), eventModel, this.aggregateData, this.baseVersion));
     }
 }

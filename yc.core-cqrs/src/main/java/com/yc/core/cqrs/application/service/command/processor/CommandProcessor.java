@@ -5,10 +5,8 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import com.yc.core.cqrs.adapter.outbound.model.ModelService;
 import com.yc.core.cqrs.application.service.command.CommandHandlerImpl;
-import com.yc.core.cqrs.application.service.event.AsyncEventHandler;
 import com.yc.core.cqrs.application.service.event.SyncEventHandler;
 import com.yc.core.cqrs.domain.Aggregate;
 import com.yc.core.cqrs.domain.command.Command;
@@ -72,6 +70,8 @@ public class CommandProcessor {
             CommandProcessor.this.defaultCommandHandler.handle(aggregate, command);
 
         List<EventWithId> events = this.aggregateStore.saveAggregate(schemaName, aggregate);
+        log.info(" > events: {}", events);
+
         this.syncEventHandler.handleEvents(events, aggregate);
 
         return aggregate;

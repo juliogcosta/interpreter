@@ -42,13 +42,16 @@ public class EventRepository {
                 throw new IllegalArgumentException("Nome de schema inválido: " + schemaName);
         }
         List<EventWithId> result = this.jdbcTemplate.query(String.format("""
-                        INSERT INTO %s.ES_EVENT (TRANSACTION_ID, AGGREGATE_ID, VERSION, EVENT_TYPE, JSON_DATA)
-                        VALUES (pg_current_xact_id(), :aggregateId, :version, :eventType, :jsonObj::json)
+                        INSERT INTO %s.ES_EVENT (TRANSACTION_ID, AGGREGATE_ID, AGGREGATE_TYPE, VERSION, EVENT_TYPE, JSON_DATA)
+                        VALUES (pg_current_xact_id(), :aggregateId, :aggregateType, :version, :eventType, :jsonObj::json)
                         RETURNING ID, TRANSACTION_ID::text, EVENT_TYPE, JSON_DATA
                         """, schemaName),
-                        Map.of("aggregateId", event.getAggregateId(), "version", event.getVersion(),
-                                        "eventType", event.getEventType(), "jsonObj",
-                                        this.objectMapper.writeValueAsString(event.getEventData())),
+                        Map.of(
+                        		"aggregateId", event.getAggregateId(), 
+                        		"aggregateType", event.getAggregateType(), 
+                        		"version", event.getVersion(),
+                                "eventType", event.getEventType(), 
+                                "jsonObj", this.objectMapper.writeValueAsString(event.getEventData())),
                         this::toEvent);
         return result.get(0);
     }
@@ -66,6 +69,7 @@ public class EventRepository {
         return this.jdbcTemplate.query(String.format("""
                         SELECT ID,
                                TRANSACTION_ID::text,
+                               AGGREGATE_TYPE,
                                EVENT_TYPE,
                                JSON_DATA
                           FROM %s.ES_EVENT
@@ -85,6 +89,7 @@ public class EventRepository {
                 String.format("""
                         SELECT e.ID,
                                e.TRANSACTION_ID::text,
+                               e.AGGREGATE_TYPE,
                                e.EVENT_TYPE,
                                e.JSON_DATA
                           FROM %s.ES_EVENT e
@@ -107,13 +112,14 @@ public class EventRepository {
         long id = rs.getLong("ID");
         String transactionId = rs.getString("TRANSACTION_ID");
         UUID aggregateId = UUID.fromString(rs.getString("AGGREGATE_ID"));
+        String aggregateType = rs.getString("AGGREGATE_TYPE");
         Integer version = rs.getInt("VERSION");
         String eventType = rs.getString("EVENT_TYPE");
         JsonNode eventModel = this.modelService.getModel("tenant").get("event").get(eventType);
         PGobject jsonObj = (PGobject) rs.getObject("JSON_DATA");
         String json = jsonObj.getValue();
         JsonNode eventData = this.objectMapper.readTree(json);
-        Event event = new Event(aggregateId, eventModel, eventData, version);
+        Event event = new Event(aggregateId, aggregateType, eventModel, eventData, version);
         log.info("\n > Event loaded: {}", event);
         return new EventWithId(id, new BigInteger(transactionId), event);
     }

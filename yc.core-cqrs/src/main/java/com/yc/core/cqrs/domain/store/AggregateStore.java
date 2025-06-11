@@ -129,9 +129,7 @@ public class AggregateStore {
     private Aggregate readAggregateFromEvents(String schemaName, String aggregateType, UUID aggregateId,
             final @Nullable Integer aggregateVersion) {
     	log.info("\n > {}, {}, {}", schemaName, aggregateId, aggregateVersion);
-        List<EventWithId> eventWithIds = this.eventRepository.readEvents(
-                schemaName, aggregateId, null, aggregateVersion);
-        // var
+        List<EventWithId> eventWithIds = this.eventRepository.readEvents(schemaName, aggregateId, null, aggregateVersion);
         /*
          * De cada EventWithId em cada eventWithIds recupera o Event e cria a events.
          * 

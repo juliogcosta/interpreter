@@ -72,17 +72,19 @@ public class EventSubscriptionProcessor {
         this.subscriptionRepository.readCheckpointAndLockSubscription(schemaName, subscriptionName)
                 .ifPresentOrElse(checkpoint -> {
                     log.debug("Acquired lock on subscription {}, checkpoint = {}", subscriptionName, checkpoint);
-                    List<EventWithId> events = EventSubscriptionProcessor.this.eventRepository.readEventsAfterCheckpoint(schemaName,
-                            eventHandler.getAggregateType(), checkpoint.lastProcessedTransactionId(),
-                            checkpoint.lastProcessedEventId(), batchSize);
+                    List<EventWithId> events = this.eventRepository.readEventsAfterCheckpoint(
+                    		schemaName,
+                            eventHandler.getAggregateType(), 
+                            checkpoint.lastProcessedTransactionId(),
+                            checkpoint.lastProcessedEventId(), 
+                            batchSize);
                     log.debug("Fetched {} new event(s) for subscription {}", events.size(), subscriptionName);
-                    if (events.isEmpty()) {
-                        
+                    if (events.isEmpty()) { 
+                    	
                     } else {
-                    	events.forEach(eventHandler::handleEvent);
+                        events.forEach(eventHandler::handleEvent);
                         EventWithId lastEvent = events.get(events.size() - 1);
-                        EventSubscriptionProcessor.this.subscriptionRepository.updateEventSubscription(schemaName, subscriptionName,
-                                lastEvent.transactionId(), lastEvent.id());
+                        this.subscriptionRepository.updateEventSubscription(schemaName, subscriptionName, lastEvent.transactionId(), lastEvent.id());
                     }
                 }, () -> log.debug("Can't acquire lock on subscription {}", subscriptionName));
     }
