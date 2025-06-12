@@ -24,8 +24,8 @@ public class Event {
     public Event(UUID aggregateId, String aggregateType, JsonNode eventModel, JsonNode eventData, int version) {
 		this.aggregateId = aggregateId;
 		this.aggregateType = aggregateType;
-		this.eventType = eventModel.asText("eventType");
-		this.eventStatus = eventModel.asText("eventStatus");
+		this.eventType = eventModel.get("type").asText();
+		this.eventStatus = eventModel.asText("status");
 		this.eventData = eventData.deepCopy();
 		this.eventModel = eventModel;
 		this.version = version;

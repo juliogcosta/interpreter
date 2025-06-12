@@ -62,7 +62,8 @@
         <module>core-common</module>
         <module>assistencia</module>
         <module>yc.core-cqrs</module>
-        <module>assistencia.catalogo</module>
         <module>assistencia.atendimento</module>
+        <module>assistencia.catalogo</module>
+        <module>yc.persistence-c</module>
     </modules>
 </project>

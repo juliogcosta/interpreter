@@ -1,11 +1,12 @@
 package com.yc.core.cqrs.application.service.command.processor;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.yc.core.cqrs.adapter.outbound.model.ModelService;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.yc.core.cqrs.application.service.command.CommandHandlerImpl;
 import com.yc.core.cqrs.application.service.event.SyncEventHandler;
 import com.yc.core.cqrs.domain.Aggregate;
@@ -34,9 +35,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class CommandProcessor {
 
-    private final ModelService modelService;
     private final AggregateStore aggregateStore;
-    private final CommandHandlerImpl defaultCommandHandler;
+    private final CommandHandlerImpl commandHandler;
     private final SyncEventHandler syncEventHandler;
 
     /**
@@ -46,7 +46,7 @@ public class CommandProcessor {
      * @param command O comando a ser processado.
      * @return O agregado atualizado após o processamento do comando.
      */
-    public Aggregate process(@NonNull Command command) {
+    public Aggregate process(JsonNode aggregateModel, @NonNull Command command) {
         log.info("\n > Starting command processor [Command: {}]", command);
 
         /**
@@ -56,9 +56,8 @@ public class CommandProcessor {
          * (atualizações) ocorridas ao longo do ciclo de vida do agregados.
          * 
          */
-        String schemaName = this.modelService.getModel("tenant").asText("schemaName");
-        Aggregate aggregate = this.aggregateStore.readAggregate(schemaName, command.getAggregateType(),
-                command.getAggregateId());
+        UUID aggregateId = command.getAggregateId();
+        Aggregate aggregate = this.aggregateStore.readAggregate(aggregateId, aggregateModel);
         log.info("\n > Aggregate read: {}", aggregate);
 
         if (command.getCommandModel().has("handler")) {
@@ -67,9 +66,9 @@ public class CommandProcessor {
              * 
              */
         } else
-            CommandProcessor.this.defaultCommandHandler.handle(aggregate, command);
+            CommandProcessor.this.commandHandler.handle(aggregate, command);
 
-        List<EventWithId> events = this.aggregateStore.saveAggregate(schemaName, aggregate);
+        List<EventWithId> events = this.aggregateStore.saveAggregate(aggregate);
         log.info(" > events: {}", events);
 
         this.syncEventHandler.handleEvents(events, aggregate);

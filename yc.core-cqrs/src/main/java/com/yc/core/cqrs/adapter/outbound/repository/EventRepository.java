@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.yc.core.cqrs.adapter.outbound.model.ModelService;
+import com.yc.core.cqrs.C;
 import com.yc.core.cqrs.domain.event.Event;
 import com.yc.core.cqrs.domain.event.EventWithId;
 
@@ -34,10 +34,10 @@ public class EventRepository {
 
     private final NamedParameterJdbcTemplate jdbcTemplate;
     private final ObjectMapper objectMapper;
-    private final ModelService modelService;
 
     @SneakyThrows
-    public EventWithId appendEvent(String schemaName, @NonNull Event event) {
+    public EventWithId appendEvent(@NonNull Event event, JsonNode aggregateModel) {
+        String schemaName = aggregateModel.get(C.schema).get(C.name).asText();
         if (!schemaName.matches("[a-zA-Z0-9_]+")) { // Permite apenas letras, números e _
                 throw new IllegalArgumentException("Nome de schema inválido: " + schemaName);
         }
@@ -52,12 +52,14 @@ public class EventRepository {
                         		"version", event.getVersion(),
                                 "eventType", event.getEventType(), 
                                 "jsonObj", this.objectMapper.writeValueAsString(event.getEventData())),
-                        this::toEvent);
+                        (rs, rowNum) -> toEvent(rs, rowNum, aggregateModel));
         return result.get(0);
     }
 
-    public List<EventWithId> readEvents(String schemaName, @NonNull UUID aggregateId,
-            final @Nullable Integer fromVersion, final @Nullable Integer toVersion) {
+    public List<EventWithId> readEvents(@NonNull UUID aggregateId,
+            final @Nullable Integer fromVersion, final @Nullable Integer toVersion,
+            JsonNode aggregateModel) {
+        String schemaName = aggregateModel.get(C.schema).get(C.name).asText();
         if (!schemaName.matches("[a-zA-Z0-9_]+")) { // Permite apenas letras, números e _
                 throw new IllegalArgumentException("Nome de schema inválido: " + schemaName);
         }
@@ -77,12 +79,14 @@ public class EventRepository {
                            AND (:fromVersion IS NULL OR VERSION > :fromVersion)
                            AND (:toVersion IS NULL OR VERSION <= :toVersion)
                          ORDER BY VERSION ASC
-                        """, schemaName), parameters, this::toEvent);
+                        """, schemaName), parameters, (rs, rowNum) -> toEvent(rs, rowNum, aggregateModel));
     }
 
-    public List<EventWithId> readEventsAfterCheckpoint(String schemaName, @NonNull String aggregateType,
-            @NonNull BigInteger lastProcessedTransactionId, long lastProcessedEventId, int batchSize) {
-        if (!schemaName.matches("[a-zA-Z0-9_]+")) { // Permite apenas letras, números e _
+    public List<EventWithId> readEventsAfterCheckpoint(@NonNull BigInteger lastProcessedTransactionId, 
+    		long lastProcessedEventId, int batchSize, JsonNode aggregateModel) {
+        String schemaName = aggregateModel.get(C.schema).get(C.name).asText();
+        String aggregateType = aggregateModel.get(C.type).asText();
+    	if (!schemaName.matches("[a-zA-Z0-9_]+")) { // Permite apenas letras, números e _
             throw new IllegalArgumentException("Nome de schema inválido: " + schemaName);
         }
         return this.jdbcTemplate.query(
@@ -104,18 +108,18 @@ public class EventRepository {
                 Map.of("aggregateType", aggregateType, "lastProcessedTransactionId",
                                 lastProcessedTransactionId.toString(), "lastProcessedEventId",
                                 lastProcessedEventId, "batchSize", batchSize),
-                this::toEvent);
+                (rs, rowNum) -> toEvent(rs, rowNum, aggregateModel));
     }
 
     @SneakyThrows
-    private EventWithId toEvent(ResultSet rs, int rowNum) {
+    private EventWithId toEvent(ResultSet rs, int rowNum, JsonNode aggregateModel) {
         long id = rs.getLong("ID");
         String transactionId = rs.getString("TRANSACTION_ID");
         UUID aggregateId = UUID.fromString(rs.getString("AGGREGATE_ID"));
         String aggregateType = rs.getString("AGGREGATE_TYPE");
         Integer version = rs.getInt("VERSION");
         String eventType = rs.getString("EVENT_TYPE");
-        JsonNode eventModel = this.modelService.getModel("tenant").get("event").get(eventType);
+        JsonNode eventModel = aggregateModel.get("event").get(eventType);
         PGobject jsonObj = (PGobject) rs.getObject("JSON_DATA");
         String json = jsonObj.getValue();
         JsonNode eventData = this.objectMapper.readTree(json);

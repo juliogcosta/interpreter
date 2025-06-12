@@ -13,9 +13,10 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.yc.core.cqrs.adapter.outbound.model.ModelService;
 import com.yc.core.cqrs.domain.Aggregate;
-import com.yc.core.cqrs.domain.AggregateTypeMapper;
 
 import jakarta.annotation.Nullable;
 import lombok.NonNull;
@@ -27,9 +28,9 @@ import lombok.SneakyThrows;
 @RequiredArgsConstructor
 public class AggregateRepository {
 
+	private final ModelService modelService;
     private final NamedParameterJdbcTemplate jdbcTemplate;
     private final ObjectMapper objectMapper;
-    private final AggregateTypeMapper aggregateTypeMapper;
 
     public void createAggregateIfAbsent(String schemaName, @NonNull String aggregateType,
             @NonNull UUID aggregateId) {
@@ -59,7 +60,7 @@ public class AggregateRepository {
                         INSERT INTO %s.ES_AGGREGATE_SNAPSHOT (AGGREGATE_ID, VERSION, JSON_DATA)
                         VALUES (:aggregateId, :version, :jsonObj::json)
                         """, schemaName), Map.of("aggregateId", aggregate.getAggregateId(), "version",
-                        aggregate.getVersion(), "jsonObj", objectMapper.writeValueAsString(aggregate)));
+                        aggregate.getVersion(), "jsonObj", this.objectMapper.writeValueAsString(aggregate)));
     }
 
     public Optional<Aggregate> readAggregateSnapshot(String schemaName, @NonNull UUID aggregateId,
@@ -82,10 +83,12 @@ public class AggregateRepository {
 
     @SneakyThrows
     private Aggregate toAggregate(ResultSet rs, int rowNum) {
-        String aggregateType = rs.getString("AGGREGATE_TYPE");
         PGobject jsonObj = (PGobject) rs.getObject("JSON_DATA");
-        String json = jsonObj.getValue();
-        Class<? extends Aggregate> aggregateClass = aggregateTypeMapper.getClassByAggregateType(aggregateType);
-        return objectMapper.readValue(json, aggregateClass);
+        JsonNode jsNode = this.objectMapper.readTree(jsonObj.getValue());
+        UUID aggregateId = UUID.fromString(jsNode.get("id").asText());
+        int version = jsNode.get("version").asInt();
+        String aggregateType = rs.getString("AGGREGATE_TYPE");
+        JsonNode aggregateModel = this.modelService.getModel("tenant").get(aggregateType);
+        return new Aggregate(aggregateId, version, aggregateModel);
     }
 }

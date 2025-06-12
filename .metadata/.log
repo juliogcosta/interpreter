@@ -6101,3 +6101,929 @@ java.util.concurrent.TimeoutException
 	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+!SESSION 2025-06-11 10:17:15.173 -----------------------------------------------
+eclipse.buildId=4.24.0.202407191504
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2025-06-11 10:17:17.147
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-06-11 10:17:18.102
+!MESSAGE Logback config file: /home/julio/Codes/YC/Experiments/interpreter/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-06-11 10:17:18.407
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-11 10:17:18.407
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-06-11 10:17:18.832
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-11 10:17:18.832
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-11 10:17:21.913
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+/opt/sts-4.24.0.RELEASE/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.3.v20240426-1530/jre/bin/java
+-cp
+/opt/sts-4.24.0.RELEASE/plugins/org.springframework.tooling.boot.ls_1.56.0.202407191456/servers/spring-boot-language-server/BOOT-INF/classes:/opt/sts-4.24.0.RELEASE/plugins/org.springframework.tooling.boot.ls_1.56.0.202407191456/servers/spring-boot-language-server/BOOT-INF/lib/*
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:/opt/sts-4.24.0.RELEASE/plugins/org.springframework.tooling.boot.ls_1.56.0.202407191456/servers/spring-boot-language-server/BOOT-INF/classes/application.properties
+-XX:ErrorFile=/home/julio/Codes/YC/Experiments/interpreter/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1749647841912
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 10:17:21.913
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-11 10:17:21.922
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 7783
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 10:17:22.895
+!MESSAGE Boot project ADDED: assistencia
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 10:17:22.895
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 10:17:22.895
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 10:17:22.900
+!MESSAGE Boot project ADDED: assistencia.atendimento
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 10:17:22.904
+!MESSAGE Boot project ADDED: assistencia.catalogo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 10:17:22.904
+!MESSAGE Boot project ADDED: core-common
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 10:17:22.909
+!MESSAGE Boot project ADDED: eureka
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 10:17:22.913
+!MESSAGE Boot project ADDED: gateway
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 10:17:22.917
+!MESSAGE Boot project ADDED: id
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 10:17:22.921
+!MESSAGE Boot project ADDED: id.autenticador
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 10:17:22.921
+!MESSAGE Boot project ADDED: yc.core-cqrs
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-11 10:29:16.403
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-11 11:00:24.804
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-11 11:12:38.519
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-11 12:36:00.598
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-11 12:36:12.856
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-11 13:19:35.316
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-11 14:11:24.542
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-11 15:20:10.746
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-11 16:21:22.012
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-11 16:36:59.423
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jface 2 0 2025-06-11 16:42:01.916
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-06-11 16:42:01.916
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		WorkbenchHandlerServiceHandler("org.springframework.tooling.boot.ls.ToggleComment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 16:43:18.509
+!MESSAGE Classpath changed for project: assistencia.atendimento
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-11 18:05:16.642
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-11 21:09:59.720
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 21:21:19.871
+!MESSAGE Classpath changed for project: yc.persistence-c
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 21:21:19.953
+!MESSAGE Classpath changed for project: yc.persistence-c
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 21:21:19.954
+!MESSAGE Boot project ADDED: yc.persistence-c
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 21:21:20.089
+!MESSAGE Classpath changed for project: yc.persistence-c
+
+!ENTRY org.eclipse.jdt.core 4 4 2025-06-11 22:02:27.735
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package com.yc.persistence.c.model;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+import java.util.stream.Stream;
+
+import org.springframework.stereotype.Service;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.yc.core.cqrs.adapter.outbound.model.ModelService;
+
+import br.com.comigo.assistencia.domain.aggregate.entity.Servico.Status;
+
+@Service
+public class ModelServiceImpl implements ModelService {
+
+	private final ObjectMapper objectMapper;
+	private final Map<String, ObjectNode> objectNodes;
+	
+	private JsonNode buildServicoAggregateRep() {
+		
+		ObjectNode id = this.objectMapper.createObjectNode();
+		id.put("type", String.class.getName());
+		id.put("length", 64);
+		id.put("nullable", true);
+		
+		ObjectNode version = this.objectMapper.createObjectNode();
+		version.put("type", Long.class.getName());
+		version.put("nullable", true);
+		
+		ObjectNode status = this.objectMapper.createObjectNode();
+		status.put("type", String.class.getName());
+		status.put("length", 16);
+		status.put("nullable", false);
+		
+		ObjectNode nome = this.objectMapper.createObjectNode();
+		nome.put("type", String.class.getName());
+		nome.put("length", 16);
+		nome.put("nullable", false);
+		
+		ObjectNode descricao = this.objectMapper.createObjectNode();
+		descricao.put("type", "Text");
+		descricao.put("nullable", true);
+		
+		ObjectNode certificacaoIso = this.objectMapper.createObjectNode();
+		certificacaoIso.put("type", "Boolean");
+		certificacaoIso.put("nullable", false);
+		
+		
+		ObjectNode servicoEntityAttributes = this.objectMapper.createObjectNode();
+		servicoEntityAttributes.set("id", id);
+		servicoEntityAttributes.set("version", version);
+		servicoEntityAttributes.set("status", status);
+		servicoEntityAttributes.set("nome", nome);
+		servicoEntityAttributes.set("descricao", descricao);
+		servicoEntityAttributes.set("certificacaoIso", certificacaoIso);
+
+		ObjectNode servicoEntity = this.objectMapper.createObjectNode();
+		servicoEntity.set("attributes", servicoEntityAttributes);
+		
+		
+		
+		/**
+		 * Sobre Comandos a respeito de instância de Servico
+		 * 
+		 */
+		/**
+		 * 1. Comando Disponibilizar
+		 * 
+		 */
+		
+		ObjectNode disponibilizarServicoCommandAttributes = this.objectMapper.createObjectNode();
+		disponibilizarServicoCommandAttributes.set("id", id);
+		disponibilizarServicoCommandAttributes.set("version", version);
+		disponibilizarServicoCommandAttributes.set("status", status);
+		disponibilizarServicoCommandAttributes.set("nome", nome);
+		disponibilizarServicoCommandAttributes.set("descricao", descricao);
+		disponibilizarServicoCommandAttributes.set("certificacaoIso", certificacaoIso);
+		
+		ObjectNode disponibilizarServicoCommand = this.objectMapper.createObjectNode();
+		disponibilizarServicoCommand.set("attribute", disponibilizarServicoCommandAttributes);
+		disponibilizarServicoCommand.put("endState", "AtendimentoSolicitado");
+		
+		ArrayNode disponibilizarServicoCommandAllowedStatus = this.objectMapper.createArrayNode();
+		disponibilizarServicoCommand.set("stateControl", disponibilizarServicoCommandAllowedStatus);
+		
+		/**
+		 * 2. Comando Cancelar
+		 * 
+		 */
+		
+		ObjectNode cancelarServicoCommandAttributes = this.objectMapper.createObjectNode();
+				
+		ObjectNode cancelarServicoCommand = this.objectMapper.createObjectNode();
+		cancelarServicoCommand.set("attribute", cancelarServicoCommandAttributes);
+		cancelarServicoCommand.put("endState", "ServicoCancelado");
+		
+		ArrayNode cancelarServicoCommandAllowedStatus = this.objectMapper.createArrayNode();
+		Stream.of(new String [] {"DISPONIBILIZADO"})
+				.forEach(item -> cancelarServicoCommandAllowedStatus.add(item));
+		cancelarServicoCommand.set("stateControl", cancelarServicoCommandAllowedStatus);
+		
+		
+		/**
+		 * Definicao de quais comandos compoem o agregado
+		 * 
+		 */
+		
+		ObjectNode commands = this.objectMapper.createObjectNode();
+		commands.set("Disponibilizar", disponibilizarServicoCommand);
+		commands.set("Cancelar", cancelarServicoCommand);
+
+		
+		
+		/**
+		 * Sobre Eventos a respeito de instância de Servico
+		 * 
+		 */
+		/**
+		 * 1. Evento Disponibilizado
+		 * 
+		 */
+		
+		ObjectNode servicoDisponibilizadoEvent = this.objectMapper.createObjectNode();
+		servicoDisponibilizadoEvent.set("attributes", disponibilizarServicoCommandAttributes);
+		servicoDisponibilizadoEvent.put("type", "Disponibilizado");
+		servicoDisponibilizadoEvent.put("status", "Disponibilizado");
+
+		/**
+		 * 2. Evento Cancelado
+		 * 
+		 */
+		
+		ObjectNode servicoCanceladoEvent = this.objectMapper.createObjectNode();
+		servicoCanceladoEvent.set("attributes", cancelarServicoCommandAttributes);
+		servicoCanceladoEvent.put("type", "Cancelado");
+		servicoCanceladoEvent.put("status", "Cancelado");
+		
+		
+		/**
+		 * Definicao de quais eventos compoem o agregado
+		 * 
+		 */
+		
+		ObjectNode events = this.objectMapper.createObjectNode();
+		events.set("Disponibilizado", servicoDisponibilizadoEvent);
+		events.set("Cancelado", servicoCanceladoEvent);
+		
+		
+		/**
+		 * Definicao de quais entidades compoem o agregado
+		 * 
+		 */
+		
+		ObjectNode entities = this.objectMapper.createObjectNode();
+		entities.set("servico", servicoEntity);
+		
+		
+		/**
+		 * Definição do agregado
+		 * 
+		 */
+		
+		ObjectNode servicoAggregateSchema = this.objectMapper.createObjectNode();
+		servicoAggregateSchema.put("name", "atendimento_es");
+		
+		ObjectNode servicoAggregate = this.objectMapper.createObjectNode();
+		servicoAggregate.set("schema", servicoAggregateSchema);
+		servicoAggregate.put("type", "Servico");
+		servicoAggregate.set("command", commands);
+		servicoAggregate.set("event", events);
+		servicoAggregate.set("entity", entities);
+		
+		return servicoAggregate;
+	}
+	
+	
+	public JsonNode buildAtendimentoAggregateRep()
+	
+	
+	public ModelServiceImpl(ObjectMapper objectMapper) {
+		this.objectMapper = objectMapper;
+		
+		
+		ObjectNode aggregates = this.objectMapper.createObjectNode();
+		aggregates.set("Atendimento", atendimentoAggregate);
+		
+		this.objectNodes = new HashMap<>();
+		this.objectNodes.put("tenant", aggregates);
+	}
+	
+	@Override
+	public JsonNode getModel(String tenant) {
+		return null;
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException: startPos = 5832 and length is -6.
+This breaks the rule that lengths are not allowed to be negative. Affected Node:
+class org.eclipse.jdt.core.dom.MethodDeclaration: public JsonNode buildAtendimentoAggregateRep();
+
+	at lombok.eclipse.agent.PatchDiagnostics.setSourceRangeCheck(PatchDiagnostics.java:36)
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:787)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:644)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1137)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:805)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1311)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2025-06-11 22:02:27.743
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException: startPos = 5832 and length is -6.
+This breaks the rule that lengths are not allowed to be negative. Affected Node:
+class org.eclipse.jdt.core.dom.MethodDeclaration: public JsonNode buildAtendimentoAggregateRep();
+
+	at lombok.eclipse.agent.PatchDiagnostics.setSourceRangeCheck(PatchDiagnostics.java:36)
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:787)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:644)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1137)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:805)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1311)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2025-06-11 22:02:27.743
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException: startPos = 5832 and length is -6.
+This breaks the rule that lengths are not allowed to be negative. Affected Node:
+class org.eclipse.jdt.core.dom.MethodDeclaration: public JsonNode buildAtendimentoAggregateRep();
+
+	at lombok.eclipse.agent.PatchDiagnostics.setSourceRangeCheck(PatchDiagnostics.java:36)
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:787)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:644)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1137)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:805)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1311)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.core 4 4 2025-06-11 22:02:28.884
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package com.yc.persistence.c.model;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+import java.util.stream.Stream;
+
+import org.springframework.stereotype.Service;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.yc.core.cqrs.adapter.outbound.model.ModelService;
+
+import br.com.comigo.assistencia.domain.aggregate.entity.Servico.Status;
+
+@Service
+public class ModelServiceImpl implements ModelService {
+
+	private final ObjectMapper objectMapper;
+	private final Map<String, ObjectNode> objectNodes;
+	
+	private JsonNode buildServicoAggregateRep() {
+		
+		ObjectNode id = this.objectMapper.createObjectNode();
+		id.put("type", String.class.getName());
+		id.put("length", 64);
+		id.put("nullable", true);
+		
+		ObjectNode version = this.objectMapper.createObjectNode();
+		version.put("type", Long.class.getName());
+		version.put("nullable", true);
+		
+		ObjectNode status = this.objectMapper.createObjectNode();
+		status.put("type", String.class.getName());
+		status.put("length", 16);
+		status.put("nullable", false);
+		
+		ObjectNode nome = this.objectMapper.createObjectNode();
+		nome.put("type", String.class.getName());
+		nome.put("length", 16);
+		nome.put("nullable", false);
+		
+		ObjectNode descricao = this.objectMapper.createObjectNode();
+		descricao.put("type", "Text");
+		descricao.put("nullable", true);
+		
+		ObjectNode certificacaoIso = this.objectMapper.createObjectNode();
+		certificacaoIso.put("type", "Boolean");
+		certificacaoIso.put("nullable", false);
+		
+		
+		ObjectNode servicoEntityAttributes = this.objectMapper.createObjectNode();
+		servicoEntityAttributes.set("id", id);
+		servicoEntityAttributes.set("version", version);
+		servicoEntityAttributes.set("status", status);
+		servicoEntityAttributes.set("nome", nome);
+		servicoEntityAttributes.set("descricao", descricao);
+		servicoEntityAttributes.set("certificacaoIso", certificacaoIso);
+
+		ObjectNode servicoEntity = this.objectMapper.createObjectNode();
+		servicoEntity.set("attributes", servicoEntityAttributes);
+		
+		
+		
+		/**
+		 * Sobre Comandos a respeito de instância de Servico
+		 * 
+		 */
+		/**
+		 * 1. Comando Disponibilizar
+		 * 
+		 */
+		
+		ObjectNode disponibilizarServicoCommandAttributes = this.objectMapper.createObjectNode();
+		disponibilizarServicoCommandAttributes.set("id", id);
+		disponibilizarServicoCommandAttributes.set("version", version);
+		disponibilizarServicoCommandAttributes.set("status", status);
+		disponibilizarServicoCommandAttributes.set("nome", nome);
+		disponibilizarServicoCommandAttributes.set("descricao", descricao);
+		disponibilizarServicoCommandAttributes.set("certificacaoIso", certificacaoIso);
+		
+		ObjectNode disponibilizarServicoCommand = this.objectMapper.createObjectNode();
+		disponibilizarServicoCommand.set("attribute", disponibilizarServicoCommandAttributes);
+		disponibilizarServicoCommand.put("endState", "AtendimentoSolicitado");
+		
+		ArrayNode disponibilizarServicoCommandAllowedStatus = this.objectMapper.createArrayNode();
+		disponibilizarServicoCommand.set("stateControl", disponibilizarServicoCommandAllowedStatus);
+		
+		/**
+		 * 2. Comando Cancelar
+		 * 
+		 */
+		
+		ObjectNode cancelarServicoCommandAttributes = this.objectMapper.createObjectNode();
+				
+		ObjectNode cancelarServicoCommand = this.objectMapper.createObjectNode();
+		cancelarServicoCommand.set("attribute", cancelarServicoCommandAttributes);
+		cancelarServicoCommand.put("endState", "ServicoCancelado");
+		
+		ArrayNode cancelarServicoCommandAllowedStatus = this.objectMapper.createArrayNode();
+		Stream.of(new String [] {"DISPONIBILIZADO"})
+				.forEach(item -> cancelarServicoCommandAllowedStatus.add(item));
+		cancelarServicoCommand.set("stateControl", cancelarServicoCommandAllowedStatus);
+		
+		
+		/**
+		 * Definicao de quais comandos compoem o agregado
+		 * 
+		 */
+		
+		ObjectNode commands = this.objectMapper.createObjectNode();
+		commands.set("Disponibilizar", disponibilizarServicoCommand);
+		commands.set("Cancelar", cancelarServicoCommand);
+
+		
+		
+		/**
+		 * Sobre Eventos a respeito de instância de Servico
+		 * 
+		 */
+		/**
+		 * 1. Evento Disponibilizado
+		 * 
+		 */
+		
+		ObjectNode servicoDisponibilizadoEvent = this.objectMapper.createObjectNode();
+		servicoDisponibilizadoEvent.set("attributes", disponibilizarServicoCommandAttributes);
+		servicoDisponibilizadoEvent.put("type", "Disponibilizado");
+		servicoDisponibilizadoEvent.put("status", "Disponibilizado");
+
+		/**
+		 * 2. Evento Cancelado
+		 * 
+		 */
+		
+		ObjectNode servicoCanceladoEvent = this.objectMapper.createObjectNode();
+		servicoCanceladoEvent.set("attributes", cancelarServicoCommandAttributes);
+		servicoCanceladoEvent.put("type", "Cancelado");
+		servicoCanceladoEvent.put("status", "Cancelado");
+		
+		
+		/**
+		 * Definicao de quais eventos compoem o agregado
+		 * 
+		 */
+		
+		ObjectNode events = this.objectMapper.createObjectNode();
+		events.set("Disponibilizado", servicoDisponibilizadoEvent);
+		events.set("Cancelado", servicoCanceladoEvent);
+		
+		
+		/**
+		 * Definicao de quais entidades compoem o agregado
+		 * 
+		 */
+		
+		ObjectNode entities = this.objectMapper.createObjectNode();
+		entities.set("servico", servicoEntity);
+		
+		
+		/**
+		 * Definição do agregado
+		 * 
+		 */
+		
+		ObjectNode servicoAggregateSchema = this.objectMapper.createObjectNode();
+		servicoAggregateSchema.put("name", "atendimento_es");
+		
+		ObjectNode servicoAggregate = this.objectMapper.createObjectNode();
+		servicoAggregate.set("schema", servicoAggregateSchema);
+		servicoAggregate.put("type", "Servico");
+		servicoAggregate.set("command", commands);
+		servicoAggregate.set("event", events);
+		servicoAggregate.set("entity", entities);
+		
+		return servicoAggregate;
+	}
+	
+	
+	public JsonNode buildAtendimentoAggregateRep() 
+	
+	
+	public ModelServiceImpl(ObjectMapper objectMapper) {
+		this.objectMapper = objectMapper;
+		
+		
+		ObjectNode aggregates = this.objectMapper.createObjectNode();
+		aggregates.set("Atendimento", atendimentoAggregate);
+		
+		this.objectNodes = new HashMap<>();
+		this.objectNodes.put("tenant", aggregates);
+	}
+	
+	@Override
+	public JsonNode getModel(String tenant) {
+		return null;
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException: startPos = 5832 and length is -6.
+This breaks the rule that lengths are not allowed to be negative. Affected Node:
+class org.eclipse.jdt.core.dom.MethodDeclaration: public JsonNode buildAtendimentoAggregateRep();
+
+	at lombok.eclipse.agent.PatchDiagnostics.setSourceRangeCheck(PatchDiagnostics.java:36)
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:787)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:644)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1137)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:805)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1311)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2025-06-11 22:02:28.884
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException: startPos = 5832 and length is -6.
+This breaks the rule that lengths are not allowed to be negative. Affected Node:
+class org.eclipse.jdt.core.dom.MethodDeclaration: public JsonNode buildAtendimentoAggregateRep();
+
+	at lombok.eclipse.agent.PatchDiagnostics.setSourceRangeCheck(PatchDiagnostics.java:36)
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:787)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:644)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1137)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:805)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1311)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2025-06-11 22:02:28.884
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException: startPos = 5832 and length is -6.
+This breaks the rule that lengths are not allowed to be negative. Affected Node:
+class org.eclipse.jdt.core.dom.MethodDeclaration: public JsonNode buildAtendimentoAggregateRep();
+
+	at lombok.eclipse.agent.PatchDiagnostics.setSourceRangeCheck(PatchDiagnostics.java:36)
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:787)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:644)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1137)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:805)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1311)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 22:05:12.065
+!MESSAGE Classpath changed for project: assistencia.atendimento
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 22:05:12.065
+!MESSAGE Boot project REMOVED: assistencia.atendimento
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 22:05:12.065
+!MESSAGE Classpath changed for project: assistencia.catalogo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 22:05:12.065
+!MESSAGE Boot project REMOVED: assistencia.catalogo
+
+!ENTRY org.eclipse.debug.core 4 125 2025-06-11 22:10:42.762
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:188)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:343)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:420)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:405)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 22:22:17.828
+!MESSAGE Classpath changed for project: assistencia.atendimento
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 22:22:17.828
+!MESSAGE Classpath changed for project: assistencia.catalogo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 22:22:18.096
+!MESSAGE Classpath changed for project: assistencia.atendimento
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 22:22:18.096
+!MESSAGE Classpath changed for project: assistencia.catalogo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 22:22:19.312
+!MESSAGE Classpath changed for project: assistencia.atendimento
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 22:22:19.312
+!MESSAGE Boot project ADDED: assistencia.atendimento
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 22:22:20.497
+!MESSAGE Classpath changed for project: assistencia.catalogo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 22:22:20.502
+!MESSAGE Boot project ADDED: assistencia.catalogo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 22:22:20.593
+!MESSAGE Classpath changed for project: assistencia.catalogo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 22:24:34.127
+!MESSAGE Classpath changed for project: assistencia.atendimento
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 22:24:34.128
+!MESSAGE Boot project REMOVED: assistencia.atendimento
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 22:24:34.128
+!MESSAGE Classpath changed for project: assistencia.catalogo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-11 22:24:34.128
+!MESSAGE Boot project REMOVED: assistencia.catalogo

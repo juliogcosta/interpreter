@@ -6,10 +6,12 @@ import java.util.UUID;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.yc.core.cqrs.C;
 
 import br.com.comigo.common.infrastructure.exception.IncompleteRegisterException;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
+
 
 @ToString
 @Slf4j
@@ -20,40 +22,36 @@ public class Command {
     protected final JsonNode commandData;
     protected final JsonNode commandModel;
 
-    public Command(JsonNode data, JsonNode commandModel) throws IncompleteRegisterException {
-        this.validateDataAgainstModel(data, commandModel);
+    public Command(String aggregateType, JsonNode commandData, JsonNode commandModel) throws IncompleteRegisterException {
+        this.validateDataAgainstModel(commandData, commandModel);
 
-        ObjectNode dataCopy = data.deepCopy();
-        dataCopy.fieldNames().forEachRemaining(field -> {
-            if (!"id".equals(field) && "type".equals(field) && !"data".equals(field)) {
-                dataCopy.remove(field);
-            }
-        });
-
-        Iterator<String> fieldNames = dataCopy.fieldNames();
+        ObjectNode commandDataCopy = commandData.deepCopy();
+        Iterator<String> fieldNames = commandDataCopy.fieldNames();
         while (fieldNames.hasNext()) {
             String fieldName = fieldNames.next();
-            if (commandModel.get("attribute").has(fieldName)) {
+            if (commandModel.get(C.attribute).has(fieldName)) {
             	
-            } else dataCopy.remove(fieldName); 
+            } else commandDataCopy.remove(fieldName); 
         }
 
-        this.aggregateId = UUID.fromString(dataCopy.asText("id"));
-        this.aggregateType = commandModel.asText("aggregateType");
-        this.commandData = dataCopy;
+        if (commandDataCopy.has(C.id)) {
+            this.aggregateId = UUID.fromString(commandDataCopy.get(C.id).asText(C.id));
+        } else this.aggregateId = null;
+        this.aggregateType = aggregateType;
+        this.commandData = commandDataCopy;
         this.commandModel = commandModel;
 	}
     
     private void validateDataAgainstModel(JsonNode aggregateData, JsonNode commandModel) throws IncompleteRegisterException {
-        Iterator<Map.Entry<String, JsonNode>> attributes = commandModel.get("attribute").fields();
+        Iterator<Map.Entry<String, JsonNode>> attributes = commandModel.get(C.attribute).fields();
         while (attributes.hasNext()) {
             Map.Entry<String, JsonNode> attribute = attributes.next();
             String attributeName = attribute.getKey();
             JsonNode attributeSpec = attribute.getValue();
-            String attributeType = attributeSpec.has("type") ? attributeSpec.get("type").asText() : null;
+            String attributeType = attributeSpec.has(C.type) ? attributeSpec.get(C.type).asText() : null;
             JsonNode attributeValue = aggregateData.get(attributeName);
 
-            if (attributeSpec.get("nullable").asBoolean()) {
+            if (attributeSpec.get(C.nullable).asBoolean()) {
                 
             } else if (aggregateData.has(attributeName)) {
             	if (aggregateData.get(attributeName).isNull()) {
@@ -63,7 +61,7 @@ public class Command {
             
             if (String.class.getSimpleName().equalsIgnoreCase(attributeType)) {
                 if (attributeValue != null && !attributeValue.isNull()) {
-                    int attributeValueMaxLength = attributeSpec.has("length") ? attributeSpec.get("length").asInt() : -1;
+                    int attributeValueMaxLength = attributeSpec.has(C.length) ? attributeSpec.get(C.length).asInt() : -1;
                     String value = attributeValue.asText();
                     if (attributeValueMaxLength > 0 && value.length() > attributeValueMaxLength) {
                         throw new IllegalArgumentException("Campo '" + attributeName + "' excede o tamanho máximo de " + attributeValueMaxLength + " caracteres.");

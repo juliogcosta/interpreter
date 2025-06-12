@@ -1,20 +1,5 @@
 package com.yc.core.cqrs.application.service.event.processor;
 
-import java.util.List;
-
-import org.springframework.scheduling.annotation.Async;
-import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.yc.core.cqrs.adapter.outbound.repository.EventRepository;
-import com.yc.core.cqrs.adapter.outbound.repository.EventSubscriptionRepository;
-import com.yc.core.cqrs.application.service.event.AsyncEventHandler;
-import com.yc.core.cqrs.domain.event.EventWithId;
-
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-
 /*
  * Detalhes Importantes:
  * 
@@ -54,27 +39,31 @@ import lombok.extern.slf4j.Slf4j;
  * 
  */
 
-@Transactional(propagation = Propagation.REQUIRES_NEW)
-@Component
-@RequiredArgsConstructor
-@Slf4j
+//@Transactional(propagation = Propagation.REQUIRES_NEW)
+//@Component
+//@RequiredArgsConstructor
+//@Slf4j
 public class EventSubscriptionProcessor {
 
+	/*
+	private final ModelService modelService;
     private final EventSubscriptionRepository subscriptionRepository;
     private final EventRepository eventRepository;
 
     @Async("eventProcessingExecutor")
-    public void processNewEvents(String schemaName, AsyncEventHandler eventHandler, int batchSize) {
-        final String subscriptionName = eventHandler.getSubscriptionName();
+    public void processNewEvents(String aggregateType, AsyncEventHandler asyncEventHandler, int batchSize) {
+        final String subscriptionName = asyncEventHandler.getSubscriptionName();
         log.debug("Handling new events for subscription {}", subscriptionName);
 
+        JsonNode aggregateModel = this.modelService.getModel(C.tenant).get(aggregateType);
+        String schemaName = aggregateModel.get(C.schema).get(C.name).asText();
         this.subscriptionRepository.createSubscriptionIfAbsent(schemaName, subscriptionName);
         this.subscriptionRepository.readCheckpointAndLockSubscription(schemaName, subscriptionName)
                 .ifPresentOrElse(checkpoint -> {
                     log.debug("Acquired lock on subscription {}, checkpoint = {}", subscriptionName, checkpoint);
                     List<EventWithId> events = this.eventRepository.readEventsAfterCheckpoint(
                     		schemaName,
-                            eventHandler.getAggregateType(), 
+                            aggregateType, 
                             checkpoint.lastProcessedTransactionId(),
                             checkpoint.lastProcessedEventId(), 
                             batchSize);
@@ -82,10 +71,11 @@ public class EventSubscriptionProcessor {
                     if (events.isEmpty()) { 
                     	
                     } else {
-                        events.forEach(eventHandler::handleEvent);
+                        events.forEach(asyncEventHandler::handleEvent);
                         EventWithId lastEvent = events.get(events.size() - 1);
                         this.subscriptionRepository.updateEventSubscription(schemaName, subscriptionName, lastEvent.transactionId(), lastEvent.id());
                     }
                 }, () -> log.debug("Can't acquire lock on subscription {}", subscriptionName));
     }
+	 */
 }

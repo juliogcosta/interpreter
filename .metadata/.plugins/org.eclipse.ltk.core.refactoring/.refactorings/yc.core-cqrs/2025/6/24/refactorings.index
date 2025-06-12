@@ -61,3 +61,37 @@
 1749608826354	Delete element
 1749609613664	Copy compilation unit
 1749610856548	Copy compilation unit
+1749648430745	Rename local variable 'parameter'
+1749648975635	Move compilation unit
+1749648980669	Delete element
+1749649056512	Rename package 'com.yc.core.cqrs.application.service.event.processor.readpriory'
+1749649087540	Move compilation units
+1749649092776	Delete element
+1749649423891	Rename local variable 'eventHandler'
+1749649856968	Rename local variable 'rootNode'
+1749649864672	Rename local variable 'solicitarAtendimento'
+1749649902543	Rename local variable 'attributes'
+1749650070645	Rename local variable 'attributeNode'
+1749651745438	Rename local variable 'nomeId'
+1749652801691	Rename local variable 'commandNode'
+1749652810931	Rename local variable 'entityNode'
+1749652815553	Rename local variable 'entitiesNode'
+1749652818590	Rename local variable 'commandsNode'
+1749652827948	Rename local variable 'confirmarAtendimentoNode'
+1749652844692	Rename local variable 'confirmarAtendimentoAttributeNode'
+1749652862934	Rename local variable 'ajustarAtendimentoNode'
+1749652871202	Rename local variable 'ajustarAtendimentoAttributeNode'
+1749652875653	Rename local variable 'ajustarAtendimentoCommandAttribute'
+1749652881656	Rename local variable 'confirmarAtendimentoCommandAttribute'
+1749652888883	Rename local variable 'solicitarAtendimentoNode'
+1749652901009	Rename local variable 'solicitarAtendimentoAttributeNode'
+1749655272556	Rename local variable 'aggregateNode'
+1749659437940	Rename local variable 'data'
+1749660476263	Rename local variable 'dataCopy'
+1749663441551	Rename field 'defaultCommandHandler'
+1749669285863	Rename local variable 'solicitarAtendimentoEvent'
+1749669293593	Rename local variable 'ajustarAtendimentoEvent'
+1749669300644	Rename local variable 'confirmarAtendimentoEvent'
+1749687205624	Copy compilation unit
+1749687215996	Delete element
+1749687883121	Move compilation unit
