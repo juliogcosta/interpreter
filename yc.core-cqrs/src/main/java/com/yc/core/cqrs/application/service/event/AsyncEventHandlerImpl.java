@@ -13,8 +13,10 @@ public class AsyncEventHandlerImpl {
 	public AsyncEventHandlerImpl(JsonNode aggregateModel) {
 		this.aggregateModel = aggregateModel;
 	}
-	
+
 	public void handleEvent(EventWithId event) {
-		log.info("\n > Handling event {} for aggregate {}\n", event, this.aggregateModel);
+		log.info("\n > Handling event {} for aggregate {}\n >    [Data: {}]\n", event.event().getEventType(),
+				this.aggregateModel.get("type").asText(),
+				event.event().getEventData());
 	}
 }

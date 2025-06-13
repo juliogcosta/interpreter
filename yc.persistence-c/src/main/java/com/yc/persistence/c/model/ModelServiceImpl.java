@@ -20,45 +20,44 @@ public class ModelServiceImpl implements ModelService {
 
 	public ModelServiceImpl(ObjectMapper objectMapper) {
 		this.objectMapper = objectMapper;
-		
+
 		ObjectNode aggregates = this.objectMapper.createObjectNode();
 		aggregates.set("Atendimento", this.buildAtendimentoAggregateRep());
 		aggregates.set("Servico", this.buildServicoAggregateRep());
-		
+
 		this.objectNodes = new HashMap<>();
 		this.objectNodes.put("tenant", aggregates);
 	}
-	
+
 	private JsonNode buildServicoAggregateRep() {
-		
+
 		ObjectNode id = this.objectMapper.createObjectNode();
 		id.put("type", String.class.getName());
 		id.put("length", 64);
 		id.put("nullable", true);
-		
+
 		ObjectNode version = this.objectMapper.createObjectNode();
 		version.put("type", Long.class.getName());
 		version.put("nullable", true);
-		
+
 		ObjectNode status = this.objectMapper.createObjectNode();
 		status.put("type", String.class.getName());
 		status.put("length", 16);
 		status.put("nullable", false);
-		
+
 		ObjectNode nome = this.objectMapper.createObjectNode();
 		nome.put("type", String.class.getName());
 		nome.put("length", 16);
 		nome.put("nullable", false);
-		
+
 		ObjectNode descricao = this.objectMapper.createObjectNode();
 		descricao.put("type", "Text");
 		descricao.put("nullable", true);
-		
+
 		ObjectNode certificacaoIso = this.objectMapper.createObjectNode();
 		certificacaoIso.put("type", "Boolean");
 		certificacaoIso.put("nullable", false);
-		
-		
+
 		ObjectNode servicoEntityAttributes = this.objectMapper.createObjectNode();
 		servicoEntityAttributes.set("id", id);
 		servicoEntityAttributes.set("version", version);
@@ -69,9 +68,7 @@ public class ModelServiceImpl implements ModelService {
 
 		ObjectNode servicoEntity = this.objectMapper.createObjectNode();
 		servicoEntity.set("attributes", servicoEntityAttributes);
-		
-		
-		
+
 		/**
 		 * Sobre Comandos a respeito de instância de Servico
 		 * 
@@ -80,7 +77,7 @@ public class ModelServiceImpl implements ModelService {
 		 * 1. Comando Disponibilizar
 		 * 
 		 */
-		
+
 		ObjectNode disponibilizarServicoCommandAttributes = this.objectMapper.createObjectNode();
 		disponibilizarServicoCommandAttributes.set("id", id);
 		disponibilizarServicoCommandAttributes.set("version", version);
@@ -88,42 +85,39 @@ public class ModelServiceImpl implements ModelService {
 		disponibilizarServicoCommandAttributes.set("nome", nome);
 		disponibilizarServicoCommandAttributes.set("descricao", descricao);
 		disponibilizarServicoCommandAttributes.set("certificacaoIso", certificacaoIso);
-		
+
 		ObjectNode disponibilizarServicoCommand = this.objectMapper.createObjectNode();
 		disponibilizarServicoCommand.set("attribute", disponibilizarServicoCommandAttributes);
 		disponibilizarServicoCommand.put("endState", "Disponibilizado");
-		
+
 		ArrayNode disponibilizarServicoCommandStateControl = this.objectMapper.createArrayNode();
 		disponibilizarServicoCommand.set("stateControl", disponibilizarServicoCommandStateControl);
-		
+
 		/**
 		 * 2. Comando Cancelar
 		 * 
 		 */
-		
+
 		ObjectNode cancelarServicoCommandAttributes = this.objectMapper.createObjectNode();
-				
+
 		ObjectNode cancelarServicoCommand = this.objectMapper.createObjectNode();
 		cancelarServicoCommand.set("attribute", cancelarServicoCommandAttributes);
 		cancelarServicoCommand.put("endState", "Cancelado");
-		
+
 		ArrayNode cancelarServicoCommandStateControl = this.objectMapper.createArrayNode();
-		Stream.of(new String [] {"DISPONIBILIZADO"})
+		Stream.of(new String[] { "DISPONIBILIZADO" })
 				.forEach(item -> cancelarServicoCommandStateControl.add(item));
 		cancelarServicoCommand.set("stateControl", cancelarServicoCommandStateControl);
-		
-		
+
 		/**
 		 * Definicao de quais comandos compoem o agregado
 		 * 
 		 */
-		
+
 		ObjectNode commands = this.objectMapper.createObjectNode();
 		commands.set("Disponibilizar", disponibilizarServicoCommand);
 		commands.set("Cancelar", cancelarServicoCommand);
 
-		
-		
 		/**
 		 * Sobre Eventos a respeito de instância de Servico
 		 * 
@@ -132,7 +126,7 @@ public class ModelServiceImpl implements ModelService {
 		 * 1. Evento Disponibilizado
 		 * 
 		 */
-		
+
 		ObjectNode servicoDisponibilizadoEvent = this.objectMapper.createObjectNode();
 		servicoDisponibilizadoEvent.set("attributes", disponibilizarServicoCommandAttributes);
 		servicoDisponibilizadoEvent.put("type", "Disponibilizado");
@@ -142,50 +136,47 @@ public class ModelServiceImpl implements ModelService {
 		 * 2. Evento Cancelado
 		 * 
 		 */
-		
+
 		ObjectNode servicoCanceladoEvent = this.objectMapper.createObjectNode();
 		servicoCanceladoEvent.set("attributes", cancelarServicoCommandAttributes);
 		servicoCanceladoEvent.put("type", "Cancelado");
 		servicoCanceladoEvent.put("status", "Cancelado");
-		
-		
+
 		/**
 		 * Definicao de quais eventos compoem o agregado
 		 * 
 		 */
-		
+
 		ObjectNode events = this.objectMapper.createObjectNode();
 		events.set("Disponibilizado", servicoDisponibilizadoEvent);
 		events.set("Cancelado", servicoCanceladoEvent);
-		
-		
+
 		/**
 		 * Definicao de quais entidades compoem o agregado
 		 * 
 		 */
-		
+
 		ObjectNode entities = this.objectMapper.createObjectNode();
 		entities.set("servico", servicoEntity);
-		
-		
+
 		/**
 		 * Definição do agregado
 		 * 
 		 */
-		
+
 		ObjectNode servicoAggregateSchema = this.objectMapper.createObjectNode();
 		servicoAggregateSchema.put("name", "assistencia_es");
-		
+
 		ObjectNode servicoAggregate = this.objectMapper.createObjectNode();
 		servicoAggregate.set("schema", servicoAggregateSchema);
 		servicoAggregate.put("type", "Servico");
 		servicoAggregate.set("command", commands);
 		servicoAggregate.set("event", events);
 		servicoAggregate.set("entity", entities);
-		
+
 		return servicoAggregate;
 	}
-	
+
 	public JsonNode buildAtendimentoAggregateRep() {
 
 		/**
@@ -380,7 +371,7 @@ public class ModelServiceImpl implements ModelService {
 		destinoEnderecoCep.put("type", String.class.getName());
 		destinoEnderecoCep.put("length", 16);
 		destinoEnderecoCep.put("nullable", false);
-		
+
 		ObjectNode atendimentoEntityAttributes = this.objectMapper.createObjectNode();
 		atendimentoEntityAttributes.set("id", id);
 		atendimentoEntityAttributes.set("status", status);
@@ -423,9 +414,7 @@ public class ModelServiceImpl implements ModelService {
 
 		ObjectNode atendimentoEntity = this.objectMapper.createObjectNode();
 		atendimentoEntity.set("attributes", atendimentoEntityAttributes);
-		
-		
-		
+
 		/**
 		 * Sobre a entidade Item
 		 * 
@@ -467,19 +456,17 @@ public class ModelServiceImpl implements ModelService {
 		ObjectNode itemEntity = this.objectMapper.createObjectNode();
 		itemEntity.set("attributes", itemEntityAttributes);
 		itemEntity.set("associations", itemEntityAssociations);
-		
-		
-		
+
 		/**
 		 * Sobre Comandos a respeito de instância de Atendimento
 		 * 
 		 */
-		
+
 		/**
 		 * 1. Comando SolicitarAtendimento
 		 * 
 		 */
-		
+
 		ObjectNode solicitarAtendimentoCommandAttributes = this.objectMapper.createObjectNode();
 		solicitarAtendimentoCommandAttributes.set("clienteId", clienteId);
 		solicitarAtendimentoCommandAttributes.set("clienteTipoDeDocFiscal", clienteTipoDeDocFiscal);
@@ -507,21 +494,19 @@ public class ModelServiceImpl implements ModelService {
 		solicitarAtendimentoCommandAttributes.set("origemEnderecoCidade", origemEnderecoCidade);
 		solicitarAtendimentoCommandAttributes.set("origemEnderecoEstado", origemEnderecoEstado);
 		solicitarAtendimentoCommandAttributes.set("origemEnderecoCep", origemEnderecoCep);
-		
-		
+
 		ObjectNode solicitarAtendimentoCommand = this.objectMapper.createObjectNode();
 		solicitarAtendimentoCommand.set("attribute", solicitarAtendimentoCommandAttributes);
 		solicitarAtendimentoCommand.put("endState", "Solicitado");
-		
+
 		ArrayNode solicitarAtendimentoCommandStateControl = this.objectMapper.createArrayNode();
 		solicitarAtendimentoCommand.set("stateControl", solicitarAtendimentoCommandStateControl);
-		
 
 		/**
 		 * 2. Comando AjustarAtendimento
 		 * 
 		 */
-		
+
 		ObjectNode ajustarAtendimentoCommandAttributes = this.objectMapper.createObjectNode();
 		ajustarAtendimentoCommandAttributes.set("servicoId", servicoId);
 		ajustarAtendimentoCommandAttributes.set("servicoNome", servicoNome);
@@ -541,44 +526,43 @@ public class ModelServiceImpl implements ModelService {
 		ajustarAtendimentoCommandAttributes.set("destinoEnderecoCep", destinoEnderecoCep);
 		ajustarAtendimentoCommandAttributes.set("descricao", descricao);
 		ajustarAtendimentoCommandAttributes.set("List.of(Item)", itemEntity);
-		
+
 		ObjectNode ajustarAtendimentoCommand = this.objectMapper.createObjectNode();
 		ajustarAtendimentoCommand.set("attribute", ajustarAtendimentoCommandAttributes);
 		ajustarAtendimentoCommand.put("endState", "Ajustado");
-		
+
 		ArrayNode ajustarAtendimentoCommandStateControl = this.objectMapper.createArrayNode();
-		Stream.of(new String [] {"SOLICITADO", "AJUSTADO"})
+		Stream.of(new String[] { "SOLICITADO", "AJUSTADO" })
 				.forEach(item -> ajustarAtendimentoCommandStateControl.add(item));
 		ajustarAtendimentoCommand.set("stateControl", ajustarAtendimentoCommandStateControl);
-		
+
 		/**
 		 * 3. Comando ConfirmarAtendimento
 		 * 
 		 */
-		
+
 		ObjectNode confirmarAtendimentoCommandAttributes = this.objectMapper.createObjectNode();
 		confirmarAtendimentoCommandAttributes.set("prestadorId", prestadorId);
-		
+
 		ObjectNode confirmarAtendimentoCommand = this.objectMapper.createObjectNode();
 		confirmarAtendimentoCommand.set("attribute", confirmarAtendimentoCommandAttributes);
 		confirmarAtendimentoCommand.put("endState", "Confirmado");
-		
+
 		ArrayNode confirmarAtendimentoCommandStateControl = this.objectMapper.createArrayNode();
-		Stream.of(new String [] {"AJUSTADO"})
+		Stream.of(new String[] { "AJUSTADO" })
 				.forEach(item -> confirmarAtendimentoCommandStateControl.add(item));
-		confirmarAtendimentoCommand.set("stateControl", confirmarAtendimentoCommandStateControl);		
-		
+		confirmarAtendimentoCommand.set("stateControl", confirmarAtendimentoCommandStateControl);
+
 		/**
 		 * Definicao de quais comandos compoem o agregado
 		 * 
 		 */
-		
+
 		ObjectNode commands = this.objectMapper.createObjectNode();
 		commands.set("Solicitar", solicitarAtendimentoCommand);
 		commands.set("Ajustar", ajustarAtendimentoCommand);
 		commands.set("Confirmar", confirmarAtendimentoCommand);
-		
-		
+
 		/**
 		 * Definicao de quais comandos compoem o agregado
 		 * 
@@ -587,51 +571,49 @@ public class ModelServiceImpl implements ModelService {
 		atendimentoSolicitadoEvent.set("attributes", solicitarAtendimentoCommandAttributes);
 		atendimentoSolicitadoEvent.put("type", "Solicitado");
 		atendimentoSolicitadoEvent.put("status", "Solicitado");
-		
+
 		ObjectNode atendimentoAjustadoEvent = this.objectMapper.createObjectNode();
 		atendimentoAjustadoEvent.set("attributes", ajustarAtendimentoCommandAttributes);
 		atendimentoAjustadoEvent.put("type", "Ajustado");
 		atendimentoAjustadoEvent.put("status", "Ajustado");
-		
+
 		ObjectNode atendimentoConfirmadoEvent = this.objectMapper.createObjectNode();
 		atendimentoConfirmadoEvent.set("attributes", confirmarAtendimentoCommandAttributes);
 		atendimentoConfirmadoEvent.put("type", "Confirmado");
 		atendimentoConfirmadoEvent.put("status", "Confirmado");
-		
+
 		ObjectNode events = this.objectMapper.createObjectNode();
 		events.set("Solicitado", atendimentoSolicitadoEvent);
 		events.set("Ajustado", atendimentoAjustadoEvent);
 		events.set("Confirmado", atendimentoConfirmadoEvent);
-		
-		
+
 		/**
 		 * Definicao de quais entidades compoem o agregado
 		 * 
 		 */
-		
+
 		ObjectNode entities = this.objectMapper.createObjectNode();
 		entities.set("atendimento", atendimentoEntity);
 		entities.set("item", itemEntity);
-		
-		
+
 		/**
 		 * Definição do agregado
 		 * 
 		 */
-		
+
 		ObjectNode atendimentoAggregateSchema = this.objectMapper.createObjectNode();
-		atendimentoAggregateSchema.put("name", "atendimento_es");
-		
+		atendimentoAggregateSchema.put("name", "assistencia_es");
+
 		ObjectNode atendimentoAggregate = this.objectMapper.createObjectNode();
 		atendimentoAggregate.set("schema", atendimentoAggregateSchema);
 		atendimentoAggregate.put("type", "Atendimento");
 		atendimentoAggregate.set("command", commands);
 		atendimentoAggregate.set("event", events);
 		atendimentoAggregate.set("entity", entities);
-		
+
 		return atendimentoAggregate;
 	}
-	
+
 	@Override
 	public JsonNode getModel(String tenant) {
 		return this.objectNodes.get(tenant);

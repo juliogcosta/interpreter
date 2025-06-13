@@ -3,6 +3,7 @@ package com.yc.core.cqrs.application.service.event.processor;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Propagation;
@@ -57,21 +58,22 @@ import lombok.extern.slf4j.Slf4j;
  * 
  */
 
+@DependsOn("transactionManager")
 @Transactional(propagation = Propagation.REQUIRES_NEW)
 @Component
 @RequiredArgsConstructor
 @Slf4j
 public class EventSubscriptionProcessor {
 
-	/**
-	 * batchSize: informa o tamanho do batch de eventos a serem processados. Isso
-	 * evita que se torne um problema de eficiência grave no sistema se um handler
-	 * novo for adicionado (caso seja obrigado) a processar todos os eventos de um
-	 * agregado, sendo muitos.
-	 * 
-	 */
-	@Value("${event-sourcing.polling-subscriptions.batch-size}")
-	private int batchSize;
+    /**
+     * batchSize: informa o tamanho do batch de eventos a serem processados. Isso
+     * evita que se torne um problema de eficiência grave no sistema se um handler
+     * novo for adicionado (caso seja obrigado) a processar todos os eventos de um
+     * agregado, sendo muitos.
+     * 
+     */
+    @Value("${event-sourcing.polling-subscriptions.batch-size}")
+    private int batchSize;
 
     private final EventSubscriptionRepository subscriptionRepository;
     private final EventRepository eventRepository;
@@ -88,18 +90,19 @@ public class EventSubscriptionProcessor {
                     log.debug("Acquired lock on subscription {}, checkpoint = {}", subscriptionName, checkpoint);
                     List<EventWithId> events = this.eventRepository.readEventsAfterCheckpoint(
                             checkpoint.lastProcessedTransactionId(),
-                            checkpoint.lastProcessedEventId(), 
+                            checkpoint.lastProcessedEventId(),
                             this.batchSize,
                             aggregateModel);
                     log.debug("Fetched {} new event(s) for subscription {}", events.size(), subscriptionName);
-                    if (events.isEmpty()) { 
-                    	
+                    if (events.isEmpty()) {
+
                     } else {
                         events.forEach(event -> {
-                        	new AsyncEventHandlerImpl(aggregateModel).handleEvent(event);
+                            new AsyncEventHandlerImpl(aggregateModel).handleEvent(event);
                         });
                         EventWithId lastEvent = events.get(events.size() - 1);
-                        this.subscriptionRepository.updateEventSubscription(schemaName, subscriptionName, lastEvent.transactionId(), lastEvent.id());
+                        this.subscriptionRepository.updateEventSubscription(schemaName, subscriptionName,
+                                lastEvent.transactionId(), lastEvent.id());
                     }
                 }, () -> log.debug("Can't acquire lock on subscription {}", subscriptionName));
     }

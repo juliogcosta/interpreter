@@ -11514,3 +11514,119 @@ Caused by: java.lang.ClassCastException: class org.eclipse.jdt.internal.compiler
 	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+!SESSION 2025-06-13 14:58:10.210 -----------------------------------------------
+eclipse.buildId=4.24.0.202407191504
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2025-06-13 14:58:11.606
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-06-13 14:58:12.409
+!MESSAGE Logback config file: /home/julio/Codes/YC/Experiments/interpreter/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-06-13 14:58:12.703
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-13 14:58:12.703
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-06-13 14:58:12.991
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-13 14:58:12.991
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-13 14:58:16.000
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+/opt/sts-4.24.0.RELEASE/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.3.v20240426-1530/jre/bin/java
+-cp
+/opt/sts-4.24.0.RELEASE/plugins/org.springframework.tooling.boot.ls_1.56.0.202407191456/servers/spring-boot-language-server/BOOT-INF/classes:/opt/sts-4.24.0.RELEASE/plugins/org.springframework.tooling.boot.ls_1.56.0.202407191456/servers/spring-boot-language-server/BOOT-INF/lib/*
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:/opt/sts-4.24.0.RELEASE/plugins/org.springframework.tooling.boot.ls_1.56.0.202407191456/servers/spring-boot-language-server/BOOT-INF/classes/application.properties
+-XX:ErrorFile=/home/julio/Codes/YC/Experiments/interpreter/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1749837496000
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.001
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-13 14:58:16.003
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 163388
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.771
+!MESSAGE Boot project ADDED: assistencia
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.771
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.772
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.772
+!MESSAGE Boot project ADDED: eureka
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.773
+!MESSAGE Boot project ADDED: gateway
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.869
+!MESSAGE Classpath changed for project: assistencia
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.870
+!MESSAGE Classpath changed for project: eureka
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.873
+!MESSAGE Classpath changed for project: gateway
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.873
+!MESSAGE Classpath changed for project: id
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.873
+!MESSAGE Boot project ADDED: id
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.879
+!MESSAGE Classpath changed for project: id.autenticador
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.879
+!MESSAGE Boot project ADDED: id.autenticador
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.879
+!MESSAGE Classpath changed for project: yc.core-common
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.879
+!MESSAGE Boot project ADDED: yc.core-common
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.882
+!MESSAGE Classpath changed for project: yc.core-cqrs
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.882
+!MESSAGE Boot project ADDED: yc.core-cqrs
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.882
+!MESSAGE Classpath changed for project: yc.persistence-c
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-13 14:58:16.882
+!MESSAGE Boot project ADDED: yc.persistence-c
+
+!ENTRY org.eclipse.core.resources 4 2 2025-06-13 14:58:27.476
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.springsource.ide.eclipse.commons.livexp.core.LiveSetVariable.getValue()" because "this.this$0.applications" is null
+	at org.springframework.ide.eclipse.boot.dash.model.LocalBootDashModel$4.resourceChanged(LocalBootDashModel.java:201)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:321)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:311)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:174)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:444)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:210)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-06-13 14:58:27.708
+!MESSAGE The workspace will exit with unsaved changes in this session.

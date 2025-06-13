@@ -26,7 +26,7 @@ public class EventSubscriptionRepository {
 
     public void createSubscriptionIfAbsent(String schemaName, String subscriptionName) {
         String query = String.format("""
-                INSERT INTO %s.ES_EVENT_SUBSCRIPTION (SUBSCRIPTION_NAME, LAST_TRANSACTION_ID, LAST_EVENT_ID)
+                INSERT INTO %s.es_event_subscription (SUBSCRIPTION_NAME, LAST_TRANSACTION_ID, LAST_EVENT_ID)
                 VALUES (:subscriptionName, '0'::xid8, 0)
                 ON CONFLICT DO NOTHING
                 """, schemaName);
@@ -57,7 +57,7 @@ public class EventSubscriptionRepository {
          """, schemaName);
         log.info("\n > query: {}\n", query);
 
-        return jdbcTemplate.query(query, Map.of("subscriptionName", subscriptionName), this::toEventSubscriptionCheckpoint)
+        return this.jdbcTemplate.query(query, Map.of("subscriptionName", subscriptionName), this::toEventSubscriptionCheckpoint)
                 .stream().findFirst();
     }
 
