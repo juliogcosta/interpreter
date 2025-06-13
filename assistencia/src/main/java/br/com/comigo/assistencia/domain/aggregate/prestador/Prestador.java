@@ -2,10 +2,10 @@ package br.com.comigo.assistencia.domain.aggregate.prestador;
 
 import java.util.List;
 
-import br.com.comigo.common.model.records.Cnpj;
-import br.com.comigo.common.model.records.Email;
-import br.com.comigo.common.model.records.Endereco;
-import br.com.comigo.common.model.records.Telefone;
+import com.yc.core.common.model.records.Cnpj;
+import com.yc.core.common.model.records.Email;
+import com.yc.core.common.model.records.Endereco;
+import com.yc.core.common.model.records.Telefone;
 
 public class Prestador {
 

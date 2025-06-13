@@ -4,6 +4,11 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.yc.core.common.infrastructure.exception.ControlledException;
+import com.yc.core.common.infrastructure.exception.IncompleteRegisterException;
+import com.yc.core.common.model.records.Cpf;
+import com.yc.core.common.model.records.Telefone;
+
 import br.com.comigo.assistencia.adapter.aggregate.cliente.dto.ClienteDTO;
 import br.com.comigo.assistencia.adapter.aggregate.cliente.outbound.restclient.DETRANService;
 import br.com.comigo.assistencia.application.usecase.cliente.ClienteUseCases;
@@ -11,10 +16,6 @@ import br.com.comigo.assistencia.domain.aggregate.cliente.Cliente;
 import br.com.comigo.assistencia.domain.aggregate.cliente.Veiculo;
 import br.com.comigo.assistencia.domain.aggregate.cliente.repository.ClienteRepository;
 import br.com.comigo.assistencia.mapper.aggregate.cliente.ClienteMapper;
-import br.com.comigo.common.infrastructure.exception.ControlledException;
-import br.com.comigo.common.infrastructure.exception.IncompleteRegisterException;
-import br.com.comigo.common.model.records.Cpf;
-import br.com.comigo.common.model.records.Telefone;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 

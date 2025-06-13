@@ -9,9 +9,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.yc.core.common.infrastructure.exception.ControlledException;
+
 import br.com.comigo.assistencia.adapter.aggregate.prestador.dto.ServicoDePrestadorResponse;
 import br.com.comigo.assistencia.application.aggregate.service.prestador.ServicoDePrestadorServiceImpl;
-import br.com.comigo.common.infrastructure.exception.ControlledException;
 import lombok.RequiredArgsConstructor;
 
 @RestController

@@ -2,8 +2,9 @@ package br.com.comigo.id.application.usecase.usuario;
 
 import java.util.List;
 
-import br.com.comigo.common.infrastructure.exception.RegisterNotFoundException;
-import br.com.comigo.common.model.records.Telefone;
+import com.yc.core.common.infrastructure.exception.RegisterNotFoundException;
+import com.yc.core.common.model.records.Telefone;
+
 import br.com.comigo.id.adapter.aggregate.usuario.dto.PapelDeUsuarioDTO;
 import br.com.comigo.id.adapter.aggregate.usuario.dto.UsuarioDTO;
 import br.com.comigo.id.adapter.aggregate.usuario.dto.UsuarioForLoginDTO;

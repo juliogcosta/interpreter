@@ -1,6 +1,7 @@
 package br.com.comigo.assistencia.adapter.aggregate.outbound.util;
 
-import br.com.comigo.common.model.records.Endereco.Tipo;
+import com.yc.core.common.model.records.Endereco.Tipo;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.EnumType;

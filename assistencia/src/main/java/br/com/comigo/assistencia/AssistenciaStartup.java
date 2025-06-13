@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableFeignClients
 @SpringBootApplication
 @ComponentScan(basePackages = {
-		//"br.com.comigo.common.infrastructure.exception.util"
+		//"com.yc.core.common.infrastructure.exception.util"
 })
 public class AssistenciaStartup {
 	public static void main(String[] args) {

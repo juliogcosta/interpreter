@@ -7,8 +7,9 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
-import br.com.comigo.common.model.records.Email;
-import br.com.comigo.common.model.records.Telefone;
+import com.yc.core.common.model.records.Email;
+import com.yc.core.common.model.records.Telefone;
+
 import br.com.comigo.id.adapter.aggregate.usuario.dto.PapelDeUsuarioDTO;
 import br.com.comigo.id.adapter.aggregate.usuario.dto.UsuarioDTO;
 import br.com.comigo.id.adapter.aggregate.usuario.outbound.JpaUsuario;

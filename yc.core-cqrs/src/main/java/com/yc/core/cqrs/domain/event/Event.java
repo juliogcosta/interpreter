@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 import java.util.UUID;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.yc.core.cqrs.C;
 
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
@@ -24,8 +25,8 @@ public class Event {
     public Event(UUID aggregateId, String aggregateType, JsonNode eventModel, JsonNode eventData, int version) {
 		this.aggregateId = aggregateId;
 		this.aggregateType = aggregateType;
-		this.eventType = eventModel.get("type").asText();
-		this.eventStatus = eventModel.asText("status");
+		this.eventType = eventModel.get(C.type).asText();
+		this.eventStatus = eventModel.asText(C.status);
 		this.eventData = eventData.deepCopy();
 		this.eventModel = eventModel;
 		this.version = version;

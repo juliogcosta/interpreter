@@ -4,8 +4,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import br.com.comigo.common.infrastructure.exception.ControlledException;
-import br.com.comigo.common.model.records._assistencia.ServicoDTO;
+import com.yc.core.common.infrastructure.exception.ControlledException;
+import com.yc.core.common.model.records._assistencia.ServicoDTO;
+
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

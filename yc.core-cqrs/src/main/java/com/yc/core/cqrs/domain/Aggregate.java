@@ -10,6 +10,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.yc.core.cqrs.C;
 import com.yc.core.cqrs.domain.command.Command;
 import com.yc.core.cqrs.domain.event.Event;
 import com.yc.core.cqrs.error.AggregateStateException;
@@ -45,7 +46,7 @@ public class Aggregate {
     }
 
     public String getAggregateType() {
-    	return this.aggregateModel.get("type").asText();
+    	return this.aggregateModel.get(C.type).asText();
     }
     
     public void loadFromHistory(List<Event> events) {
@@ -68,7 +69,7 @@ public class Aggregate {
 
     protected void applyChange(Event event) {
         if (event.getVersion() != this.getNextVersion()) {
-            throw new IllegalStateException("A versão (%s) do evento não casa com a versão esperada (%s)."
+            throw new IllegalStateException("Event version %s doesn't match expected version %s"
                     .formatted(event.getVersion(), this.getNextVersion()));
         }
         this.apply(event);
@@ -77,19 +78,32 @@ public class Aggregate {
     }
 
     private void apply(Event event) {
-        this.aggregateData.put("id", event.getAggregateId().toString());
-        this.aggregateData.put("status", event.getEventStatus());
-        this.aggregateData.put("when", event.getCreatedDate().toInstant().toString());
+        this.aggregateData.put(C.id, event.getAggregateId().toString());
+        this.aggregateData.put(C.status, event.getEventStatus());
+        this.aggregateData.put(C.when, event.getCreatedDate().toInstant().toString());
+        JsonNode eventData = event.getEventData();
+        if (eventData != null && eventData.isObject()) {
+            eventData.fields().forEachRemaining(entry -> {
+            	if (entry.getKey().equals(C.id) || entry.getKey().equals(C.status) 
+            			|| entry.getKey().equals(C.when)) {
+            		
+            	} else this.aggregateData.set(entry.getKey(), entry.getValue());
+            });
+        };
         this.version = event.getVersion();
         log.debug("\n > Applyed event {}", event);
     }
 
     public void process(Command command) {
-        log.debug("\n > processing command {} into aggregate", command);
-        String status = command.getAggregateData().asText("status");
-        ArrayNode stateControl = (ArrayNode) command.getCommandModel().get("stateControl");
+        log.debug("\n > Processing command {} into aggregate", command);
+        String status = null;
+        if (command.getAggregateData().has(C.status)) {
+        	status = command.getAggregateData().get(C.status).asText();
+        }
+        ArrayNode stateControl = (ArrayNode) command.getCommandModel().get(C.stateControl);
+        log.info("\n > status: {}", status);
         if (status == null) {
-        	if (stateControl.size() == 0) {
+            if (stateControl.size() == 0) {
         		
         	} else throw new AggregateStateException("Não é possível deterinar o status do agregado");
         } else {
@@ -106,7 +120,9 @@ public class Aggregate {
         	} else throw new AggregateStateException("A transição de situação (%s) do aggregado não pode ser processada.".formatted(status));
         }
         
-        JsonNode eventModel = this.aggregateModel.get("event").get(command.getCommandModel().get("endState").asText());
-        this.applyChange(new Event(this.aggregateId, this.getAggregateType(), eventModel, this.aggregateData, this.baseVersion));
+        // ObjectNode aggregateData = (ObjectNode) command.getAggregateData();
+        
+        JsonNode eventModel = this.aggregateModel.get(C.event).get(command.getCommandModel().get(C.endState).asText());
+        this.applyChange(new Event(this.aggregateId, this.getAggregateType(), eventModel, command.getAggregateData(), this.getNextVersion()));
     }
 }

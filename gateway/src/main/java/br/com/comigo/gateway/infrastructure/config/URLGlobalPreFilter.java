@@ -11,7 +11,8 @@ import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 
-import br.com.comigo.common.utils.HashUtils;
+import com.yc.core.common.utils.HashUtils;
+
 import reactor.core.publisher.Mono;
 
 @Component

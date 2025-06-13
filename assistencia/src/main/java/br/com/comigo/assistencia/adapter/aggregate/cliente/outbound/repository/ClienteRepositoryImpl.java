@@ -9,6 +9,9 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Repository;
 
+import com.yc.core.common.model.records.Cpf;
+import com.yc.core.common.model.records.Telefone;
+
 import br.com.comigo.assistencia.adapter.aggregate.cliente.outbound.JpaCliente;
 import br.com.comigo.assistencia.adapter.aggregate.cliente.outbound.JpaVeiculo;
 import br.com.comigo.assistencia.adapter.aggregate.outbound.util.JpaCpf;
@@ -19,8 +22,6 @@ import br.com.comigo.assistencia.domain.aggregate.cliente.Cliente;
 import br.com.comigo.assistencia.domain.aggregate.cliente.Veiculo;
 import br.com.comigo.assistencia.domain.aggregate.cliente.repository.ClienteRepository;
 import br.com.comigo.assistencia.mapper.aggregate.cliente.ClienteMapper;
-import br.com.comigo.common.model.records.Cpf;
-import br.com.comigo.common.model.records.Telefone;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 

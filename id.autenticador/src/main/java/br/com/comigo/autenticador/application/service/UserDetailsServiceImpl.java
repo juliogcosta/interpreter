@@ -10,11 +10,12 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import com.yc.core.common.infrastructure.exception.RegisterNotFoundException;
+import com.yc.core.common.model.records.Email;
+
 import br.com.comigo.autenticador.adaper.outbound.restclient.UnsecUsuarioRestClient;
 import br.com.comigo.autenticador.domain.Role;
 import br.com.comigo.autenticador.domain.User;
-import br.com.comigo.common.infrastructure.exception.RegisterNotFoundException;
-import br.com.comigo.common.model.records.Email;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 

@@ -106,7 +106,7 @@
 
         <dependency>
             <groupId>br.com.comigo</groupId>
-            <artifactId>core-common</artifactId>
+            <artifactId>yc.core-common</artifactId>
             <version>${project.version}</version>
             <exclusions>
                 <exclusion>

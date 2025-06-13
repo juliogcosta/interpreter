@@ -8,8 +8,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import br.com.comigo.common.infrastructure.exception.RegisterNotFoundException;
-import br.com.comigo.common.model.records.Telefone;
+import com.yc.core.common.infrastructure.exception.RegisterNotFoundException;
+import com.yc.core.common.model.records.Telefone;
+
 import br.com.comigo.id.adapter.aggregate.usuario.dto.PapelDeUsuarioDTO;
 import br.com.comigo.id.adapter.aggregate.usuario.dto.UsuarioDTO;
 import br.com.comigo.id.application.aggregate.service.usuario.UsuarioServiceImpl;

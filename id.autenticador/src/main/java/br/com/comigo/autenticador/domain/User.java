@@ -8,7 +8,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import br.com.comigo.common.model.records.Email;
+import com.yc.core.common.model.records.Email;
 
 public class User implements UserDetails {
 	

@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan(basePackages = {
 		"br.com.comigo.id.**",
-		"br.com.comigo.common.infrastructure.exception.util"
+		"com.yc.core.common.infrastructure.exception.util"
 })
 public class IdStartup {
 	public static void main(String[] args) {

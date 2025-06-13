@@ -2,8 +2,9 @@ package br.com.comigo.id.domain.aggregate.usuario;
 
 import java.util.List;
 
-import br.com.comigo.common.model.records.Email;
-import br.com.comigo.common.model.records.Telefone;
+import com.yc.core.common.model.records.Email;
+import com.yc.core.common.model.records.Telefone;
+
 import br.com.comigo.id.domain.util.StatusDeUsuario;
 
 public class Usuario {

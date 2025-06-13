@@ -39,16 +39,17 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/julio/Codes/YC/Experiments/interpreter"/>
 			<item value="/home/julio/Codes/Experiments/interpreter"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
 		</list>
 		<section name="ExternalProjectImportWizard.dialogBounds">
-			<item key="DIALOG_X_ORIGIN" value="20"/>
-			<item key="DIALOG_Y_ORIGIN" value="20"/>
-			<item key="DIALOG_WIDTH" value="470"/>
-			<item key="DIALOG_HEIGHT" value="731"/>
+			<item key="DIALOG_X_ORIGIN" value="630"/>
+			<item key="DIALOG_Y_ORIGIN" value="182"/>
+			<item key="DIALOG_WIDTH" value="609"/>
+			<item key="DIALOG_HEIGHT" value="760"/>
 			<item key="DIALOG_FONT_NAME" value="1|Ubuntu|9.0|0|GTK|1|"/>
 		</section>
 	</section>
@@ -64,8 +65,8 @@
 		<section name="SmartImportWizard.dialogBounds">
 			<item key="DIALOG_X_ORIGIN" value="630"/>
 			<item key="DIALOG_Y_ORIGIN" value="182"/>
-			<item key="DIALOG_WIDTH" value="903"/>
-			<item key="DIALOG_HEIGHT" value="838"/>
+			<item key="DIALOG_WIDTH" value="948"/>
+			<item key="DIALOG_HEIGHT" value="798"/>
 			<item key="DIALOG_FONT_NAME" value="1|Ubuntu|9.0|0|GTK|1|"/>
 		</section>
 	</section>

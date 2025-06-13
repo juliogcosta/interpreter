@@ -3,7 +3,8 @@ package br.com.comigo.id.domain.aggregate.usuario.repository;
 import java.util.List;
 import java.util.Optional;
 
-import br.com.comigo.common.model.records.Telefone;
+import com.yc.core.common.model.records.Telefone;
+
 import br.com.comigo.id.domain.aggregate.usuario.Usuario;
 import br.com.comigo.id.domain.projection.UsuarioAndPapelProjection;
 import br.com.comigo.id.domain.util.StatusDePapel;

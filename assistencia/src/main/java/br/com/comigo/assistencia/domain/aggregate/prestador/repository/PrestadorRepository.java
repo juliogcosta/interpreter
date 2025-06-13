@@ -3,9 +3,10 @@ package br.com.comigo.assistencia.domain.aggregate.prestador.repository;
 import java.util.List;
 import java.util.Optional;
 
+import com.yc.core.common.model.records.Cnpj;
+import com.yc.core.common.model.records.Telefone;
+
 import br.com.comigo.assistencia.domain.aggregate.prestador.Prestador;
-import br.com.comigo.common.model.records.Cnpj;
-import br.com.comigo.common.model.records.Telefone;
 
 public interface PrestadorRepository {
     public Prestador create(Prestador prestador);

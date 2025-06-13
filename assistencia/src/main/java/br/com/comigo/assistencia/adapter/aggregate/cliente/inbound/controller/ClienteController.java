@@ -12,12 +12,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.yc.core.common.infrastructure.exception.ControlledException;
+import com.yc.core.common.infrastructure.exception.IncompleteRegisterException;
+import com.yc.core.common.model.records.Cpf;
+import com.yc.core.common.model.records.Telefone;
+
 import br.com.comigo.assistencia.adapter.aggregate.cliente.dto.ClienteDTO;
 import br.com.comigo.assistencia.application.aggregate.service.cliente.ClienteServiceImpl;
-import br.com.comigo.common.infrastructure.exception.ControlledException;
-import br.com.comigo.common.infrastructure.exception.IncompleteRegisterException;
-import br.com.comigo.common.model.records.Cpf;
-import br.com.comigo.common.model.records.Telefone;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 

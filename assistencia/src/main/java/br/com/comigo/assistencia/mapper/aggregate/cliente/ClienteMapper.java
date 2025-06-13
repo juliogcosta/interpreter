@@ -8,15 +8,16 @@ import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 import org.slf4j.LoggerFactory;
 
+import com.yc.core.common.model.records.Cpf;
+import com.yc.core.common.model.records.Email;
+import com.yc.core.common.model.records.Endereco;
+import com.yc.core.common.model.records.Telefone;
+
 import br.com.comigo.assistencia.adapter.aggregate.cliente.dto.ClienteDTO;
 import br.com.comigo.assistencia.adapter.aggregate.cliente.dto.VeiculoDTO;
 import br.com.comigo.assistencia.adapter.aggregate.cliente.outbound.JpaCliente;
 import br.com.comigo.assistencia.domain.aggregate.cliente.Cliente;
 import br.com.comigo.assistencia.domain.aggregate.cliente.Veiculo;
-import br.com.comigo.common.model.records.Cpf;
-import br.com.comigo.common.model.records.Email;
-import br.com.comigo.common.model.records.Endereco;
-import br.com.comigo.common.model.records.Telefone;
 
 @Mapper(componentModel = "spring")
 public interface ClienteMapper {

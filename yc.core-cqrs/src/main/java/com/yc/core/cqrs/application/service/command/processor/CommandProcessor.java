@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.yc.core.cqrs.C;
 import com.yc.core.cqrs.application.service.command.CommandHandlerImpl;
 import com.yc.core.cqrs.application.service.event.SyncEventHandler;
 import com.yc.core.cqrs.domain.Aggregate;
@@ -47,7 +48,7 @@ public class CommandProcessor {
      * @return O agregado atualizado após o processamento do comando.
      */
     public Aggregate process(JsonNode aggregateModel, @NonNull Command command) {
-        log.info("\n > Starting command processor [Command: {}]", command);
+        log.info("\n > Starting command processor [{}]", command);
 
         /**
          * A invocação de "readAggregate" implica a recuperação do agregado a partid do
@@ -60,16 +61,18 @@ public class CommandProcessor {
         Aggregate aggregate = this.aggregateStore.readAggregate(aggregateId, aggregateModel);
         log.info("\n > Aggregate read: {}", aggregate);
 
-        if (command.getCommandModel().has("handler")) {
+        if (command.getCommandModel().has(C.handler)) {
             /**
              * Oportunidade para a invocação de funções que executam regras de negócio, etc.
              * 
              */
-        } else
+        } else {
+            log.info("\n > Aggregate command.handle");
             CommandProcessor.this.commandHandler.handle(aggregate, command);
-
+        }
+        
         List<EventWithId> events = this.aggregateStore.saveAggregate(aggregate);
-        log.info(" > events: {}", events);
+        log.info("\n > Events: {}", events);
 
         this.syncEventHandler.handleEvents(events, aggregate);
 

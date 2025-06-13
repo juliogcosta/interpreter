@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="origem"/>
+		<item key="selection" value="Disponibilizado"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="Disponibizado"/>
+			<item value="fly"/>
+			<item value="solicitarAtendimentoAttributeNode"/>
+			<item value="ajustarAtendimento"/>
 			<item value="base"/>
 			<item value="clienteTipoDeDocFiscal"/>
 			<item value="&lt;Event&gt;"/>
@@ -15,6 +19,9 @@
 			<item value="JsonNode"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Disponibilizado"/>
+			<item value="atendimentoEntityAttributes"/>
+			<item value="confirmarAtendimento"/>
 			<item value="origem"/>
 			<item value="clienteDocFiscal"/>
 		</list>

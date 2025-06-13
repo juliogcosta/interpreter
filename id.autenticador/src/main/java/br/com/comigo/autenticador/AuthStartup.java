@@ -12,7 +12,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 @EnableFeignClients(basePackages = "br.com.comigo.autenticador.adaper.outbound.restclient")
 @ComponentScan(basePackages = { 
     "br.com.comigo.autenticador",
-    "br.com.comigo.common.infrastructure.exception"
+    "com.yc.core.common.infrastructure.exception"
 })
 @SpringBootApplication
 public class AuthStartup {

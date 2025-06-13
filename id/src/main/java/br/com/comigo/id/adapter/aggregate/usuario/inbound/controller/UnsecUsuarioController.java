@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.comigo.common.infrastructure.exception.RegisterNotFoundException;
+import com.yc.core.common.infrastructure.exception.RegisterNotFoundException;
+
 import br.com.comigo.id.adapter.aggregate.usuario.dto.UsuarioForLoginDTO;
 import br.com.comigo.id.application.aggregate.service.usuario.UsuarioServiceImpl;
 import lombok.RequiredArgsConstructor;

@@ -4,14 +4,15 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
+import com.yc.core.common.model.records.Cnpj;
+import com.yc.core.common.model.records.Email;
+import com.yc.core.common.model.records.Endereco;
+import com.yc.core.common.model.records.Telefone;
+
 import br.com.comigo.assistencia.adapter.aggregate.prestador.dto.PrestadorDTO;
 import br.com.comigo.assistencia.adapter.aggregate.prestador.dto.PrestadorResponse;
 import br.com.comigo.assistencia.adapter.aggregate.prestador.outbound.JpaPrestador;
 import br.com.comigo.assistencia.domain.aggregate.prestador.Prestador;
-import br.com.comigo.common.model.records.Cnpj;
-import br.com.comigo.common.model.records.Email;
-import br.com.comigo.common.model.records.Endereco;
-import br.com.comigo.common.model.records.Telefone;
 
 @Mapper(componentModel = "spring")
 public interface PrestadorMapper {

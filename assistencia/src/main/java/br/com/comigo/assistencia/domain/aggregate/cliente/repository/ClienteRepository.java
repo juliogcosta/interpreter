@@ -3,9 +3,10 @@ package br.com.comigo.assistencia.domain.aggregate.cliente.repository;
 import java.util.List;
 import java.util.Optional;
 
+import com.yc.core.common.model.records.Cpf;
+import com.yc.core.common.model.records.Telefone;
+
 import br.com.comigo.assistencia.domain.aggregate.cliente.Cliente;
-import br.com.comigo.common.model.records.Cpf;
-import br.com.comigo.common.model.records.Telefone;
 
 public interface ClienteRepository {
     public Cliente create(Cliente event);

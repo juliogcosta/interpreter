@@ -5,9 +5,10 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+import com.yc.core.common.infrastructure.exception.IncompleteRegisterException;
+
 import br.com.comigo.assistencia.domain.aggregate.cliente.Cliente;
 import br.com.comigo.assistencia.domain.aggregate.cliente.Veiculo;
-import br.com.comigo.common.infrastructure.exception.IncompleteRegisterException;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

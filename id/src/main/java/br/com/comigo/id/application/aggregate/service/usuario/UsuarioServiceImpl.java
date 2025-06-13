@@ -5,8 +5,9 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
-import br.com.comigo.common.infrastructure.exception.RegisterNotFoundException;
-import br.com.comigo.common.model.records.Telefone;
+import com.yc.core.common.infrastructure.exception.RegisterNotFoundException;
+import com.yc.core.common.model.records.Telefone;
+
 import br.com.comigo.id.adapter.aggregate.usuario.dto.PapelDeUsuarioDTO;
 import br.com.comigo.id.adapter.aggregate.usuario.dto.UsuarioDTO;
 import br.com.comigo.id.adapter.aggregate.usuario.dto.UsuarioForLoginDTO;

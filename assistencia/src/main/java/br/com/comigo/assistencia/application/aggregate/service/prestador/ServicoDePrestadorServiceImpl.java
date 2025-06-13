@@ -5,6 +5,11 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
+import com.yc.core.common.infrastructure.exception.BusinessRuleConsistencyException;
+import com.yc.core.common.infrastructure.exception.ControlledException;
+import com.yc.core.common.infrastructure.exception.IncompleteRegisterException;
+import com.yc.core.common.model.records._assistencia.ServicoDTO;
+
 import br.com.comigo.assistencia.adapter.aggregate.prestador.dto.ServicoDePrestadorDTO;
 import br.com.comigo.assistencia.adapter.aggregate.prestador.dto.ServicoDePrestadorResponse;
 import br.com.comigo.assistencia.adapter.aggregate.prestador.outbound.restclient.AssistenciaCatalogoService;
@@ -14,10 +19,6 @@ import br.com.comigo.assistencia.domain.aggregate.prestador.ServicoDePrestador;
 import br.com.comigo.assistencia.domain.aggregate.prestador.ServicoDePrestador.Status;
 import br.com.comigo.assistencia.domain.aggregate.prestador.repository.ServicoDePrestadorRepository;
 import br.com.comigo.assistencia.mapper.aggregate.prestador.ServicoDePrestadorMapper;
-import br.com.comigo.common.infrastructure.exception.BusinessRuleConsistencyException;
-import br.com.comigo.common.infrastructure.exception.ControlledException;
-import br.com.comigo.common.infrastructure.exception.IncompleteRegisterException;
-import br.com.comigo.common.model.records._assistencia.ServicoDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 

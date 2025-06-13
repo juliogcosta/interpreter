@@ -13,13 +13,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.yc.core.common.infrastructure.exception.BusinessRuleConsistencyException;
+import com.yc.core.common.infrastructure.exception.ControlledException;
+import com.yc.core.common.infrastructure.exception.IncompleteRegisterException;
+
 import br.com.comigo.assistencia.adapter.aggregate.prestador.dto.ServicoDePrestadorDTO;
 import br.com.comigo.assistencia.adapter.aggregate.prestador.dto.ServicoDePrestadorResponse;
 import br.com.comigo.assistencia.application.aggregate.service.prestador.ServicoDePrestadorServiceImpl;
 import br.com.comigo.assistencia.domain.aggregate.prestador.ServicoDePrestador.Status;
-import br.com.comigo.common.infrastructure.exception.BusinessRuleConsistencyException;
-import br.com.comigo.common.infrastructure.exception.ControlledException;
-import br.com.comigo.common.infrastructure.exception.IncompleteRegisterException;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 

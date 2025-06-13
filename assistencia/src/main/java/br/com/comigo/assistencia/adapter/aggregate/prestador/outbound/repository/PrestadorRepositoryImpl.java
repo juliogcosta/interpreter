@@ -6,6 +6,9 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Repository;
 
+import com.yc.core.common.model.records.Cnpj;
+import com.yc.core.common.model.records.Telefone;
+
 import br.com.comigo.assistencia.adapter.aggregate.outbound.util.JpaCnpj;
 import br.com.comigo.assistencia.adapter.aggregate.outbound.util.JpaEmail;
 import br.com.comigo.assistencia.adapter.aggregate.outbound.util.JpaEndereco;
@@ -14,8 +17,6 @@ import br.com.comigo.assistencia.adapter.aggregate.prestador.outbound.JpaPrestad
 import br.com.comigo.assistencia.domain.aggregate.prestador.Prestador;
 import br.com.comigo.assistencia.domain.aggregate.prestador.repository.PrestadorRepository;
 import br.com.comigo.assistencia.mapper.aggregate.prestador.PrestadorMapper;
-import br.com.comigo.common.model.records.Cnpj;
-import br.com.comigo.common.model.records.Telefone;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

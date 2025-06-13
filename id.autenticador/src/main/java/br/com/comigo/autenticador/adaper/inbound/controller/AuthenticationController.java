@@ -15,11 +15,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.yc.core.common.infrastructure.exception.RegisterNotFoundException;
+
 import br.com.comigo.autenticador.adaper.dto.AuthrorizationResponse;
 import br.com.comigo.autenticador.adaper.dto.Credential;
 import br.com.comigo.autenticador.domain.User;
 import br.com.comigo.autenticador.infrastructure.security.JwtUtils;
-import br.com.comigo.common.infrastructure.exception.RegisterNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

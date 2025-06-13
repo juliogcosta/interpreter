@@ -30,7 +30,7 @@ public class SyncEventHandlerImpl implements SyncEventHandler {
 		 * precisa estar nesse ponto com o tenant.
 		 * 
 		 */
-		log.info("\n > aggregate: ", aggregate);
+		log.info("\n > Aggregate: ", aggregate);
 	}
 
 }

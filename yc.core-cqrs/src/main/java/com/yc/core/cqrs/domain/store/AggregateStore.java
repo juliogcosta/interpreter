@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.yc.core.cqrs.C;
 import com.yc.core.cqrs.adapter.outbound.repository.AggregateRepository;
 import com.yc.core.cqrs.adapter.outbound.repository.EventRepository;
 import com.yc.core.cqrs.domain.Aggregate;
@@ -47,7 +48,7 @@ public class AggregateStore {
 
         String aggregateType = aggregate.getAggregateType();
         UUID aggregateId = aggregate.getAggregateId();
-        String schemaName = aggregate.getAggregateModel().get("schema").get("name").asText();
+        String schemaName = aggregate.getAggregateModel().get(C.schema).get(C.name).asText();
         this.aggregateRepository.createAggregateIfAbsent(schemaName, aggregateType, aggregateId);
 
         int expectedVersion = aggregate.getBaseVersion();
@@ -80,7 +81,7 @@ public class AggregateStore {
             log.info("\n > Creating {} aggregate (id: {}, version: {}) snapshot", aggregate.getAggregateType(),
                     aggregate.getAggregateId(),
                     aggregate.getVersion());
-            String schemaName = aggregate.getAggregateModel().get("schema").get("name").asText();
+            String schemaName = aggregate.getAggregateModel().get(C.schema).get(C.name).asText();
             this.aggregateRepository.createAggregateSnapshot(schemaName, aggregate);
         }
     }
@@ -91,7 +92,7 @@ public class AggregateStore {
 
     public Aggregate readAggregate(@NonNull final UUID aggregateId, final @Nullable Integer version, 
     		JsonNode aggregateModel) {
-    	String aggregateType = aggregateModel.get("type").asText();
+    	String aggregateType = aggregateModel.get(C.type).asText();
         
     	log.info("\n > Reading {} aggregate {}", aggregateType, aggregateId);
         SnapshottingProperties snapshotting = this.properties.getSnapshotting(aggregateType);
@@ -131,8 +132,7 @@ public class AggregateStore {
 
     private Aggregate readAggregateFromEvents(UUID aggregateId, final @Nullable Integer aggregateVersion, 
     		JsonNode aggregateModel) {
-    	String schemaName = aggregateModel.get("schema").get("name").asText();
-    	log.info("\n > schemaName: {}, aggregateId: {}, aggregateVersion: {}", schemaName, aggregateId, aggregateVersion);
+    	log.info("\n > schemaName: {}, \n > aggregateId: {},\n > aggregateVersion: {}", aggregateId, aggregateVersion);
         List<EventWithId> eventWithIds = this.eventRepository.readEvents(aggregateId, null, 
         		aggregateVersion, aggregateModel);
         /*
@@ -144,7 +144,7 @@ public class AggregateStore {
          */
         List<Event> events = eventWithIds.stream().map(EventWithId::event).toList();
         log.debug("\n Read {} events for aggregate {}", events.size(), aggregateId);
-        Aggregate aggregate = new Aggregate(aggregateId, aggregateVersion, aggregateModel);
+        Aggregate aggregate = new Aggregate(aggregateId, 0, aggregateModel);
         aggregate.loadFromHistory(events);
         return aggregate;
     }

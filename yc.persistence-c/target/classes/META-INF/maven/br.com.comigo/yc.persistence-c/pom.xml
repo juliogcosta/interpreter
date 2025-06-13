@@ -129,14 +129,14 @@
 				</exclusion>
 				<exclusion>
 					<groupId>br.com.comigo</groupId>
-					<artifactId>core-common</artifactId>
+					<artifactId>yc.core-common</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
 
 		<dependency>
 			<groupId>br.com.comigo</groupId>
-			<artifactId>core-common</artifactId>
+			<artifactId>yc.core-common</artifactId>
 			<version>${project.version}</version>
 			<exclusions>
 				<exclusion>

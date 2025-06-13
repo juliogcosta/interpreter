@@ -93,8 +93,8 @@ public class ModelServiceImpl implements ModelService {
 		disponibilizarServicoCommand.set("attribute", disponibilizarServicoCommandAttributes);
 		disponibilizarServicoCommand.put("endState", "Disponibilizado");
 		
-		ArrayNode disponibilizarServicoCommandAllowedStatus = this.objectMapper.createArrayNode();
-		disponibilizarServicoCommand.set("stateControl", disponibilizarServicoCommandAllowedStatus);
+		ArrayNode disponibilizarServicoCommandStateControl = this.objectMapper.createArrayNode();
+		disponibilizarServicoCommand.set("stateControl", disponibilizarServicoCommandStateControl);
 		
 		/**
 		 * 2. Comando Cancelar
@@ -107,10 +107,10 @@ public class ModelServiceImpl implements ModelService {
 		cancelarServicoCommand.set("attribute", cancelarServicoCommandAttributes);
 		cancelarServicoCommand.put("endState", "Cancelado");
 		
-		ArrayNode cancelarServicoCommandAllowedStatus = this.objectMapper.createArrayNode();
+		ArrayNode cancelarServicoCommandStateControl = this.objectMapper.createArrayNode();
 		Stream.of(new String [] {"DISPONIBILIZADO"})
-				.forEach(item -> cancelarServicoCommandAllowedStatus.add(item));
-		cancelarServicoCommand.set("stateControl", cancelarServicoCommandAllowedStatus);
+				.forEach(item -> cancelarServicoCommandStateControl.add(item));
+		cancelarServicoCommand.set("stateControl", cancelarServicoCommandStateControl);
 		
 		
 		/**
@@ -174,7 +174,7 @@ public class ModelServiceImpl implements ModelService {
 		 */
 		
 		ObjectNode servicoAggregateSchema = this.objectMapper.createObjectNode();
-		servicoAggregateSchema.put("name", "atendimento_es");
+		servicoAggregateSchema.put("name", "assistencia_es");
 		
 		ObjectNode servicoAggregate = this.objectMapper.createObjectNode();
 		servicoAggregate.set("schema", servicoAggregateSchema);
@@ -513,8 +513,8 @@ public class ModelServiceImpl implements ModelService {
 		solicitarAtendimentoCommand.set("attribute", solicitarAtendimentoCommandAttributes);
 		solicitarAtendimentoCommand.put("endState", "Solicitado");
 		
-		ArrayNode solicitarAtendimentoCommandAllowedStatus = this.objectMapper.createArrayNode();
-		solicitarAtendimentoCommand.set("stateControl", solicitarAtendimentoCommandAllowedStatus);
+		ArrayNode solicitarAtendimentoCommandStateControl = this.objectMapper.createArrayNode();
+		solicitarAtendimentoCommand.set("stateControl", solicitarAtendimentoCommandStateControl);
 		
 
 		/**
@@ -546,10 +546,10 @@ public class ModelServiceImpl implements ModelService {
 		ajustarAtendimentoCommand.set("attribute", ajustarAtendimentoCommandAttributes);
 		ajustarAtendimentoCommand.put("endState", "Ajustado");
 		
-		ArrayNode ajustarAtendimentoCommandAllowedStatus = this.objectMapper.createArrayNode();
+		ArrayNode ajustarAtendimentoCommandStateControl = this.objectMapper.createArrayNode();
 		Stream.of(new String [] {"SOLICITADO", "AJUSTADO"})
-				.forEach(item -> ajustarAtendimentoCommandAllowedStatus.add(item));
-		ajustarAtendimentoCommand.set("stateControl", ajustarAtendimentoCommandAllowedStatus);
+				.forEach(item -> ajustarAtendimentoCommandStateControl.add(item));
+		ajustarAtendimentoCommand.set("stateControl", ajustarAtendimentoCommandStateControl);
 		
 		/**
 		 * 3. Comando ConfirmarAtendimento
@@ -563,10 +563,10 @@ public class ModelServiceImpl implements ModelService {
 		confirmarAtendimentoCommand.set("attribute", confirmarAtendimentoCommandAttributes);
 		confirmarAtendimentoCommand.put("endState", "Confirmado");
 		
-		ArrayNode confirmarAtendimentoCommandAllowedStatus = this.objectMapper.createArrayNode();
+		ArrayNode confirmarAtendimentoCommandStateControl = this.objectMapper.createArrayNode();
 		Stream.of(new String [] {"AJUSTADO"})
-				.forEach(item -> confirmarAtendimentoCommandAllowedStatus.add(item));
-		confirmarAtendimentoCommand.set("stateControl", confirmarAtendimentoCommandAllowedStatus);		
+				.forEach(item -> confirmarAtendimentoCommandStateControl.add(item));
+		confirmarAtendimentoCommand.set("stateControl", confirmarAtendimentoCommandStateControl);		
 		
 		/**
 		 * Definicao de quais comandos compoem o agregado

@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.yc.core.cqrs.C;
 import com.yc.core.cqrs.adapter.outbound.model.ModelService;
 import com.yc.core.cqrs.domain.Aggregate;
 
@@ -39,7 +40,7 @@ public class AggregateRepository {
                         VALUES (:aggregateId, 0, :aggregateType)
                         ON CONFLICT DO NOTHING
                         """, schemaName);
-        this.jdbcTemplate.update(command, Map.of("aggregateId", aggregateId, "aggregateType", aggregateType));
+        this.jdbcTemplate.update(command, Map.of(C.aggregateId, aggregateId, C.aggregateType, aggregateType));
     }
 
     public boolean checkAndUpdateAggregateVersion(String schemaName, @NonNull UUID aggregateId, int expectedVersion,
@@ -49,7 +50,7 @@ public class AggregateRepository {
                            SET VERSION = :newVersion
                          WHERE ID = :aggregateId
                            AND VERSION = :expectedVersion
-                        """, schemaName), Map.of("newVersion", newVersion, "aggregateId", aggregateId,
+                        """, schemaName), Map.of("newVersion", newVersion, C.aggregateId, aggregateId,
                         "expectedVersion", expectedVersion));
         return updatedRows > 0;
     }
@@ -59,15 +60,15 @@ public class AggregateRepository {
         this.jdbcTemplate.update(String.format("""
                         INSERT INTO %s.ES_AGGREGATE_SNAPSHOT (AGGREGATE_ID, VERSION, JSON_DATA)
                         VALUES (:aggregateId, :version, :jsonObj::json)
-                        """, schemaName), Map.of("aggregateId", aggregate.getAggregateId(), "version",
+                        """, schemaName), Map.of(C.aggregateId, aggregate.getAggregateId(), C.version,
                         aggregate.getVersion(), "jsonObj", this.objectMapper.writeValueAsString(aggregate)));
     }
 
     public Optional<Aggregate> readAggregateSnapshot(String schemaName, @NonNull UUID aggregateId,
             @Nullable Integer version) {
         MapSqlParameterSource parameters = new MapSqlParameterSource();
-        parameters.addValue("aggregateId", aggregateId);
-        parameters.addValue("version", version, Types.INTEGER);
+        parameters.addValue(C.aggregateId, aggregateId);
+        parameters.addValue(C.version, version, Types.INTEGER);
 
         return jdbcTemplate.query(String.format("""
                         SELECT a.AGGREGATE_TYPE,
@@ -86,9 +87,9 @@ public class AggregateRepository {
         PGobject jsonObj = (PGobject) rs.getObject("JSON_DATA");
         JsonNode jsNode = this.objectMapper.readTree(jsonObj.getValue());
         UUID aggregateId = UUID.fromString(jsNode.get("id").asText());
-        int version = jsNode.get("version").asInt();
+        int version = jsNode.get(C.version).asInt();
         String aggregateType = rs.getString("AGGREGATE_TYPE");
-        JsonNode aggregateModel = this.modelService.getModel("tenant").get(aggregateType);
+        JsonNode aggregateModel = this.modelService.getModel(C.tenant).get(aggregateType);
         return new Aggregate(aggregateId, version, aggregateModel);
     }
 }

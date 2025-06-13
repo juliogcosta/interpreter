@@ -6,7 +6,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import br.com.comigo.common.model.records._assistencia.ServicoDTO;
+import com.yc.core.common.model.records._assistencia.ServicoDTO;
 
 @FeignClient(name = "${app.assistencia-catalogo.name}", url = "${app.assistencia-catalogo.address}:${app.assistencia-catalogo.port}")
 public interface AssistenciaCatalogoRestClient {

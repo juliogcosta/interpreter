@@ -38,20 +38,29 @@ public class EventRepository {
     @SneakyThrows
     public EventWithId appendEvent(@NonNull Event event, JsonNode aggregateModel) {
         String schemaName = aggregateModel.get(C.schema).get(C.name).asText();
-        if (!schemaName.matches("[a-zA-Z0-9_]+")) { // Permite apenas letras, números e _
-                throw new IllegalArgumentException("Nome de schema inválido: " + schemaName);
-        }
-        List<EventWithId> result = this.jdbcTemplate.query(String.format("""
-                        INSERT INTO %s.ES_EVENT (TRANSACTION_ID, AGGREGATE_ID, AGGREGATE_TYPE, VERSION, EVENT_TYPE, JSON_DATA)
-                        VALUES (pg_current_xact_id(), :aggregateId, :aggregateType, :version, :eventType, :jsonObj::json)
-                        RETURNING ID, TRANSACTION_ID::text, EVENT_TYPE, JSON_DATA
-                        """, schemaName),
+        log.info(" > event.aggregateId: {}", event.getAggregateId().toString());
+        log.info(" > event.aggregateType: {}", event.getAggregateType());
+        log.info(" > event.eventType: {}", event.getEventType());
+        String jsonObj = this.objectMapper.writeValueAsString(event.getEventData());
+        
+        PGobject pgObject = new PGobject();
+        pgObject.setType("json");
+        pgObject.setValue(jsonObj);
+        
+        log.info(" > jsonObj: {}", pgObject);
+        String query = String.format("""
+                INSERT INTO %s.ES_EVENT (TRANSACTION_ID, AGGREGATE_ID, AGGREGATE_TYPE, VERSION, EVENT_TYPE, JSON_DATA)
+                VALUES (pg_current_xact_id(), :aggregateId, :aggregateType, :version, :eventType, :jsonObj)
+                RETURNING ID, TRANSACTION_ID::text, AGGREGATE_ID, AGGREGATE_TYPE, VERSION, EVENT_TYPE, JSON_DATA
+                """, schemaName);
+        log.info(" > query: {}", query);
+        List<EventWithId> result = this.jdbcTemplate.query(query,
                         Map.of(
-                        		"aggregateId", event.getAggregateId(), 
-                        		"aggregateType", event.getAggregateType(), 
-                        		"version", event.getVersion(),
-                                "eventType", event.getEventType(), 
-                                "jsonObj", this.objectMapper.writeValueAsString(event.getEventData())),
+                        		C.aggregateId, event.getAggregateId(), 
+                        		C.aggregateType, event.getAggregateType(), 
+                        		C.version, event.getVersion(),
+                        		C.eventType, event.getEventType(), 
+                                "jsonObj", pgObject),
                         (rs, rowNum) -> toEvent(rs, rowNum, aggregateModel));
         return result.get(0);
     }
@@ -59,53 +68,67 @@ public class EventRepository {
     public List<EventWithId> readEvents(@NonNull UUID aggregateId,
             final @Nullable Integer fromVersion, final @Nullable Integer toVersion,
             JsonNode aggregateModel) {
-        String schemaName = aggregateModel.get(C.schema).get(C.name).asText();
-        if (!schemaName.matches("[a-zA-Z0-9_]+")) { // Permite apenas letras, números e _
-                throw new IllegalArgumentException("Nome de schema inválido: " + schemaName);
-        }
+    	String schemaName = aggregateModel.get(C.schema).get(C.name).asText();
         MapSqlParameterSource parameters = new MapSqlParameterSource();
-        parameters.addValue("aggregateId", aggregateId);
-        parameters.addValue("fromVersion", fromVersion, Types.INTEGER);
-        parameters.addValue("toVersion", toVersion, Types.INTEGER);
+        parameters.addValue(C.aggregateId, aggregateId);
 
-        return this.jdbcTemplate.query(String.format("""
-                        SELECT ID,
-                               TRANSACTION_ID::text,
-                               AGGREGATE_TYPE,
-                               EVENT_TYPE,
-                               JSON_DATA
-                          FROM %s.ES_EVENT
-                         WHERE AGGREGATE_ID = :aggregateId
-                           AND (:fromVersion IS NULL OR VERSION > :fromVersion)
-                           AND (:toVersion IS NULL OR VERSION <= :toVersion)
-                         ORDER BY VERSION ASC
-                        """, schemaName), parameters, (rs, rowNum) -> toEvent(rs, rowNum, aggregateModel));
+        StringBuilder queryBuilder = new StringBuilder();
+        queryBuilder.append(String.format("""
+            SELECT ID,
+                   TRANSACTION_ID::text,
+                   AGGREGATE_ID, 
+                   AGGREGATE_TYPE,
+                   VERSION, 
+                   EVENT_TYPE,
+                   JSON_DATA
+              FROM %s.ES_EVENT
+             WHERE AGGREGATE_ID = :aggregateId
+            """, schemaName));
+
+        if (fromVersion != null) {
+            queryBuilder.append(" AND VERSION > :fromVersion");
+            parameters.addValue("fromVersion", fromVersion, Types.INTEGER);
+        }
+
+        if (toVersion != null) {
+            queryBuilder.append(" AND VERSION <= :toVersion");
+            parameters.addValue("toVersion", toVersion, Types.INTEGER);
+        }
+
+        queryBuilder.append(" ORDER BY VERSION ASC");
+
+        String query = queryBuilder.toString();
+        log.info("\n > query: {}", query);
+
+        return this.jdbcTemplate.query(query, parameters,
+                (rs, rowNum) -> toEvent(rs, rowNum, aggregateModel));
     }
 
     public List<EventWithId> readEventsAfterCheckpoint(@NonNull BigInteger lastProcessedTransactionId, 
     		long lastProcessedEventId, int batchSize, JsonNode aggregateModel) {
         String schemaName = aggregateModel.get(C.schema).get(C.name).asText();
         String aggregateType = aggregateModel.get(C.type).asText();
-    	if (!schemaName.matches("[a-zA-Z0-9_]+")) { // Permite apenas letras, números e _
-            throw new IllegalArgumentException("Nome de schema inválido: " + schemaName);
-        }
+    	String query = String.format("""
+         SELECT e.ID,
+                e.TRANSACTION_ID::text,
+                e.AGGREGATE_ID,
+                e.AGGREGATE_TYPE,
+                e.VERSION,
+                e.EVENT_TYPE,
+                e.JSON_DATA
+           FROM %s.ES_EVENT e
+           JOIN %s.ES_AGGREGATE a on a.ID = e.AGGREGATE_ID
+          WHERE a.AGGREGATE_TYPE = :aggregateType
+            AND (e.TRANSACTION_ID, e.ID) > (:lastProcessedTransactionId::xid8, :lastProcessedEventId)
+            AND e.TRANSACTION_ID < pg_snapshot_xmin(pg_current_snapshot())
+          ORDER BY e.TRANSACTION_ID ASC, e.ID ASC
+          LIMIT :batchSize
+         """,
+         schemaName, schemaName);
+    	
         return this.jdbcTemplate.query(
-                String.format("""
-                        SELECT e.ID,
-                               e.TRANSACTION_ID::text,
-                               e.AGGREGATE_TYPE,
-                               e.EVENT_TYPE,
-                               e.JSON_DATA
-                          FROM %s.ES_EVENT e
-                          JOIN %s.ES_AGGREGATE a on a.ID = e.AGGREGATE_ID
-                         WHERE a.AGGREGATE_TYPE = :aggregateType
-                           AND (e.TRANSACTION_ID, e.ID) > (:lastProcessedTransactionId::xid8, :lastProcessedEventId)
-                           AND e.TRANSACTION_ID < pg_snapshot_xmin(pg_current_snapshot())
-                         ORDER BY e.TRANSACTION_ID ASC, e.ID ASC
-                         LIMIT :batchSize
-                        """,
-                        schemaName, schemaName),
-                Map.of("aggregateType", aggregateType, "lastProcessedTransactionId",
+                query,
+                Map.of(C.aggregateType, aggregateType, "lastProcessedTransactionId",
                                 lastProcessedTransactionId.toString(), "lastProcessedEventId",
                                 lastProcessedEventId, "batchSize", batchSize),
                 (rs, rowNum) -> toEvent(rs, rowNum, aggregateModel));
@@ -119,7 +142,7 @@ public class EventRepository {
         String aggregateType = rs.getString("AGGREGATE_TYPE");
         Integer version = rs.getInt("VERSION");
         String eventType = rs.getString("EVENT_TYPE");
-        JsonNode eventModel = aggregateModel.get("event").get(eventType);
+        JsonNode eventModel = aggregateModel.get(C.event).get(eventType);
         PGobject jsonObj = (PGobject) rs.getObject("JSON_DATA");
         String json = jsonObj.getValue();
         JsonNode eventData = this.objectMapper.readTree(json);

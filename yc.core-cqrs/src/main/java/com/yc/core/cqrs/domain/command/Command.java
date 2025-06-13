@@ -5,13 +5,13 @@ import java.util.Map;
 import java.util.UUID;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.yc.core.common.infrastructure.exception.IncompleteRegisterException;
 import com.yc.core.cqrs.C;
 
-import br.com.comigo.common.infrastructure.exception.IncompleteRegisterException;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
-
 
 @ToString
 @Slf4j
@@ -35,8 +35,10 @@ public class Command {
         }
 
         if (commandDataCopy.has(C.id)) {
-            this.aggregateId = UUID.fromString(commandDataCopy.get(C.id).asText(C.id));
-        } else this.aggregateId = null;
+            this.aggregateId = UUID.fromString(commandDataCopy.get(C.id).asText());
+        } else if (((ArrayNode)commandModel.get("stateControl")).size() == 0) { 
+        	this.aggregateId = UUID.randomUUID();
+        } else throw new IncompleteRegisterException("O campo id está ausente ou nulo.");
         this.aggregateType = aggregateType;
         this.commandData = commandDataCopy;
         this.commandModel = commandModel;
@@ -50,21 +52,24 @@ public class Command {
             JsonNode attributeSpec = attribute.getValue();
             String attributeType = attributeSpec.has(C.type) ? attributeSpec.get(C.type).asText() : null;
             JsonNode attributeValue = aggregateData.get(attributeName);
-
-            if (attributeSpec.get(C.nullable).asBoolean()) {
+            
+            if (attributeName.equals("status")) {
+            	
+            } else if (attributeSpec.get(C.nullable).asBoolean()) {
                 
             } else if (aggregateData.has(attributeName)) {
             	if (aggregateData.get(attributeName).isNull()) {
-            		throw new IncompleteRegisterException("Campo obrigatório ausente ou nulo: " + attributeName); 
+            		throw new IncompleteRegisterException("Campo obrigatório ".concat(attributeName).concat(" ausente ou nulo.")); 
                 } 
-            } else throw new IncompleteRegisterException("Campo obrigatório ausente ou nulo: " + attributeName); 
+            } else throw new IncompleteRegisterException("Campo obrigatório ".concat(attributeName).concat(" ausente ou nulo.")); 
             
             if (String.class.getSimpleName().equalsIgnoreCase(attributeType)) {
                 if (attributeValue != null && !attributeValue.isNull()) {
                     int attributeValueMaxLength = attributeSpec.has(C.length) ? attributeSpec.get(C.length).asInt() : -1;
                     String value = attributeValue.asText();
                     if (attributeValueMaxLength > 0 && value.length() > attributeValueMaxLength) {
-                        throw new IllegalArgumentException("Campo '" + attributeName + "' excede o tamanho máximo de " + attributeValueMaxLength + " caracteres.");
+                        throw new IllegalArgumentException("Campo '".concat(attributeName).concat("' excede o tamanho máximo de ")
+                        		.concat(String.valueOf(attributeValueMaxLength)).concat(" caracteres."));
                     }
                 }
             }

@@ -1,6 +1,7 @@
 package br.com.comigo.id.adapter.util;
 
-import br.com.comigo.common.model.records.Telefone.Tipo;
+import com.yc.core.common.model.records.Telefone.Tipo;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.EnumType;

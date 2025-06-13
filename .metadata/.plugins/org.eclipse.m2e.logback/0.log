@@ -2482,3 +2482,561 @@ org.eclipse.jdt.core.JavaModelException: core-common does not exist
 2025-06-11 22:39:38,322 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
 2025-06-11 22:39:38,326 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
 2025-06-11 22:39:38,328 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.persistence-c/src/test/resources
+2025-06-11 22:42:31,806 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@583fc143{STOPPING}[12.0.9,sto=0]
+2025-06-11 22:42:31,809 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@6533ce0d{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
+2025-06-12 10:13:03,048 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-06-12 10:14:20,236 [Worker-3: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: br.com.comigo:yc.core-cqrs:0.0.1 with classifier  to /yc.core-cqrs/target/classes
+2025-06-12 10:14:20,237 [Worker-3: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier  to /core-common/target/classes
+2025-06-12 10:14:20,403 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 10:14:20,416 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 10:14:20,419 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.persistence-c/src/test/resources
+2025-06-12 13:29:06,721 [Worker-38: Launching id - IdStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier  to /core-common/target/classes
+2025-06-12 13:29:06,778 [Worker-38: Launching id - IdStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier null to /core-common/target/classes
+2025-06-12 13:29:06,829 [Worker-38: Launching id - IdStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier null to /core-common/target/classes
+2025-06-12 13:29:06,888 [Worker-38: Launching id - IdStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier null to /core-common/target/classes
+2025-06-12 13:29:17,908 [Worker-35: Launching id.autenticador - AuthStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier  to /core-common/target/classes
+2025-06-12 13:29:17,950 [Worker-35: Launching id.autenticador - AuthStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier null to /core-common/target/classes
+2025-06-12 13:29:17,988 [Worker-35: Launching id.autenticador - AuthStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier null to /core-common/target/classes
+2025-06-12 13:29:18,025 [Worker-35: Launching id.autenticador - AuthStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier null to /core-common/target/classes
+2025-06-12 13:29:28,169 [Worker-40: Launching gateway - GatewayStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier  to /core-common/target/classes
+2025-06-12 13:29:28,220 [Worker-40: Launching gateway - GatewayStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier null to /core-common/target/classes
+2025-06-12 13:29:28,313 [Worker-40: Launching gateway - GatewayStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier null to /core-common/target/classes
+2025-06-12 13:29:28,354 [Worker-40: Launching gateway - GatewayStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/core-common: br.com.comigo:core-common:0.0.1 with classifier null to /core-common/target/classes
+2025-06-12 13:29:58,780 [Worker-38: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:gateway:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/gateway/pom.xml.
+2025-06-12 13:29:59,149 [Worker-38: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:usuario.autenticador:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/id.autenticador/pom.xml.
+2025-06-12 13:29:59,552 [Worker-38: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:assistencia:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/assistencia/pom.xml.
+2025-06-12 13:29:59,801 [Worker-38: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:id:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/id/pom.xml.
+2025-06-12 13:30:00,073 [Worker-38: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:yc.core-cqrs:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/pom.xml.
+2025-06-12 13:30:00,207 [Worker-38: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:yc.persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/yc.persistence-c/pom.xml.
+2025-06-12 13:30:00,229 [Worker-38: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: br.com.comigo:yc.core-cqrs:0.0.1 with classifier  to /yc.core-cqrs/target/classes
+2025-06-12 13:30:02,153 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:30:02,160 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 13:30:02,165 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/assistencia/src/test/resources
+2025-06-12 13:30:02,364 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:30:02,367 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:30:02,370 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/gateway/src/test/resources
+2025-06-12 13:30:02,829 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:30:02,830 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 13:30:02,834 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/id/src/test/resources
+2025-06-12 13:30:02,932 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:30:02,933 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:30:02,935 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/id.autenticador/src/test/resources
+2025-06-12 13:30:03,079 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 13:30:03,079 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 13:30:03,081 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 13:30:03,161 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:30:03,162 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 13:30:03,166 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.persistence-c/src/test/resources
+2025-06-12 13:37:31,621 [Worker-50: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:yc.persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/yc.persistence-c/pom.xml.
+2025-06-12 13:37:32,389 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/br/com/comigo/yc.core-common/0.0.1/yc.core-common-0.0.1.pom
+2025-06-12 13:37:32,391 [Worker-50: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for br.com.comigo:yc.core-common:jar:0.0.1 is missing, no dependency information available
+2025-06-12 13:37:32,416 [Worker-50: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: br.com.comigo:yc.core-cqrs:0.0.1 with classifier  to /yc.core-cqrs/target/classes
+2025-06-12 13:37:32,436 [Worker-50: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: br.com.comigo:yc.core-cqrs:0.0.1 with classifier  to /yc.core-cqrs/target/classes
+2025-06-12 13:37:32,656 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/br/com/comigo/yc.core-common/0.0.1/yc.core-common-0.0.1.jar
+2025-06-12 13:37:32,730 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:37:32,733 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 13:37:32,735 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.persistence-c/src/test/resources
+2025-06-12 13:44:19,075 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-06-12 13:44:23,080 [Worker-0: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:assistencia:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/assistencia/pom.xml.
+2025-06-12 13:44:23,804 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:44:23,830 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 13:44:23,839 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/assistencia/src/test/resources
+2025-06-12 13:44:25,444 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:44:25,450 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 13:44:25,455 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/assistencia/src/test/resources
+2025-06-12 13:44:25,604 [Worker-8: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/br/com/comigo/yc.core-common/0.0.1/yc.core-common-0.0.1-sources.jar
+2025-06-12 13:44:25,606 [Worker-8: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for br.com.comigo:yc.core-common:0.0.1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact br.com.comigo:yc.core-common:jar:sources:0.0.1
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-06-12 13:44:26,552 [Worker-3: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:gateway:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/gateway/pom.xml.
+2025-06-12 13:44:26,907 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:44:26,913 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:44:26,916 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/gateway/src/test/resources
+2025-06-12 13:44:27,465 [Worker-3: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:id:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/id/pom.xml.
+2025-06-12 13:44:27,864 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:44:27,868 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 13:44:27,871 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/id/src/test/resources
+2025-06-12 13:44:28,213 [Worker-14: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/br/com/comigo/yc.core-common/0.0.1/yc.core-common-0.0.1-javadoc.jar
+2025-06-12 13:44:28,215 [Worker-14: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download javadoc for br.com.comigo:yc.core-common:0.0.1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact br.com.comigo:yc.core-common:jar:javadoc:0.0.1
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-06-12 13:44:28,426 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:44:28,427 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:44:28,429 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/gateway/src/test/resources
+2025-06-12 13:44:28,962 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:44:28,964 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 13:44:28,968 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/id/src/test/resources
+2025-06-12 13:44:29,388 [Worker-14: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:usuario.autenticador:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/id.autenticador/pom.xml.
+2025-06-12 13:44:29,578 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:44:29,583 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:44:29,586 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/id.autenticador/src/test/resources
+2025-06-12 13:44:29,981 [Worker-14: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:yc.core-cqrs:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/pom.xml.
+2025-06-12 13:44:30,433 [Worker-14: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: br.com.comigo:yc.core-cqrs:0.0.1 with classifier  to /yc.core-cqrs/target/classes
+2025-06-12 13:44:30,444 [Worker-14: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:yc.persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/yc.persistence-c/pom.xml.
+2025-06-12 13:44:30,461 [Worker-14: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: br.com.comigo:yc.core-cqrs:0.0.1 with classifier  to /yc.core-cqrs/target/classes
+2025-06-12 13:44:30,547 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 13:44:30,547 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 13:44:30,549 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 13:44:30,660 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:44:30,661 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 13:44:30,663 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.persistence-c/src/test/resources
+2025-06-12 13:44:31,818 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:44:31,819 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:44:31,822 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/id.autenticador/src/test/resources
+2025-06-12 13:44:31,971 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 13:44:31,971 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 13:44:31,973 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 13:45:37,942 [Worker-10: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-06-12 13:45:38,102 [Worker-10: Update Maven projects configuration] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:yc.core-common:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/pom.xml.
+2025-06-12 13:45:38,298 [Worker-10: Update Maven projects configuration] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:assistencia:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/assistencia/pom.xml.
+2025-06-12 13:45:38,400 [Worker-10: Update Maven projects configuration] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-12 13:45:38,530 [Worker-10: Update Maven projects configuration] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:gateway:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/gateway/pom.xml.
+2025-06-12 13:45:38,558 [Worker-10: Update Maven projects configuration] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-12 13:45:38,680 [Worker-10: Update Maven projects configuration] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:id:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/id/pom.xml.
+2025-06-12 13:45:38,698 [Worker-10: Update Maven projects configuration] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-12 13:45:38,813 [Worker-10: Update Maven projects configuration] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:usuario.autenticador:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/id.autenticador/pom.xml.
+2025-06-12 13:45:38,825 [Worker-10: Update Maven projects configuration] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-12 13:45:38,929 [Worker-10: Update Maven projects configuration] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:yc.core-cqrs:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/pom.xml.
+2025-06-12 13:45:38,934 [Worker-10: Update Maven projects configuration] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-12 13:45:39,062 [Worker-10: Update Maven projects configuration] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.com.comigo:yc.persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/interpreter/yc.persistence-c/pom.xml.
+2025-06-12 13:45:39,087 [Worker-10: Update Maven projects configuration] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: br.com.comigo:yc.core-cqrs:0.0.1 with classifier  to /yc.core-cqrs/target/classes
+2025-06-12 13:45:39,088 [Worker-10: Update Maven projects configuration] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-12 13:45:39,377 [Worker-10: Update Maven projects configuration] ERROR o.e.m2e.jdt.internal.ModuleSupport - yc.core-common does not exist
+org.eclipse.jdt.core.JavaModelException: yc.core-common does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:572)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaProject.getModuleDescription(JavaProject.java:3747)
+	at org.eclipse.m2e.jdt.internal.ModuleSupport.getModuleInfo(ModuleSupport.java:213)
+	at org.eclipse.m2e.jdt.internal.ModuleSupport.getModuleInfo(ModuleSupport.java:204)
+	at org.eclipse.m2e.jdt.internal.ModuleSupport.configureClasspath(ModuleSupport.java:133)
+	at org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator.configureClasspath(AbstractJavaProjectConfigurator.java:992)
+	at org.eclipse.m2e.jdt.internal.DefaultClasspathManagerDelegate.populateClasspath(DefaultClasspathManagerDelegate.java:67)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:239)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:360)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:342)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:367)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.updateClasspath(BuildPathManager.java:200)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.mavenProjectChanged(BuildPathManager.java:188)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:892)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:1042)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:324)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration0(ProjectConfigurationManager.java:388)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$3(ProjectConfigurationManager.java:340)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1053)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:339)
+	at org.eclipse.m2e.core.ui.internal.project.MavenProjectConfigurator$UpdateMavenConfigurationJob.run(MavenProjectConfigurator.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-06-12 13:45:39,422 [Worker-10: Update Maven projects configuration] ERROR o.e.m2e.jdt.internal.ModuleSupport - yc.core-common does not exist
+org.eclipse.jdt.core.JavaModelException: yc.core-common does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:572)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaProject.getModuleDescription(JavaProject.java:3747)
+	at org.eclipse.m2e.jdt.internal.ModuleSupport.getModuleInfo(ModuleSupport.java:213)
+	at org.eclipse.m2e.jdt.internal.ModuleSupport.getModuleInfo(ModuleSupport.java:204)
+	at org.eclipse.m2e.jdt.internal.ModuleSupport.configureClasspath(ModuleSupport.java:133)
+	at org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator.configureClasspath(AbstractJavaProjectConfigurator.java:992)
+	at org.eclipse.m2e.jdt.internal.DefaultClasspathManagerDelegate.populateClasspath(DefaultClasspathManagerDelegate.java:67)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:239)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:360)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:342)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:367)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.updateClasspath(BuildPathManager.java:200)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.mavenProjectChanged(BuildPathManager.java:188)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:892)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:1042)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:324)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration0(ProjectConfigurationManager.java:388)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$3(ProjectConfigurationManager.java:340)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1053)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:339)
+	at org.eclipse.m2e.core.ui.internal.project.MavenProjectConfigurator$UpdateMavenConfigurationJob.run(MavenProjectConfigurator.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-06-12 13:45:39,464 [Worker-10: Update Maven projects configuration] ERROR o.e.m2e.jdt.internal.ModuleSupport - yc.core-common does not exist
+org.eclipse.jdt.core.JavaModelException: yc.core-common does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:572)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaProject.getModuleDescription(JavaProject.java:3747)
+	at org.eclipse.m2e.jdt.internal.ModuleSupport.getModuleInfo(ModuleSupport.java:213)
+	at org.eclipse.m2e.jdt.internal.ModuleSupport.getModuleInfo(ModuleSupport.java:204)
+	at org.eclipse.m2e.jdt.internal.ModuleSupport.configureClasspath(ModuleSupport.java:133)
+	at org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator.configureClasspath(AbstractJavaProjectConfigurator.java:992)
+	at org.eclipse.m2e.jdt.internal.DefaultClasspathManagerDelegate.populateClasspath(DefaultClasspathManagerDelegate.java:67)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:239)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:360)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:342)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:367)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.updateClasspath(BuildPathManager.java:200)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.mavenProjectChanged(BuildPathManager.java:188)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:892)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:1042)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:324)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration0(ProjectConfigurationManager.java:388)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$3(ProjectConfigurationManager.java:340)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1053)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:339)
+	at org.eclipse.m2e.core.ui.internal.project.MavenProjectConfigurator$UpdateMavenConfigurationJob.run(MavenProjectConfigurator.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-06-12 13:45:39,496 [Worker-10: Update Maven projects configuration] ERROR o.e.m2e.jdt.internal.ModuleSupport - yc.core-common does not exist
+org.eclipse.jdt.core.JavaModelException: yc.core-common does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:572)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaProject.getModuleDescription(JavaProject.java:3747)
+	at org.eclipse.m2e.jdt.internal.ModuleSupport.getModuleInfo(ModuleSupport.java:213)
+	at org.eclipse.m2e.jdt.internal.ModuleSupport.getModuleInfo(ModuleSupport.java:204)
+	at org.eclipse.m2e.jdt.internal.ModuleSupport.configureClasspath(ModuleSupport.java:133)
+	at org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator.configureClasspath(AbstractJavaProjectConfigurator.java:992)
+	at org.eclipse.m2e.jdt.internal.DefaultClasspathManagerDelegate.populateClasspath(DefaultClasspathManagerDelegate.java:67)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:239)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:360)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:342)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:367)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.updateClasspath(BuildPathManager.java:200)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.mavenProjectChanged(BuildPathManager.java:188)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:892)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:1042)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:324)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration0(ProjectConfigurationManager.java:388)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$3(ProjectConfigurationManager.java:340)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1053)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:339)
+	at org.eclipse.m2e.core.ui.internal.project.MavenProjectConfigurator$UpdateMavenConfigurationJob.run(MavenProjectConfigurator.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-06-12 13:45:39,529 [Worker-10: Update Maven projects configuration] ERROR o.e.m2e.jdt.internal.ModuleSupport - yc.core-common does not exist
+org.eclipse.jdt.core.JavaModelException: yc.core-common does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:572)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaProject.getModuleDescription(JavaProject.java:3747)
+	at org.eclipse.m2e.jdt.internal.ModuleSupport.getModuleInfo(ModuleSupport.java:213)
+	at org.eclipse.m2e.jdt.internal.ModuleSupport.getModuleInfo(ModuleSupport.java:204)
+	at org.eclipse.m2e.jdt.internal.ModuleSupport.configureClasspath(ModuleSupport.java:133)
+	at org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator.configureClasspath(AbstractJavaProjectConfigurator.java:992)
+	at org.eclipse.m2e.jdt.internal.DefaultClasspathManagerDelegate.populateClasspath(DefaultClasspathManagerDelegate.java:67)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:239)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:360)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:342)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:367)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.updateClasspath(BuildPathManager.java:200)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.mavenProjectChanged(BuildPathManager.java:188)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:892)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:1042)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:324)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration0(ProjectConfigurationManager.java:388)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$3(ProjectConfigurationManager.java:340)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1053)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:339)
+	at org.eclipse.m2e.core.ui.internal.project.MavenProjectConfigurator$UpdateMavenConfigurationJob.run(MavenProjectConfigurator.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-06-12 13:45:39,548 [Worker-10: Update Maven projects configuration] ERROR o.e.m2e.jdt.internal.ModuleSupport - yc.core-common does not exist
+org.eclipse.jdt.core.JavaModelException: yc.core-common does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:572)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaProject.getModuleDescription(JavaProject.java:3747)
+	at org.eclipse.m2e.jdt.internal.ModuleSupport.getModuleInfo(ModuleSupport.java:213)
+	at org.eclipse.m2e.jdt.internal.ModuleSupport.getModuleInfo(ModuleSupport.java:204)
+	at org.eclipse.m2e.jdt.internal.ModuleSupport.configureClasspath(ModuleSupport.java:133)
+	at org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator.configureClasspath(AbstractJavaProjectConfigurator.java:992)
+	at org.eclipse.m2e.jdt.internal.DefaultClasspathManagerDelegate.populateClasspath(DefaultClasspathManagerDelegate.java:67)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:239)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:360)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:342)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.getClasspath(BuildPathManager.java:367)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.updateClasspath(BuildPathManager.java:200)
+	at org.eclipse.m2e.jdt.internal.BuildPathManager.mavenProjectChanged(BuildPathManager.java:188)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:892)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:1042)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:324)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration0(ProjectConfigurationManager.java:388)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$3(ProjectConfigurationManager.java:340)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1053)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:339)
+	at org.eclipse.m2e.core.ui.internal.project.MavenProjectConfigurator$UpdateMavenConfigurationJob.run(MavenProjectConfigurator.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-06-12 13:45:39,726 [Worker-10: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /yc.core-common/src/main/java
+2025-06-12 13:45:39,727 [Worker-10: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /yc.core-common/src/main/resources
+2025-06-12 13:45:39,728 [Worker-10: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /yc.core-common/src/main/resources
+2025-06-12 13:45:39,729 [Worker-10: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /yc.core-common/src/test/java
+2025-06-12 13:45:39,729 [Worker-10: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /yc.core-common/src/test/resources
+2025-06-12 13:45:39,890 [Worker-10: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 1,00 sec, update config takes 0,00 sec 
+2025-06-12 13:45:40,210 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/main/resources
+2025-06-12 13:45:40,210 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/main/resources
+2025-06-12 13:45:40,212 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/test/resources
+2025-06-12 13:45:40,351 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:45:40,352 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:45:40,354 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/id.autenticador/src/test/resources
+2025-06-12 13:45:40,805 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:45:40,806 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 13:45:40,809 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/id/src/test/resources
+2025-06-12 13:45:40,918 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:45:40,919 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:45:40,922 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/gateway/src/test/resources
+2025-06-12 13:45:41,258 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:45:41,258 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 13:45:41,260 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/assistencia/src/test/resources
+2025-06-12 13:45:41,373 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 13:45:41,373 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 13:45:41,374 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 13:45:41,431 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 13:45:41,432 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 13:45:41,434 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.persistence-c/src/test/resources
+2025-06-12 14:05:11,580 [Worker-21: Launching id - IdStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:05:11,617 [Worker-21: Launching id - IdStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:05:11,653 [Worker-21: Launching id - IdStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:05:22,186 [Worker-25: Launching id.autenticador - AuthStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:05:22,220 [Worker-25: Launching id.autenticador - AuthStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:05:22,255 [Worker-25: Launching id.autenticador - AuthStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:05:30,310 [Worker-16: Launching assistencia - AssistenciaStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:05:30,368 [Worker-16: Launching assistencia - AssistenciaStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:05:30,426 [Worker-16: Launching assistencia - AssistenciaStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:05:41,139 [Worker-11: Launching gateway - GatewayStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:05:41,173 [Worker-11: Launching gateway - GatewayStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:05:41,207 [Worker-11: Launching gateway - GatewayStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:05:47,184 [Worker-23: Launching yc.persistence-c - PersistenceCStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: br.com.comigo:yc.core-cqrs:0.0.1 with classifier null to /yc.core-cqrs/target/classes
+2025-06-12 14:05:47,184 [Worker-23: Launching yc.persistence-c - PersistenceCStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:05:47,222 [Worker-23: Launching yc.persistence-c - PersistenceCStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: br.com.comigo:yc.core-cqrs:0.0.1 with classifier null to /yc.core-cqrs/target/classes
+2025-06-12 14:05:47,222 [Worker-23: Launching yc.persistence-c - PersistenceCStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:05:47,256 [Worker-23: Launching yc.persistence-c - PersistenceCStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: br.com.comigo:yc.core-cqrs:0.0.1 with classifier null to /yc.core-cqrs/target/classes
+2025-06-12 14:05:47,256 [Worker-23: Launching yc.persistence-c - PersistenceCStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:22:51,193 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/main/resources
+2025-06-12 14:22:51,193 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/main/resources
+2025-06-12 14:22:51,195 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/test/resources
+2025-06-12 14:23:16,507 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/main/resources
+2025-06-12 14:23:16,507 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/main/resources
+2025-06-12 14:23:16,509 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/test/resources
+2025-06-12 14:23:16,576 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 14:23:16,581 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 14:23:16,583 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/id.autenticador/src/test/resources
+2025-06-12 14:23:16,623 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 14:23:16,626 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 14:23:16,628 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/id/src/test/resources
+2025-06-12 14:23:16,694 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 14:23:16,697 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 14:23:16,699 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/assistencia/src/test/resources
+2025-06-12 14:23:16,738 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 14:23:16,738 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 14:23:16,739 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 14:23:16,768 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 14:23:16,772 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 14:23:16,774 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.persistence-c/src/test/resources
+2025-06-12 14:23:30,685 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/main/resources
+2025-06-12 14:23:30,685 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/main/resources
+2025-06-12 14:23:30,686 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/test/resources
+2025-06-12 14:23:51,764 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/main/resources
+2025-06-12 14:23:51,764 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/main/resources
+2025-06-12 14:23:51,766 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/test/resources
+2025-06-12 14:23:51,819 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 14:23:51,824 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 14:23:51,826 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/gateway/src/test/resources
+2025-06-12 14:24:05,724 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/main/resources
+2025-06-12 14:24:05,724 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/main/resources
+2025-06-12 14:24:05,726 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/test/resources
+2025-06-12 14:24:06,040 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 14:24:06,044 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 14:24:06,046 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/assistencia/src/test/resources
+2025-06-12 14:24:16,947 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/main/resources
+2025-06-12 14:24:16,947 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/main/resources
+2025-06-12 14:24:16,948 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-common/src/test/resources
+2025-06-12 14:24:16,987 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 14:24:16,991 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 14:24:16,993 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/id.autenticador/src/test/resources
+2025-06-12 14:24:17,119 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 14:24:17,123 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 14:24:17,125 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/id/src/test/resources
+2025-06-12 14:24:17,321 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 14:24:17,324 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 14:24:17,326 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/assistencia/src/test/resources
+2025-06-12 14:34:25,747 [Worker-18: Launching id - IdStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:34:25,782 [Worker-18: Launching id - IdStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:34:25,817 [Worker-18: Launching id - IdStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:34:33,279 [Worker-32: Launching id.autenticador - AuthStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:34:33,316 [Worker-32: Launching id.autenticador - AuthStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:34:33,345 [Worker-32: Launching id.autenticador - AuthStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:34:39,058 [Worker-32: Launching gateway - GatewayStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:34:39,088 [Worker-32: Launching gateway - GatewayStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:34:39,118 [Worker-32: Launching gateway - GatewayStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:34:45,089 [Worker-48: Launching assistencia - AssistenciaStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:34:45,132 [Worker-48: Launching assistencia - AssistenciaStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:34:45,166 [Worker-48: Launching assistencia - AssistenciaStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:37:32,472 [Worker-42: Launching yc.persistence-c - PersistenceCStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: br.com.comigo:yc.core-cqrs:0.0.1 with classifier null to /yc.core-cqrs/target/classes
+2025-06-12 14:37:32,472 [Worker-42: Launching yc.persistence-c - PersistenceCStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:37:32,505 [Worker-42: Launching yc.persistence-c - PersistenceCStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: br.com.comigo:yc.core-cqrs:0.0.1 with classifier null to /yc.core-cqrs/target/classes
+2025-06-12 14:37:32,505 [Worker-42: Launching yc.persistence-c - PersistenceCStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:37:32,538 [Worker-42: Launching yc.persistence-c - PersistenceCStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: br.com.comigo:yc.core-cqrs:0.0.1 with classifier null to /yc.core-cqrs/target/classes
+2025-06-12 14:37:32,538 [Worker-42: Launching yc.persistence-c - PersistenceCStartup] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: br.com.comigo:yc.core-common:0.0.1 with classifier null to /yc.core-common/target/classes
+2025-06-12 14:38:50,397 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 14:38:50,397 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 14:38:50,398 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 14:38:58,425 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 14:38:58,429 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 14:38:58,431 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.persistence-c/src/test/resources
+2025-06-12 14:52:43,139 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 14:52:43,140 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 14:52:43,144 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 14:54:34,209 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 14:54:34,209 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 14:54:34,213 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 15:11:44,217 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:11:44,217 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:11:44,220 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 15:12:52,252 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:12:52,253 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:12:52,255 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 15:15:15,585 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:15:15,586 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:15:15,587 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 15:16:07,474 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:16:07,474 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:16:07,476 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 15:16:58,666 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:16:58,666 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:16:58,668 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 15:24:12,200 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 15:24:12,212 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 15:24:12,216 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.persistence-c/src/test/resources
+2025-06-12 15:24:20,951 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 15:24:20,955 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 15:24:20,958 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.persistence-c/src/test/resources
+2025-06-12 15:24:36,645 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 15:24:36,649 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 15:24:36,652 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.persistence-c/src/test/resources
+2025-06-12 15:24:45,273 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 15:24:45,289 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 15:24:45,293 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.persistence-c/src/test/resources
+2025-06-12 15:24:52,816 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 15:24:52,820 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 15:24:52,823 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.persistence-c/src/test/resources
+2025-06-12 15:29:41,837 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:29:41,837 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:29:41,838 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 15:30:11,409 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:30:11,409 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:30:11,411 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 15:30:34,788 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:30:34,788 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:30:34,789 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 15:33:11,517 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-12 15:33:11,521 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-12 15:33:11,524 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.persistence-c/src/test/resources
+2025-06-12 15:40:09,954 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:40:09,954 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:40:09,955 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 15:41:12,762 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:41:12,762 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:41:12,764 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 15:42:45,170 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:42:45,170 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:42:45,172 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 15:46:36,616 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:46:36,616 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:46:36,618 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 15:51:04,179 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:51:04,179 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:51:04,181 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 15:51:13,918 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:51:13,918 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:51:13,920 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 15:52:33,813 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:52:33,813 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 15:52:33,814 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 16:12:18,272 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 16:12:18,272 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 16:12:18,273 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 16:15:34,682 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 16:15:34,682 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 16:15:34,684 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 16:15:53,499 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 16:15:53,499 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 16:15:53,500 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 16:18:16,964 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 16:18:16,964 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 16:18:16,965 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 16:21:47,336 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 16:21:47,336 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 16:21:47,339 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 16:29:25,856 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 16:29:25,856 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 16:29:25,858 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 16:31:22,289 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 16:31:22,289 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 16:31:22,290 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 16:43:23,528 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 16:43:23,528 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 16:43:23,529 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 16:45:17,279 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 16:45:17,279 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 16:45:17,282 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 21:09:26,575 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 21:09:26,575 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/main/resources
+2025-06-12 21:09:26,577 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/yc.core-cqrs/src/test/resources
+2025-06-12 21:11:58,758 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-12.0.9; built: 2024-05-03T13:03:17.262Z; git: efe8023327e67287f9bfd006700e6a71d45b5dd6; jvm 21.0.3+9-LTS
+2025-06-12 21:11:58,794 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started oeje8n.ContextHandler$CoreContextHandler@466a78e7{/help,/help,b=null,a=AVAILABLE,h=oeje8n.ContextHandler$CoreContextHandler$CoreToNestedHandler@2b9c5717{STARTED}}
+2025-06-12 21:11:58,795 [Start Help Server] INFO  o.e.j.s.DefaultSessionIdManager - Session workerName=node0
+2025-06-12 21:11:58,804 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@3b4591b7{HTTP/1.1, (http/1.1)}{127.0.0.1:40217}
+2025-06-12 21:11:58,815 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@70c9219c{STARTING}[12.0.9,sto=0] @26866422ms

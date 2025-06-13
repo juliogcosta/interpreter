@@ -7,7 +7,8 @@ import java.util.stream.Collectors;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Repository;
 
-import br.com.comigo.common.model.records.Telefone;
+import com.yc.core.common.model.records.Telefone;
+
 import br.com.comigo.id.adapter.aggregate.usuario.outbound.JpaUsuario;
 import br.com.comigo.id.adapter.util.JpaEmail;
 import br.com.comigo.id.adapter.util.JpaTelefone;
