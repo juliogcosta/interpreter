@@ -1,33 +1,20 @@
 package com.yc.core.cqrs.application.service.event;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.yc.core.cqrs.domain.event.EventWithId;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class AsyncEventHandlerImpl implements AsyncEventHandler {
+public class AsyncEventHandlerImpl {
 
-	private final String aggregateType;
-	private final String subscriptionName;
+	private final JsonNode aggregateModel;
 
-	public AsyncEventHandlerImpl(String aggregateType, String subscriptionName) {
-		this.aggregateType = aggregateType;
-		this.subscriptionName = subscriptionName;
+	public AsyncEventHandlerImpl(JsonNode aggregateModel) {
+		this.aggregateModel = aggregateModel;
 	}
 	
-	@Override
 	public void handleEvent(EventWithId event) {
-		log.info("\n > Event {} handled.", event);
+		log.info("\n > Handling event {} for aggregate {}\n", event, this.aggregateModel);
 	}
-
-	@Override
-	public String getAggregateType() {
-		return this.aggregateType;
-	}
-
-	@Override
-	public String getSubscriptionName() {
-		return this.subscriptionName;
-	}
-
 }

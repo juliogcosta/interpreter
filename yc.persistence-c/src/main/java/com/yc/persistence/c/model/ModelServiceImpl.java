@@ -22,8 +22,8 @@ public class ModelServiceImpl implements ModelService {
 		this.objectMapper = objectMapper;
 		
 		ObjectNode aggregates = this.objectMapper.createObjectNode();
-		aggregates.set("Atendimento", buildAtendimentoAggregateRep());
-		aggregates.set("Servico", buildServicoAggregateRep());
+		aggregates.set("Atendimento", this.buildAtendimentoAggregateRep());
+		aggregates.set("Servico", this.buildServicoAggregateRep());
 		
 		this.objectNodes = new HashMap<>();
 		this.objectNodes.put("tenant", aggregates);

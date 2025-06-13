@@ -38,22 +38,19 @@ public class EventRepository {
     @SneakyThrows
     public EventWithId appendEvent(@NonNull Event event, JsonNode aggregateModel) {
         String schemaName = aggregateModel.get(C.schema).get(C.name).asText();
-        log.info(" > event.aggregateId: {}", event.getAggregateId().toString());
-        log.info(" > event.aggregateType: {}", event.getAggregateType());
-        log.info(" > event.eventType: {}", event.getEventType());
         String jsonObj = this.objectMapper.writeValueAsString(event.getEventData());
         
         PGobject pgObject = new PGobject();
         pgObject.setType("json");
         pgObject.setValue(jsonObj);
         
-        log.info(" > jsonObj: {}", pgObject);
         String query = String.format("""
                 INSERT INTO %s.ES_EVENT (TRANSACTION_ID, AGGREGATE_ID, AGGREGATE_TYPE, VERSION, EVENT_TYPE, JSON_DATA)
                 VALUES (pg_current_xact_id(), :aggregateId, :aggregateType, :version, :eventType, :jsonObj)
                 RETURNING ID, TRANSACTION_ID::text, AGGREGATE_ID, AGGREGATE_TYPE, VERSION, EVENT_TYPE, JSON_DATA
                 """, schemaName);
-        log.info(" > query: {}", query);
+        log.info(" > query: {}\n", query);
+        
         List<EventWithId> result = this.jdbcTemplate.query(query,
                         Map.of(
                         		C.aggregateId, event.getAggregateId(), 
@@ -98,7 +95,7 @@ public class EventRepository {
         queryBuilder.append(" ORDER BY VERSION ASC");
 
         String query = queryBuilder.toString();
-        log.info("\n > query: {}", query);
+        log.info(" > query: {}\n", query);
 
         return this.jdbcTemplate.query(query, parameters,
                 (rs, rowNum) -> toEvent(rs, rowNum, aggregateModel));
@@ -125,6 +122,7 @@ public class EventRepository {
           LIMIT :batchSize
          """,
          schemaName, schemaName);
+        log.info(" > query: {}\n", query);
     	
         return this.jdbcTemplate.query(
                 query,
@@ -147,7 +145,7 @@ public class EventRepository {
         String json = jsonObj.getValue();
         JsonNode eventData = this.objectMapper.readTree(json);
         Event event = new Event(aggregateId, aggregateType, eventModel, eventData, version);
-        log.info("\n > Event loaded: {}", event);
+        log.info("\n > Event loaded: {}\n", event);
         return new EventWithId(id, new BigInteger(transactionId), event);
     }
 }

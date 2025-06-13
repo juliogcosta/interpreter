@@ -78,6 +78,7 @@ public class Aggregate {
     }
 
     private void apply(Event event) {
+        log.info("\n > Event: {}\n", event);
         this.aggregateData.put(C.id, event.getAggregateId().toString());
         this.aggregateData.put(C.status, event.getEventStatus());
         this.aggregateData.put(C.when, event.getCreatedDate().toInstant().toString());
@@ -91,17 +92,16 @@ public class Aggregate {
             });
         };
         this.version = event.getVersion();
-        log.debug("\n > Applyed event {}", event);
+        log.debug("\n > Event applyed [aggregate:data: {}, aggregate:version: {}]\n", this.aggregateData, this.version);
     }
 
     public void process(Command command) {
-        log.debug("\n > Processing command {} into aggregate", command);
+        log.debug("\n > Processing command {} into aggregate\n", command);
         String status = null;
         if (command.getAggregateData().has(C.status)) {
         	status = command.getAggregateData().get(C.status).asText();
         }
         ArrayNode stateControl = (ArrayNode) command.getCommandModel().get(C.stateControl);
-        log.info("\n > status: {}", status);
         if (status == null) {
             if (stateControl.size() == 0) {
         		
@@ -119,8 +119,6 @@ public class Aggregate {
         		
         	} else throw new AggregateStateException("A transição de situação (%s) do aggregado não pode ser processada.".formatted(status));
         }
-        
-        // ObjectNode aggregateData = (ObjectNode) command.getAggregateData();
         
         JsonNode eventModel = this.aggregateModel.get(C.event).get(command.getCommandModel().get(C.endState).asText());
         this.applyChange(new Event(this.aggregateId, this.getAggregateType(), eventModel, command.getAggregateData(), this.getNextVersion()));

@@ -44,10 +44,10 @@ public class Controller {
 		JsonNode commandModel = this.modelService.getModel(C.tenant)
 				.get(aggregateType).get(C.command).get(aggregateCommand);
         JsonNode commandData = request.get(aggregateType).get(aggregateCommand);
-        log.info("\n > aggregateType: {}", aggregateType);
-        log.info("\n > aggregateCommand: {}", aggregateCommand);
-        log.info("\n > commandModel: {}", commandModel);
-        log.info("\n > commandData: {}", commandData);
+        log.info("\n > aggregateType: {}\n", aggregateType);
+        log.info("\n > aggregateCommand: {}\n", aggregateCommand);
+        log.info("\n > commandModel: {}\n", commandModel);
+        log.info("\n > commandData: {}\n", commandData);
         Command command = new Command(aggregateType, commandData, commandModel);
         JsonNode aggregateModel = this.modelService.getModel(C.tenant).get(aggregateType);
         var aggregate = this.commandProcessor.process(aggregateModel, command);

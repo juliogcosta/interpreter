@@ -59,14 +59,15 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/home/julio/Codes/YC/Experiments/interpreter/yc.core-common"/>
 			<item value="/home/julio/Codes/YC/Experiments/interpreter"/>
 			<item value="/home/julio/Codes/Experiments/interpreter/yc.core-cqrs"/>
 		</list>
 		<section name="SmartImportWizard.dialogBounds">
-			<item key="DIALOG_X_ORIGIN" value="630"/>
+			<item key="DIALOG_X_ORIGIN" value="715"/>
 			<item key="DIALOG_Y_ORIGIN" value="182"/>
-			<item key="DIALOG_WIDTH" value="948"/>
-			<item key="DIALOG_HEIGHT" value="798"/>
+			<item key="DIALOG_WIDTH" value="903"/>
+			<item key="DIALOG_HEIGHT" value="760"/>
 			<item key="DIALOG_FONT_NAME" value="1|Ubuntu|9.0|0|GTK|1|"/>
 		</section>
 	</section>

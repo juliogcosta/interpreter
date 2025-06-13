@@ -23,7 +23,9 @@ import jakarta.annotation.Nullable;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Transactional(propagation = Propagation.MANDATORY)
 @Repository
 @RequiredArgsConstructor
@@ -35,12 +37,13 @@ public class AggregateRepository {
 
     public void createAggregateIfAbsent(String schemaName, @NonNull String aggregateType,
             @NonNull UUID aggregateId) {
-        String command = String.format("""
+        String query = String.format("""
                         INSERT INTO %s.ES_AGGREGATE (ID, VERSION, AGGREGATE_TYPE)
                         VALUES (:aggregateId, 0, :aggregateType)
                         ON CONFLICT DO NOTHING
                         """, schemaName);
-        this.jdbcTemplate.update(command, Map.of(C.aggregateId, aggregateId, C.aggregateType, aggregateType));
+        log.info("\n > query: {}\n", query);
+        this.jdbcTemplate.update(query, Map.of(C.aggregateId, aggregateId, C.aggregateType, aggregateType));
     }
 
     public boolean checkAndUpdateAggregateVersion(String schemaName, @NonNull UUID aggregateId, int expectedVersion,
@@ -57,10 +60,13 @@ public class AggregateRepository {
 
     @SneakyThrows
     public void createAggregateSnapshot(String schemaName, @NonNull Aggregate aggregate) {
-        this.jdbcTemplate.update(String.format("""
-                        INSERT INTO %s.ES_AGGREGATE_SNAPSHOT (AGGREGATE_ID, VERSION, JSON_DATA)
-                        VALUES (:aggregateId, :version, :jsonObj::json)
-                        """, schemaName), Map.of(C.aggregateId, aggregate.getAggregateId(), C.version,
+        String query = String.format("""
+                INSERT INTO %s.ES_AGGREGATE_SNAPSHOT (AGGREGATE_ID, VERSION, JSON_DATA)
+                VALUES (:aggregateId, :version, :jsonObj::json)
+                """, schemaName);
+    	log.info("\n > query: {}\n", query);
+        
+        this.jdbcTemplate.update(query, Map.of(C.aggregateId, aggregate.getAggregateId(), C.version,
                         aggregate.getVersion(), "jsonObj", this.objectMapper.writeValueAsString(aggregate)));
     }
 
@@ -70,16 +76,19 @@ public class AggregateRepository {
         parameters.addValue(C.aggregateId, aggregateId);
         parameters.addValue(C.version, version, Types.INTEGER);
 
-        return jdbcTemplate.query(String.format("""
-                        SELECT a.AGGREGATE_TYPE,
-                               s.JSON_DATA
-                          FROM %s.ES_AGGREGATE_SNAPSHOT s
-                          JOIN %s.ES_AGGREGATE a ON a.ID = s.AGGREGATE_ID
-                         WHERE s.AGGREGATE_ID = :aggregateId
-                           AND (:version IS NULL OR s.VERSION <= :version)
-                         ORDER BY s.VERSION DESC
-                         LIMIT 1
-                        """, schemaName, schemaName), parameters, this::toAggregate).stream().findFirst();
+        String query = String.format("""
+         SELECT a.AGGREGATE_TYPE,
+                s.JSON_DATA
+           FROM %s.ES_AGGREGATE_SNAPSHOT s
+           JOIN %s.ES_AGGREGATE a ON a.ID = s.AGGREGATE_ID
+          WHERE s.AGGREGATE_ID = :aggregateId
+            AND (:version IS NULL OR s.VERSION <= :version)
+          ORDER BY s.VERSION DESC
+          LIMIT 1
+         """, schemaName, schemaName);
+        log.info("\n > query: {}\n", query);
+        
+        return jdbcTemplate.query(query, parameters, this::toAggregate).stream().findFirst();
     }
 
     @SneakyThrows

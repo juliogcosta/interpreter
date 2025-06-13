@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.yc.core.cqrs.C;
 import com.yc.core.cqrs.application.service.command.CommandHandlerImpl;
-import com.yc.core.cqrs.application.service.event.SyncEventHandler;
+import com.yc.core.cqrs.application.service.event.SyncEventHandlerImpl;
 import com.yc.core.cqrs.domain.Aggregate;
 import com.yc.core.cqrs.domain.command.Command;
 import com.yc.core.cqrs.domain.event.EventWithId;
@@ -38,7 +38,7 @@ public class CommandProcessor {
 
     private final AggregateStore aggregateStore;
     private final CommandHandlerImpl commandHandler;
-    private final SyncEventHandler syncEventHandler;
+    private final SyncEventHandlerImpl syncEventHandler;
 
     /**
      * Processa um comando, recuperando o agregado associado, aplicando as regras de
@@ -48,7 +48,7 @@ public class CommandProcessor {
      * @return O agregado atualizado após o processamento do comando.
      */
     public Aggregate process(JsonNode aggregateModel, @NonNull Command command) {
-        log.info("\n > Starting command processor [{}]", command);
+        log.info("\n > Starting command processor for {}\n", command);
 
         /**
          * A invocação de "readAggregate" implica a recuperação do agregado a partid do
@@ -59,7 +59,7 @@ public class CommandProcessor {
          */
         UUID aggregateId = command.getAggregateId();
         Aggregate aggregate = this.aggregateStore.readAggregate(aggregateId, aggregateModel);
-        log.info("\n > Aggregate read: {}", aggregate);
+        log.info("\n > Aggregate read: {}\n", aggregate);
 
         if (command.getCommandModel().has(C.handler)) {
             /**
@@ -67,12 +67,13 @@ public class CommandProcessor {
              * 
              */
         } else {
-            log.info("\n > Aggregate command.handle");
+            log.info("\n > Aggregate command.handle\n");
             CommandProcessor.this.commandHandler.handle(aggregate, command);
         }
         
         List<EventWithId> events = this.aggregateStore.saveAggregate(aggregate);
-        log.info("\n > Events: {}", events);
+        log.info("\n > Aggregate: {}\n", aggregate);
+        log.info("\n > Events: {}\n", events);
 
         this.syncEventHandler.handleEvents(events, aggregate);
 

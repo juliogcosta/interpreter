@@ -36,14 +36,15 @@
     <fullyQualifiedTypeName name="org.json.JSONObject"/>
     <fullyQualifiedTypeName name="java.util.UUID"/>
     <fullyQualifiedTypeName name="java.util.stream.Stream"/>
-    <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.node.ArrayNode"/>
     <fullyQualifiedTypeName name="com.yc.core.cqrs.error.AggregateStateException"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
-    <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.node.ObjectNode"/>
-    <fullyQualifiedTypeName name="com.yc.core.cqrs.C"/>
     <fullyQualifiedTypeName name="br.com.comigo.common.infrastructure.exception.IllegalRequestFormatException"/>
     <fullyQualifiedTypeName name="com.yc.core.cqrs.domain.Aggregate"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.JsonNode"/>
     <fullyQualifiedTypeName name="com.yc.core.cqrs.adapter.outbound.model.ModelService"/>
     <fullyQualifiedTypeName name="lombok.RequiredArgsConstructor"/>
+    <fullyQualifiedTypeName name="com.yc.core.cqrs.C"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.node.ArrayNode"/>
+    <fullyQualifiedTypeName name="com.yc.core.common.infrastructure.exception.IncompleteRegisterException"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.node.ObjectNode"/>
 </qualifiedTypeNameHistroy>

@@ -25,11 +25,14 @@ public class EventSubscriptionRepository {
     private final NamedParameterJdbcTemplate jdbcTemplate;
 
     public void createSubscriptionIfAbsent(String schemaName, String subscriptionName) {
-        jdbcTemplate.update(String.format("""
+        String query = String.format("""
                 INSERT INTO %s.ES_EVENT_SUBSCRIPTION (SUBSCRIPTION_NAME, LAST_TRANSACTION_ID, LAST_EVENT_ID)
                 VALUES (:subscriptionName, '0'::xid8, 0)
                 ON CONFLICT DO NOTHING
-                """, schemaName), Map.of("subscriptionName", subscriptionName));
+                """, schemaName);
+        log.info("\n > query: {}\n", query);
+        
+    	this.jdbcTemplate.update(query, Map.of("subscriptionName", subscriptionName));
     }
 
     /**
@@ -45,26 +48,33 @@ public class EventSubscriptionRepository {
      */
     public Optional<EventSubscriptionCheckpoint> readCheckpointAndLockSubscription(String schemaName,
             String subscriptionName) {
-        return jdbcTemplate.query(String.format("""
-                SELECT LAST_TRANSACTION_ID::text,
-                       LAST_EVENT_ID
-                  FROM %s.ES_EVENT_SUBSCRIPTION
-                 WHERE SUBSCRIPTION_NAME = :subscriptionName
-                   FOR UPDATE SKIP LOCKED
-                """, schemaName), Map.of("subscriptionName", subscriptionName), this::toEventSubscriptionCheckpoint)
+    	String query = String.format("""
+         SELECT LAST_TRANSACTION_ID::text,
+                LAST_EVENT_ID
+           FROM %s.ES_EVENT_SUBSCRIPTION
+          WHERE SUBSCRIPTION_NAME = :subscriptionName
+            FOR UPDATE SKIP LOCKED
+         """, schemaName);
+        log.info("\n > query: {}\n", query);
+
+        return jdbcTemplate.query(query, Map.of("subscriptionName", subscriptionName), this::toEventSubscriptionCheckpoint)
                 .stream().findFirst();
     }
 
     public boolean updateEventSubscription(String schemaName, String subscriptionName,
             BigInteger lastProcessedTransactionId, long lastProcessedEventId) {
-        int updatedRows = jdbcTemplate.update(String.format("""
-                UPDATE %s.ES_EVENT_SUBSCRIPTION
-                   SET LAST_TRANSACTION_ID = :lastProcessedTransactionId::xid8,
-                       LAST_EVENT_ID = :lastProcessedEventId
-                 WHERE SUBSCRIPTION_NAME = :subscriptionName
-                """, schemaName), Map.of("subscriptionName", subscriptionName, "lastProcessedTransactionId",
+        String query = String.format("""
+             UPDATE %s.ES_EVENT_SUBSCRIPTION
+                SET LAST_TRANSACTION_ID = :lastProcessedTransactionId::xid8,
+                    LAST_EVENT_ID = :lastProcessedEventId
+              WHERE SUBSCRIPTION_NAME = :subscriptionName
+             """, schemaName);
+        log.info("\n > query: {}\n", query);
+        
+    	int updatedRows = this.jdbcTemplate.update(query, Map.of("subscriptionName", subscriptionName, "lastProcessedTransactionId",
                 lastProcessedTransactionId.toString(), "lastProcessedEventId", lastProcessedEventId));
-        return updatedRows > 0;
+
+    	return updatedRows > 0;
     }
 
     private EventSubscriptionCheckpoint toEventSubscriptionCheckpoint(ResultSet rs, int rowNum) throws SQLException {

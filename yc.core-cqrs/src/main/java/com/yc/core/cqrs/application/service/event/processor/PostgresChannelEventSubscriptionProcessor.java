@@ -1,9 +1,36 @@
 package com.yc.core.cqrs.application.service.event.processor;
 
-//@Component
-//@ConditionalOnProperty(name = "event-sourcing.subscriptions", havingValue = "postgres-channel")
-//@RequiredArgsConstructor
-//@Slf4j
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+
+import org.postgresql.PGNotification;
+import org.postgresql.jdbc.PgConnection;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
+import org.springframework.scheduling.concurrent.CustomizableThreadFactory;
+import org.springframework.stereotype.Component;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.yc.core.cqrs.C;
+import com.yc.core.cqrs.adapter.outbound.model.ModelService;
+
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@Component
+@ConditionalOnProperty(name = "event-sourcing.subscriptions", havingValue = "postgres-channel")
+@RequiredArgsConstructor
+@Slf4j
 public class PostgresChannelEventSubscriptionProcessor {
 
     /**
@@ -12,24 +39,17 @@ public class PostgresChannelEventSubscriptionProcessor {
      * novo for adicionado (caso seja obrigado) a processar todos os eventos de um
      * agregado, sendo muitos.
      * 
-     *
+     */
     @Value("${event-sourcing.polling-subscriptions.batch-size}")
     private int batchSize;
 
-    @Value("${db.schema}")
-    private String schemaName;
-
-    /*private final List<AsyncEventHandler> eventHandlers;         * /
-    private final AsyncEventHandler eventHandler;
-    
     private final EventSubscriptionProcessor eventSubscriptionProcessor;
-    
-    private final ModelService modelService;
     private final DataSourceProperties dataSourceProperties;
     private final ExecutorService executor = newExecutor();
     private CountDownLatch latch = new CountDownLatch(0);
     private Future<?> future = CompletableFuture.completedFuture(null);
     private volatile PgConnection connection;
+	private final ModelService modelService;
 
     /**
      * 1. Por que criar um ExecutorService?
@@ -65,7 +85,7 @@ public class PostgresChannelEventSubscriptionProcessor {
      * PostgreSQL. E (2) garantir que o ciclo de vida da thread esteja alinhado com
      * o da aplicação Spring.
      * 
-     * /
+     */
     private static ExecutorService newExecutor() {
         CustomizableThreadFactory threadFactory = new CustomizableThreadFactory("postgres-channel-event-subscription-");
         threadFactory.setDaemon(true);
@@ -95,9 +115,15 @@ public class PostgresChannelEventSubscriptionProcessor {
                         }
 
                         /*this.eventHandlers.forEach(handler -> PostgresChannelEventSubscriptionProcessor.this
-                                .processNewEvents(this.schemaName, handler));          * /
-                        modelService.getModel("tenant").
-                        this.processNewEvents(this.schemaName, null, this.eventHandler);
+                                .processNewEvents(this.schemaName, handler));*/
+                        this.modelService.getModel("tenant").fields().forEachRemaining(field -> {
+                			JsonNode aggregateModel = field.getValue();
+                			try {
+                				this.eventSubscriptionProcessor.processNewEvents(aggregateModel);
+                			} catch (Exception e) {
+                	            log.warn("Failed to handle new events for subscription %s".formatted(aggregateModel.get(C.type).asText()), e);
+                			}
+                        });
 
                         try {
                         	//log.info(" > 1");
@@ -117,11 +143,11 @@ public class PostgresChannelEventSubscriptionProcessor {
                                 if (notifications != null) {
                                     for (PGNotification notification : notifications) {
                                         String aggregateType = notification.getParameter();
+                                        this.eventSubscriptionProcessor.processNewEvents(this.modelService.getModel("tenant").get(aggregateType));
                                         /*this.eventHandlers.stream().filter(
                                                 eventHandler -> eventHandler.getAggregateType().equals(aggregateType))
                                                 .forEach(handler -> PostgresChannelEventSubscriptionProcessor.this
-                                                        .processNewEvents(this.schemaName, handler));                  * /
-                                    	this.processNewEvents(this.schemaName, aggregateType, this.eventHandler);
+                                                        .processNewEvents(this.schemaName, handler));*/
                                     }
                                 }
                             }
@@ -157,13 +183,13 @@ public class PostgresChannelEventSubscriptionProcessor {
         return true;
     }
 
-    private void processNewEvents(String schemaName, String aggregateType, AsyncEventHandler eventHandler) {
+    /*private void processNewEvents(String schemaName, AsyncEventHandler eventHandler) {
         try {
-            this.eventSubscriptionProcessor.processNewEvents(schemaName, aggregateType, eventHandler, this.batchSize);
+            this.eventSubscriptionProcessor.processNewEvents(schemaName, eventHandler, this.batchSize);
         } catch (Exception e) {
             log.warn("Failed to handle new events for subscription %s".formatted(eventHandler.getSubscriptionName()), e);
         }
-    }
+    }*/
 
     @PreDestroy
     public synchronized void stop() {
@@ -185,5 +211,5 @@ public class PostgresChannelEventSubscriptionProcessor {
             }
         } catch (InterruptedException ignored) {
         }
-    }*/
+    }
 }

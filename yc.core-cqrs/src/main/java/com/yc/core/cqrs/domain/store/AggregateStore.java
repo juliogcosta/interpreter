@@ -44,7 +44,7 @@ public class AggregateStore {
      * 
      */
     public List<EventWithId> saveAggregate(Aggregate aggregate) {
-        log.debug("\n > Saving aggregate {}", aggregate);
+        log.debug("\n > Saving aggregate {}\n", aggregate);
 
         String aggregateType = aggregate.getAggregateType();
         UUID aggregateId = aggregate.getAggregateId();
@@ -60,14 +60,14 @@ public class AggregateStore {
                     aggregateType, aggregateId, expectedVersion);
             throw new OptimisticConcurrencyControlException(expectedVersion);
         }
-        log.info("\n > Aggregate created!");
+        log.info("\n > Aggregate created!\n");
 
         SnapshottingProperties snapProperties = this.properties.getSnapshotting(aggregateType);
         List<Event> occurredEvents = aggregate.getOccurredEvents();
-        log.info("\n > Occurred events {}", occurredEvents);
+        log.info("\n > Occurred events {}\n", occurredEvents);
         List<EventWithId> events = new ArrayList<>();
         for (Event occurredEvent : occurredEvents) {
-            log.info("\n > Appending event {} to aggregate of type {}", occurredEvent, aggregateType);
+            log.info("\n > Appending event {} to aggregate of type {}\n", occurredEvent, aggregateType);
             EventWithId eventWithId = this.eventRepository.appendEvent(occurredEvent, aggregate.getAggregateModel());
             events.add(eventWithId);
             this.createAggregateSnapshot(snapProperties, aggregate);
@@ -78,7 +78,7 @@ public class AggregateStore {
     private void createAggregateSnapshot(SnapshottingProperties snapshotting, Aggregate aggregate) {
         if (snapshotting.enabled() && snapshotting.nthEvent() > 1
                 && aggregate.getVersion() % snapshotting.nthEvent() == 0) {
-            log.info("\n > Creating {} aggregate (id: {}, version: {}) snapshot", aggregate.getAggregateType(),
+            log.info("\n > Creating {} aggregate (id: {}, version: {}) snapshot\n", aggregate.getAggregateType(),
                     aggregate.getAggregateId(),
                     aggregate.getVersion());
             String schemaName = aggregate.getAggregateModel().get(C.schema).get(C.name).asText();
@@ -94,20 +94,20 @@ public class AggregateStore {
     		JsonNode aggregateModel) {
     	String aggregateType = aggregateModel.get(C.type).asText();
         
-    	log.info("\n > Reading {} aggregate {}", aggregateType, aggregateId);
+    	log.info("\n > Reading {} aggregate {}\n", aggregateType, aggregateId);
         SnapshottingProperties snapshotting = this.properties.getSnapshotting(aggregateType);
         Aggregate aggregate;
         if (snapshotting.enabled()) {
             aggregate = this.readAggregateFromSnapshot(aggregateId, version, aggregateModel).orElseGet(() -> {
-                log.info("\n > Aggregate {} snapshot not found", aggregateId);
+                log.info("\n > Aggregate {} snapshot not found\n", aggregateId);
                 return this.readAggregateFromEvents(aggregateId, version, aggregateModel);
             });
 
         } else {
-        	log.info("\n > Version: {}", version);
+        	log.info("\n > Version: {}\n", version);
             aggregate = this.readAggregateFromEvents(aggregateId, version, aggregateModel);
         }
-        log.info("\n > Aggregate read {}", aggregate);
+        log.info("\n > Aggregate read {}\n", aggregate);
         return aggregate;
     }
 
@@ -117,12 +117,12 @@ public class AggregateStore {
     	return this.aggregateRepository.readAggregateSnapshot(schemaName, aggregateId, aggregateVersion)
                 .map(aggregate -> {
                     int snapshotVersion = aggregate.getVersion();
-                    log.debug("\n > Read aggregate {} snapshot version {}", aggregateId, snapshotVersion);
+                    log.debug("\n > Read aggregate {} snapshot version {}\n", aggregateId, snapshotVersion);
                     if (aggregateVersion == null || snapshotVersion < aggregateVersion) {
                         var events = this.eventRepository
                                 .readEvents(aggregateId, snapshotVersion, aggregateVersion, aggregateModel)
                                 .stream().map(EventWithId::event).toList();
-                        log.debug("\n > Read {} events after version {} for aggregate {}", events.size(), snapshotVersion,
+                        log.debug("\n > Read {} events after version {} for aggregate {}\n", events.size(), snapshotVersion,
                                 aggregateId);
                         aggregate.loadFromHistory(events);
                     }
@@ -132,7 +132,7 @@ public class AggregateStore {
 
     private Aggregate readAggregateFromEvents(UUID aggregateId, final @Nullable Integer aggregateVersion, 
     		JsonNode aggregateModel) {
-    	log.info("\n > schemaName: {}, \n > aggregateId: {},\n > aggregateVersion: {}", aggregateId, aggregateVersion);
+    	log.info("\n > schemaName: {}, \n > aggregateId: {},\n > aggregateVersion: {}\n", aggregateId, aggregateVersion);
         List<EventWithId> eventWithIds = this.eventRepository.readEvents(aggregateId, null, 
         		aggregateVersion, aggregateModel);
         /*
@@ -143,7 +143,7 @@ public class AggregateStore {
          * 
          */
         List<Event> events = eventWithIds.stream().map(EventWithId::event).toList();
-        log.debug("\n Read {} events for aggregate {}", events.size(), aggregateId);
+        log.debug("\n Read {} events for aggregate {}\n", events.size(), aggregateId);
         Aggregate aggregate = new Aggregate(aggregateId, 0, aggregateModel);
         aggregate.loadFromHistory(events);
         return aggregate;

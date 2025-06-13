@@ -15,9 +15,8 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 @RequiredArgsConstructor
 @Slf4j
-public class SyncEventHandlerImpl implements SyncEventHandler {
+public class SyncEventHandlerImpl {
 
-	@Override
 	public void handleEvents(List<EventWithId> events, Aggregate aggregate) {
 		this.updateAggregateProjection(aggregate);
 	}
@@ -30,7 +29,7 @@ public class SyncEventHandlerImpl implements SyncEventHandler {
 		 * precisa estar nesse ponto com o tenant.
 		 * 
 		 */
-		log.info("\n > Aggregate: ", aggregate);
+		log.info("\n > Aggregate: {}\n", aggregate);
 	}
 
 }
