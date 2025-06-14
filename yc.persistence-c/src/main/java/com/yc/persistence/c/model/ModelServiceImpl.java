@@ -130,7 +130,7 @@ public class ModelServiceImpl implements ModelService {
 		ObjectNode servicoDisponibilizadoEvent = this.objectMapper.createObjectNode();
 		servicoDisponibilizadoEvent.set("attributes", disponibilizarServicoCommandAttributes);
 		servicoDisponibilizadoEvent.put("type", "Disponibilizado");
-		servicoDisponibilizadoEvent.put("status", "Disponibilizado");
+		servicoDisponibilizadoEvent.put("status", "DISPONIBILIZADO");
 
 		/**
 		 * 2. Evento Cancelado
@@ -140,7 +140,7 @@ public class ModelServiceImpl implements ModelService {
 		ObjectNode servicoCanceladoEvent = this.objectMapper.createObjectNode();
 		servicoCanceladoEvent.set("attributes", cancelarServicoCommandAttributes);
 		servicoCanceladoEvent.put("type", "Cancelado");
-		servicoCanceladoEvent.put("status", "Cancelado");
+		servicoCanceladoEvent.put("status", "CANCELADO");
 
 		/**
 		 * Definicao de quais eventos compoem o agregado

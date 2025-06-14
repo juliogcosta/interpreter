@@ -37,6 +37,8 @@ public class Command {
             String fieldName = fieldNames.next();
             if (fieldName.equals("id")) {
 
+            } else if (fieldName.equals("status")) {
+
             } else if (commandModel.get(C.attribute).has(fieldName)) {
 
             } else
@@ -52,6 +54,7 @@ public class Command {
             this.aggregateId = UUID.randomUUID();
         } else
             throw new IncompleteRegisterException("O campo id está ausente ou nulo.");
+
         this.aggregateType = aggregateType;
         this.commandData = commandDataCopy;
         this.commandModel = commandModel;
@@ -103,7 +106,7 @@ public class Command {
         return this.aggregateType;
     }
 
-    final public JsonNode getAggregateData() {
+    final public JsonNode getCommandData() {
         return this.commandData;
     }
 

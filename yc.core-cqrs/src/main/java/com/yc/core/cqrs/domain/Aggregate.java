@@ -46,17 +46,19 @@ public class Aggregate {
     }
 
     public String getAggregateType() {
-    	return this.aggregateModel.get(C.type).asText();
+        return this.aggregateModel.get(C.type).asText();
     }
-    
+
     public void loadFromHistory(List<Event> events) {
         if (this.occurredEvents.isEmpty()) {
-            
-        } else throw new IllegalStateException("O aggregate não tem occurredEvents");
+
+        } else
+            throw new IllegalStateException("O aggregate não tem occurredEvents");
         events.forEach(event -> {
             if (event.getVersion() <= this.version) {
-                throw new IllegalStateException("A versão (%s) do evento deve ser menor ou igual à versão base do agregado (%s)"
-                        .formatted(event.getVersion(), this.getNextVersion()));
+                throw new IllegalStateException(
+                        "A versão (%s) do evento deve ser menor ou igual à versão base do agregado (%s)"
+                                .formatted(event.getVersion(), this.getNextVersion()));
             }
             this.apply(event);
             this.baseVersion = this.version = event.getVersion();
@@ -83,44 +85,59 @@ public class Aggregate {
         this.aggregateData.put(C.status, event.getEventStatus());
         this.aggregateData.put(C.when, event.getCreatedDate().toInstant().toString());
         JsonNode eventData = event.getEventData();
+        log.info("\n > eventData[1]: {}\n", eventData);
         if (eventData != null && eventData.isObject()) {
             eventData.fields().forEachRemaining(entry -> {
-            	if (entry.getKey().equals(C.id) || entry.getKey().equals(C.status) 
-            			|| entry.getKey().equals(C.when)) {
-            		
-            	} else this.aggregateData.set(entry.getKey(), entry.getValue());
+                if (entry.getKey().equals(C.id)) {
+                    ((ObjectNode) eventData).put(C.id, Aggregate.this.getAggregateId().toString());
+                } else if (entry.getKey().equals(C.status)) {
+                    ((ObjectNode) eventData).put(C.status, event.getEventStatus());
+                } else if (entry.getKey().equals(C.when)) {
+                    ((ObjectNode) eventData).put(C.when, event.getCreatedDate().toInstant().toString());
+                } else {
+                    this.aggregateData.set(entry.getKey(), entry.getValue());
+                }
             });
-        };
+        }
+        log.info("\n > eventData[2]: {}\n", eventData);
+
         this.version = event.getVersion();
-        log.debug("\n > Event applyed [aggregate:data: {}, aggregate:version: {}]\n", this.aggregateData, this.version);
+        log.info("\n > Event applyed [aggregate:data: {}, aggregate:version: {}]\n", this.aggregateData, this.version);
     }
 
     public void process(Command command) {
         log.debug("\n > Processing command {} into aggregate\n", command);
         String status = null;
-        if (command.getAggregateData().has(C.status)) {
-        	status = command.getAggregateData().get(C.status).asText();
+        log.info("\n > aggregateData: {}\n", command.getCommandData());
+        if (command.getCommandData().has(C.status)) {
+            status = command.getCommandData().get(C.status).asText();
         }
         ArrayNode stateControl = (ArrayNode) command.getCommandModel().get(C.stateControl);
+        log.info("\n > stateControl: {}\n", stateControl);
         if (status == null) {
             if (stateControl.size() == 0) {
-        		
-        	} else throw new AggregateStateException("Não é possível deterinar o status do agregado");
+
+            } else
+                throw new AggregateStateException("Não é possível deterinar o status do agregado");
         } else {
-        	Boolean ok = false;
-        	Iterator<JsonNode> iterator = stateControl.elements();
-        	while (iterator.hasNext()) {
-        		if (iterator.next().asText().equals(status)) {
-        			ok = true;
-        		}
-        	}
-        	
-        	if (ok) {
-        		
-        	} else throw new AggregateStateException("A transição de situação (%s) do aggregado não pode ser processada.".formatted(status));
+            Boolean ok = false;
+            Iterator<JsonNode> iterator = stateControl.elements();
+            while (iterator.hasNext()) {
+                if (iterator.next().asText().equals(status)) {
+                    ok = true;
+                }
+            }
+
+            if (ok) {
+
+            } else
+                throw new AggregateStateException(
+                        "A transição de situação (%s) do aggregado não pode ser processada.".formatted(status));
         }
-        
+
         JsonNode eventModel = this.aggregateModel.get(C.event).get(command.getCommandModel().get(C.endState).asText());
-        this.applyChange(new Event(this.aggregateId, this.getAggregateType(), eventModel, command.getAggregateData(), this.getNextVersion()));
+        log.info("\n from DISPONIBILIZADO to CANCELADO [{}]\n", eventModel.get(C.type));
+        this.applyChange(new Event(this.aggregateId, this.getAggregateType(), eventModel, command.getCommandData(),
+                this.getNextVersion()));
     }
 }
