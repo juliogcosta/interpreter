@@ -998,3 +998,118 @@ Contains: Missing com.yc:yc.core-common:jar:javadoc:0.0.1
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 17:06:15.171
 !MESSAGE Boot project REMOVED: ie.persistence-q
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-14 18:10:10.121
+!MESSAGE Builder must not be set
+!STACK 0
+java.lang.IllegalStateException: Builder must not be set
+	at org.eclipse.mylyn.wikitext.parser.MarkupParser.parseToHtml(MarkupParser.java:114)
+	at org.eclipse.lsp4e.LSPEclipseUtils.lambda$29(LSPEclipseUtils.java:1440)
+	at org.eclipse.lsp4j.jsonrpc.messages.Either.map(Either.java:75)
+	at org.eclipse.lsp4e.LSPEclipseUtils.getHtmlDocString(LSPEclipseUtils.java:1429)
+	at org.eclipse.lsp4e.operations.completion.LSCompletionProposal.getAdditionalProposalInfo(LSCompletionProposal.java:342)
+	at org.eclipse.lsp4e.operations.completion.LSCompletionProposal.getAdditionalProposalInfo(LSCompletionProposal.java:1)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:116)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2025-06-14 19:27:52.487 -----------------------------------------------
+eclipse.buildId=4.24.0.202407191504
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4 -data /home/julio/Codes/YC/Experiments/ycp
+
+!ENTRY ch.qos.logback.classic 1 0 2025-06-14 19:27:53.803
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-06-14 19:27:54.606
+!MESSAGE Logback config file: /home/julio/Codes/YC/Experiments/ycp/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-06-14 19:27:54.868
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-14 19:27:54.868
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-06-14 19:27:55.122
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-14 19:27:55.122
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-14 19:27:58.094
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+/opt/sts-4.24.0.RELEASE/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.3.v20240426-1530/jre/bin/java
+-cp
+/opt/sts-4.24.0.RELEASE/plugins/org.springframework.tooling.boot.ls_1.56.0.202407191456/servers/spring-boot-language-server/BOOT-INF/classes:/opt/sts-4.24.0.RELEASE/plugins/org.springframework.tooling.boot.ls_1.56.0.202407191456/servers/spring-boot-language-server/BOOT-INF/lib/*
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:/opt/sts-4.24.0.RELEASE/plugins/org.springframework.tooling.boot.ls_1.56.0.202407191456/servers/spring-boot-language-server/BOOT-INF/classes/application.properties
+-XX:ErrorFile=/home/julio/Codes/YC/Experiments/ycp/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1749940078093
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.094
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-14 19:27:58.096
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 87170
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.770
+!MESSAGE Classpath changed for project: ie.persistence-c
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.771
+!MESSAGE Boot project ADDED: ie.persistence-c
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.772
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.773
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.773
+!MESSAGE Classpath changed for project: yc.loco3
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.773
+!MESSAGE Boot project ADDED: yc.loco3
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.862
+!MESSAGE Boot project ADDED: assistencia
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.862
+!MESSAGE Boot project ADDED: eureka
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.863
+!MESSAGE Boot project ADDED: gateway
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.863
+!MESSAGE Boot project ADDED: id
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.863
+!MESSAGE Boot project ADDED: id.autenticador
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.863
+!MESSAGE Boot project ADDED: ie.persistence-crs
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.863
+!MESSAGE Boot project ADDED: yc.collector
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.863
+!MESSAGE Boot project ADDED: yc.core-common
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.863
+!MESSAGE Boot project ADDED: yc.core-cqrs
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.864
+!MESSAGE Boot project ADDED: yc.error
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.864
+!MESSAGE Boot project ADDED: yc.models
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.864
+!MESSAGE Boot project ADDED: yc.pr
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-06-14 19:27:58.864
+!MESSAGE Boot project ADDED: yc.utils

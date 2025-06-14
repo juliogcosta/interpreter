@@ -79,4 +79,12 @@
 		<item key="DIALOG_HEIGHT" value="355"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|9.0|0|GTK|1|"/>
 	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="613"/>
+		<item key="DIALOG_Y_ORIGIN" value="335"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
 </section>

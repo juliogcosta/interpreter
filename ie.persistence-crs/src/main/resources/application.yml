@@ -111,11 +111,12 @@ event-sourcing:
 
 logging:
   level:
-    '[com.zaxxer.hikari.pool.HikariPool]': INFO
+    '[com.zaxxer.hikari.pool.HikariPool]': ERROR
     '[org.springframework]': ERROR
     '[org.hibernate]':
       SQL: ERROR
       '[type.descriptor.sql.BasicBinder]': ERROR
+    '[com.yc]': TRACE
   pattern:
     console: "%clr(%d{HH:mm:ss}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(:){faint} %clr(%-40.40logger{39}){cyan}%clr(.%M:%L){yellow} %clr(:){faint} %m%n"
 

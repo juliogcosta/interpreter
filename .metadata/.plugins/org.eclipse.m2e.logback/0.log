@@ -4147,3 +4147,45 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact com.yc:yc.cor
 2025-06-14 17:14:32,536 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
 2025-06-14 17:14:32,539 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
 2025-06-14 17:14:32,541 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 18:08:49,387 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 18:08:49,408 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 7 resources from src/main/resources to target/classes
+2025-06-14 18:08:49,414 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-crs/src/test/resources
+2025-06-14 18:09:21,917 [Worker-109: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 18:09:21,918 [Worker-109: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 18:09:21,920 [Worker-109: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-crs/src/test/resources
+2025-06-14 18:10:51,511 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 18:10:51,515 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 18:10:51,516 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-crs/src/test/resources
+2025-06-14 18:11:10,117 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 18:11:10,121 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 18:11:10,124 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-crs/src/test/resources
+2025-06-14 18:11:47,430 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 18:11:47,431 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 18:11:47,433 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-crs/src/test/resources
+2025-06-14 19:27:58,557 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-06-14 19:28:00,301 [Worker-10: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 19:28:00,463 [Worker-7: reload maven project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: com.yc:yc.core-cqrs:0.0.1 with classifier  to /yc.core-cqrs/target/classes
+2025-06-14 19:28:00,464 [Worker-7: reload maven project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 19:28:00,570 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 19:28:00,593 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 19:28:00,619 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 19:28:03,884 [Worker-15: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 19:28:04,182 [Worker-15: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 19:28:04,182 [Worker-15: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 19:28:04,183 [Worker-15: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 19:28:04,393 [Worker-15: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 19:28:04,393 [Worker-15: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 19:28:04,622 [Worker-15: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 19:28:04,623 [Worker-15: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 19:28:05,065 [Worker-15: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 19:28:05,065 [Worker-15: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 19:28:05,065 [Worker-15: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 19:28:05,065 [Worker-15: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 19:28:05,065 [Worker-15: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 19:28:05,066 [Worker-15: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 19:28:05,066 [Worker-15: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.loco3: com.yc:yc.loco3:0.0.1 with classifier  to /yc.loco3/target/classes
+2025-06-14 19:28:05,066 [Worker-15: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 19:28:05,074 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 19:28:05,078 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 19:28:05,081 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 19:28:18,504 [Worker-17: reload maven project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
