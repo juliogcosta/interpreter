@@ -22,9 +22,9 @@ import br.com.comigo.assistencia.domain.aggregate.cliente.Veiculo;
 @Mapper(componentModel = "spring")
 public interface ClienteMapper {
 
-	@Mappings({ 
+	@Mappings({
 			@Mapping(source = "clienteDTO.id", target = "id"),
-			@Mapping(source = "clienteDTO.nome", target = "nome"), 
+			@Mapping(source = "clienteDTO.nome", target = "nome"),
 			@Mapping(source = "clienteDTO.cpf", target = "cpf"),
 			@Mapping(source = "clienteDTO.telefone", target = "telefone"),
 			@Mapping(source = "clienteDTO.whatsapp", target = "whatsapp"),
@@ -34,8 +34,8 @@ public interface ClienteMapper {
 			@Mapping(target = "veiculos", ignore = true) })
 	Cliente toDomain(ClienteDTO clienteDTO);
 
-	@Mappings({ 
-			@Mapping(source = "cliente.id", target = "id"), 
+	@Mappings({
+			@Mapping(source = "cliente.id", target = "id"),
 			@Mapping(source = "cliente.nome", target = "nome"),
 			@Mapping(source = "cliente.cpf", target = "cpf"),
 			@Mapping(source = "cliente.telefone", target = "telefone"),
@@ -68,7 +68,8 @@ public interface ClienteMapper {
 					veiculo.getModelo(), veiculo.getMarca())).toList();
 		}
 
-		Endereco endereco = new Endereco(jpaCliente.getEndereco().getTipo(), jpaCliente.getEndereco().getLogradouro(), jpaCliente.getEndereco().getNumero(),
+		Endereco endereco = new Endereco(jpaCliente.getEndereco().getTipo(), jpaCliente.getEndereco().getLogradouro(),
+				jpaCliente.getEndereco().getNumero(),
 				jpaCliente.getEndereco().getComplemento(), jpaCliente.getEndereco().getBairro(),
 				jpaCliente.getEndereco().getCidade(), jpaCliente.getEndereco().getEstado(),
 				jpaCliente.getEndereco().getCep());
@@ -93,7 +94,8 @@ public interface ClienteMapper {
 
 		Email email = new Email(jpaCliente.getEmail().getEmail());
 
-		Endereco endereco = new Endereco(jpaCliente.getEndereco().getTipo(), jpaCliente.getEndereco().getLogradouro(), jpaCliente.getEndereco().getNumero(),
+		Endereco endereco = new Endereco(jpaCliente.getEndereco().getTipo(), jpaCliente.getEndereco().getLogradouro(),
+				jpaCliente.getEndereco().getNumero(),
 				jpaCliente.getEndereco().getComplemento(), jpaCliente.getEndereco().getBairro(),
 				jpaCliente.getEndereco().getCidade(), jpaCliente.getEndereco().getEstado(),
 				jpaCliente.getEndereco().getCep());

@@ -1,0 +1,38 @@
+
+## Extensão para a query language:
+{
+  "action": "READ",
+  "data": [
+    {
+      "localizacoes": {
+        "licenseplate": {
+          "distinct": true
+        }
+      },
+      "_paging": {},
+      "_sorting": {},
+      "_unfolding": {
+        "_foreach": {
+          "action": "READ",
+          "data": [
+            {
+              "localizacoes": {
+                "licenseplate": "PLACA-DO-VEICULO-AQUI",
+                "positionlatitude": "",
+                "positionlongitude": ""
+              },
+              "_paging": {
+                "_maxRegisters": 1,
+                "_firstRegister": 0
+              },
+              "_sorting": {
+                "_orderBy": "timestamp",
+                "_order": "desc"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

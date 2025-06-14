@@ -3,11 +3,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>br.com.comigo</groupId>
-		<artifactId>modulos</artifactId>
-		<version>0.0.1</version>
-	</parent>
+    <parent>
+        <groupId>com.yc</groupId>
+        <artifactId>platform</artifactId>
+        <version>0.0.1</version>
+    </parent>
 	<artifactId>yc.core-common</artifactId>
 	<name>yc.core-common</name>
 	<description>biblioteca - recursos comuns na comigo</description>

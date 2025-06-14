@@ -1,0 +1,11 @@
+trash/
+/trash
+/target
+target/
+/target/
+*.jar
+*~
+.settings/
+.project
+.classpath
+.mvn/ 

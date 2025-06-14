@@ -11,17 +11,17 @@ import br.com.comigo.assistencia.domain.aggregate.cliente.Veiculo;
 @Mapper(componentModel = "spring")
 public interface VeiculoMapper {
 
-	@Mappings({ 
+	@Mappings({
 			@Mapping(source = "veiculoDTO.marca", target = "marca"),
 			@Mapping(source = "veiculoDTO.modelo", target = "modelo"),
 			@Mapping(source = "veiculoDTO.placa", target = "placa"),
 			@Mapping(source = "veiculoDTO.validado", target = "validado") })
 	Veiculo toDomain(VeiculoDTO veiculoDTO);
 
-	@Mappings({ 
+	@Mappings({
 			@Mapping(source = "veiculo.marca", target = "marca"),
-			@Mapping(source = "veiculo.modelo", target = "modelo"), 
-			@Mapping(source = "veiculo.placa", target = "placa"), 
+			@Mapping(source = "veiculo.modelo", target = "modelo"),
+			@Mapping(source = "veiculo.placa", target = "placa"),
 			@Mapping(source = "veiculo.validado", target = "validado") })
 	VeiculoDTO toDto(Veiculo veiculo);
 
@@ -32,7 +32,7 @@ public interface VeiculoMapper {
 			@Mapping(source = "jpaVeiculo.validado", target = "validado") })
 	Veiculo fromJpaToDomain(JpaVeiculo jpaVeiculo);
 
-	@Mappings({ 
+	@Mappings({
 			@Mapping(source = "jpaVeiculo.marca", target = "marca"),
 			@Mapping(source = "jpaVeiculo.modelo", target = "modelo"),
 			@Mapping(source = "jpaVeiculo.placa", target = "placa"),

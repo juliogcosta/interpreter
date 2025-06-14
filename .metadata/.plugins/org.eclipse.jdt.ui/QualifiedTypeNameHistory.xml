@@ -6,7 +6,6 @@
     <fullyQualifiedTypeName name="com.yc.core.cqrs.domain.command.Command"/>
     <fullyQualifiedTypeName name="org.springframework.boot.configurationprocessor.json.JSONObject"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
-    <fullyQualifiedTypeName name="java.util.IllegalFormatException"/>
     <fullyQualifiedTypeName name="java.lang.annotation.IncompleteAnnotationException"/>
     <fullyQualifiedTypeName name="br.com.comigo.common.infrastructure.exception.IncompleteRegisterException"/>
     <fullyQualifiedTypeName name="java.util.stream.StreamSupport"/>
@@ -49,4 +48,12 @@
     <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.JsonNode"/>
     <fullyQualifiedTypeName name="com.yc.core.cqrs.C"/>
     <fullyQualifiedTypeName name="com.yc.core.cqrs.application.service.event.AsyncEventHandlerImpl"/>
+    <fullyQualifiedTypeName name="com.yc.core.common.infrastructure.exception.PlatformCascadingException"/>
+    <fullyQualifiedTypeName name="com.yc.core.common.infrastructure.exception.ForbiddenRequestException"/>
+    <fullyQualifiedTypeName name="com.yc.loco3.dao.DAO"/>
+    <fullyQualifiedTypeName name="com.yc.loco3.security.User"/>
+    <fullyQualifiedTypeName name="com.yc.loco3.Constant"/>
+    <fullyQualifiedTypeName name="com.yc.loco3.transformers.queries.Helper"/>
+    <fullyQualifiedTypeName name="java.util.IllegalFormatException"/>
+    <fullyQualifiedTypeName name="com.yc.core.common.infrastructure.exception.IllegalRequestFormatException"/>
 </qualifiedTypeNameHistroy>

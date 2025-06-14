@@ -3336,3 +3336,814 @@ org.eclipse.jdt.core.JavaModelException: yc.core-common does not exist
 2025-06-13 14:58:26,854 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
 2025-06-13 14:58:26,866 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
 2025-06-13 14:58:26,871 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/interpreter/id/src/test/resources
+2025-06-14 16:21:14,345 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-06-14 16:22:00,102 [Worker-3: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:eureka:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/eureka/pom.xml.
+2025-06-14 16:22:01,579 [Worker-3: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/yc/yc.core-common/0.0.1/yc.core-common-0.0.1.pom
+2025-06-14 16:22:01,580 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.yc:yc.core-common:jar:0.0.1 is missing, no dependency information available
+2025-06-14 16:22:01,791 [Worker-3: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/yc/yc.core-common/0.0.1/yc.core-common-0.0.1.jar
+2025-06-14 16:22:02,822 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:22:02,837 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:22:02,842 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/eureka/src/test/resources
+2025-06-14 16:22:04,028 [Worker-3: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.core-common:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.core-common/pom.xml.
+2025-06-14 16:22:04,168 [Worker-3: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:gateway:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/gateway/pom.xml.
+2025-06-14 16:22:04,286 [Worker-3: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:22:04,451 [Worker-3: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:assistencia:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/assistencia/pom.xml.
+2025-06-14 16:22:04,492 [Worker-3: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:22:04,620 [Worker-3: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:id.autenticador:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/id.autenticador/pom.xml.
+2025-06-14 16:22:04,631 [Worker-3: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:22:04,925 [Worker-3: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:id:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/id/pom.xml.
+2025-06-14 16:22:04,937 [Worker-3: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:22:05,060 [Worker-3: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.core-cqrs:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.core-cqrs/pom.xml.
+2025-06-14 16:22:05,067 [Worker-3: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:22:05,472 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.core-common/src/main/resources
+2025-06-14 16:22:05,472 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.core-common/src/main/resources
+2025-06-14 16:22:05,475 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.core-common/src/test/resources
+2025-06-14 16:22:05,705 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:22:05,717 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:22:05,719 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/id.autenticador/src/test/resources
+2025-06-14 16:22:06,565 [Worker-20: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.pr:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.pr/pom.xml.
+2025-06-14 16:22:06,676 [Worker-20: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:eureka:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/eureka/pom.xml.
+2025-06-14 16:22:07,006 [Worker-3: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:22:07,018 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:22:07,022 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-14 16:22:07,025 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/id/src/test/resources
+2025-06-14 16:22:07,028 [Worker-20: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:id:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/id/pom.xml.
+2025-06-14 16:22:07,102 [Worker-20: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:22:07,132 [Worker-20: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: com.yc:yc.doc:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.doc/pom.xml.
+2025-06-14 16:22:07,753 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:22:07,755 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:22:07,757 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/gateway/src/test/resources
+2025-06-14 16:22:08,376 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:22:08,377 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-14 16:22:08,379 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/assistencia/src/test/resources
+2025-06-14 16:22:08,630 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.core-cqrs/src/main/resources
+2025-06-14 16:22:08,630 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.core-cqrs/src/main/resources
+2025-06-14 16:22:08,632 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.core-cqrs/src/test/resources
+2025-06-14 16:22:08,671 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.doc/src/main/resources
+2025-06-14 16:22:08,671 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.doc/src/main/resources
+2025-06-14 16:22:09,033 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to read mojo metadata.
+2025-06-14 16:22:09,038 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Applying mojo extractor for language: java
+2025-06-14 16:22:09,057 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Mojo extractor for language: java found 0 mojo descriptors.
+2025-06-14 16:22:09,057 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Applying mojo extractor for language: bsh
+2025-06-14 16:22:09,058 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Mojo extractor for language: bsh found 0 mojo descriptors.
+2025-06-14 16:22:09,059 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Applying mojo extractor for language: java-annotations
+2025-06-14 16:22:09,067 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Mojo extractor for language: java-annotations found 0 mojo descriptors.
+2025-06-14 16:22:09,073 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.doc/src/test/resources
+2025-06-14 16:22:09,503 [Worker-4: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.models:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.models/pom.xml.
+2025-06-14 16:22:09,704 [Worker-4: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.pr:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.pr/pom.xml.
+2025-06-14 16:22:09,755 [Worker-4: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:22:09,794 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.models/src/main/resources
+2025-06-14 16:22:09,794 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.models/src/main/resources
+2025-06-14 16:22:09,796 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.models/src/test/resources
+2025-06-14 16:22:10,388 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.models/src/main/resources
+2025-06-14 16:22:10,388 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.models/src/main/resources
+2025-06-14 16:22:10,390 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.models/src/test/resources
+2025-06-14 16:22:10,469 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.pr/src/main/resources
+2025-06-14 16:22:10,469 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.pr/src/main/resources
+2025-06-14 16:22:10,471 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.pr/src/test/resources
+2025-06-14 16:22:10,811 [Worker-17: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.utils:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.utils/pom.xml.
+2025-06-14 16:22:10,895 [Worker-17: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:22:10,896 [Worker-17: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:22:10,896 [Worker-17: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:22:10,923 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.utils/src/main/resources
+2025-06-14 16:22:10,923 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.utils/src/main/resources
+2025-06-14 16:22:10,925 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.utils/src/test/resources
+2025-06-14 16:22:11,129 [Worker-31: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-mongodb/3.4.2/spring-boot-starter-data-mongodb-3.4.2-sources.jar
+2025-06-14 16:22:11,141 [Worker-31: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-mongodb/3.4.2/spring-boot-starter-data-mongodb-3.4.2-sources.jar
+2025-06-14 16:22:11,143 [Worker-31: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-data-mongodb:3.4.2
+2025-06-14 16:22:11,364 [Worker-31: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mongodb/mongodb-driver-sync/5.2.1/mongodb-driver-sync-5.2.1-sources.jar
+2025-06-14 16:22:11,519 [Worker-31: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mongodb/mongodb-driver-sync/5.2.1/mongodb-driver-sync-5.2.1-sources.jar
+2025-06-14 16:22:11,520 [Worker-31: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mongodb:mongodb-driver-sync:5.2.1
+2025-06-14 16:22:11,732 [Worker-31: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mongodb/bson/5.2.1/bson-5.2.1-sources.jar
+2025-06-14 16:22:11,980 [Worker-31: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mongodb/bson/5.2.1/bson-5.2.1-sources.jar
+2025-06-14 16:22:11,981 [Worker-31: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mongodb:bson:5.2.1
+2025-06-14 16:22:12,065 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.utils/src/main/resources
+2025-06-14 16:22:12,065 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.utils/src/main/resources
+2025-06-14 16:22:12,066 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.utils/src/test/resources
+2025-06-14 16:22:12,301 [Worker-31: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mongodb/mongodb-driver-core/5.2.1/mongodb-driver-core-5.2.1-sources.jar
+2025-06-14 16:22:12,668 [Worker-31: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mongodb/mongodb-driver-core/5.2.1/mongodb-driver-core-5.2.1-sources.jar
+2025-06-14 16:22:12,669 [Worker-31: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mongodb:mongodb-driver-core:5.2.1
+2025-06-14 16:22:12,871 [Worker-31: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mongodb/bson-record-codec/5.2.1/bson-record-codec-5.2.1-sources.jar
+2025-06-14 16:22:12,872 [Worker-31: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mongodb/bson-record-codec/5.2.1/bson-record-codec-5.2.1-sources.jar
+2025-06-14 16:22:12,872 [Worker-31: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mongodb:bson-record-codec:5.2.1
+2025-06-14 16:22:13,172 [Worker-31: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-mongodb/4.4.2/spring-data-mongodb-4.4.2-sources.jar
+2025-06-14 16:22:13,519 [Worker-31: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-mongodb/4.4.2/spring-data-mongodb-4.4.2-sources.jar
+2025-06-14 16:22:13,520 [Worker-31: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.data:spring-data-mongodb:4.4.2
+2025-06-14 16:23:15,754 [Worker-3: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/pom.xml.
+2025-06-14 16:23:15,962 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for br.edu.ufrn:ufrn.loco3:jar:0.0.1 is missing, no dependency information available
+2025-06-14 16:23:15,975 [Worker-3: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:23:15,976 [Worker-3: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:23:15,976 [Worker-3: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:23:15,977 [Worker-3: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:23:15,977 [Worker-3: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:23:15,983 [Worker-3: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:23:15,983 [Worker-3: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:23:15,983 [Worker-3: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:23:15,984 [Worker-3: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:23:15,984 [Worker-3: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:23:16,057 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:23:16,059 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:23:16,061 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:23:16,264 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:23:16,270 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:23:16,272 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:23:16,456 [Worker-20: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-crs/pom.xml.
+2025-06-14 16:23:16,595 [Worker-20: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: com.yc:yc.core-cqrs:0.0.1 with classifier  to /yc.core-cqrs/target/classes
+2025-06-14 16:23:16,596 [Worker-20: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:23:16,663 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:23:16,664 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-14 16:23:16,667 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-crs/src/test/resources
+2025-06-14 16:23:16,904 [Worker-20: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-q:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-q/pom.xml.
+2025-06-14 16:23:17,133 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for br.edu.ufrn:ufrn.loco3:jar:0.0.1 is missing, no dependency information available
+2025-06-14 16:23:17,507 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-config/4.2.0/spring-cloud-starter-config-4.2.0-sources.jar
+2025-06-14 16:23:17,515 [Worker-20: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:23:17,516 [Worker-20: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:23:17,516 [Worker-20: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:23:17,516 [Worker-20: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:23:17,509 [Worker-3: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for org.springframework.cloud:spring-cloud-starter-config:4.2.0
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springframework.cloud:spring-cloud-starter-config:jar:sources:4.2.0
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-06-14 16:23:17,523 [Worker-20: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:23:17,523 [Worker-20: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:23:17,524 [Worker-20: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:23:17,524 [Worker-20: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:23:17,573 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:23:17,574 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:23:17,575 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/test/resources to target/test-classes
+2025-06-14 16:23:17,775 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-config-client/4.2.0/spring-cloud-config-client-4.2.0-sources.jar
+2025-06-14 16:23:17,816 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:23:17,817 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src/main/resources to target/classes
+2025-06-14 16:23:17,820 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-crs/src/test/resources
+2025-06-14 16:23:17,860 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-config-client/4.2.0/spring-cloud-config-client-4.2.0-sources.jar
+2025-06-14 16:23:17,860 [Worker-3: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.cloud:spring-cloud-config-client:4.2.0
+2025-06-14 16:23:17,994 [Worker-5: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.collector:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.collector/pom.xml.
+2025-06-14 16:23:18,043 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:23:18,043 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:23:18,121 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0-sources.jar
+2025-06-14 16:23:18,214 [Worker-5: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/pom.xml.
+2025-06-14 16:23:18,462 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0-sources.jar
+2025-06-14 16:23:18,463 [Worker-3: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.commons:commons-lang3:3.17.0
+2025-06-14 16:23:18,705 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.18.2/jackson-dataformat-yaml-2.18.2-sources.jar
+2025-06-14 16:23:18,782 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.18.2/jackson-dataformat-yaml-2.18.2-sources.jar
+2025-06-14 16:23:18,783 [Worker-3: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.18.2
+2025-06-14 16:23:19,009 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/webjars/webjars-locator-core/0.59/webjars-locator-core-0.59-sources.jar
+2025-06-14 16:23:19,011 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/webjars/webjars-locator-core/0.59/webjars-locator-core-0.59-sources.jar
+2025-06-14 16:23:19,012 [Worker-3: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.webjars:webjars-locator-core:0.59
+2025-06-14 16:23:19,226 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-core/3.2.2/metrics-core-3.2.2-sources.jar
+2025-06-14 16:23:19,300 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-core/3.2.2/metrics-core-3.2.2-sources.jar
+2025-06-14 16:23:19,301 [Worker-3: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.dropwizard.metrics:metrics-core:3.2.2
+2025-06-14 16:23:19,697 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/br/edu/ufrn/ufrn.loco3/0.0.1/ufrn.loco3-0.0.1-sources.jar
+2025-06-14 16:23:19,697 [Worker-3: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for br.edu.ufrn:ufrn.loco3:0.0.1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact br.edu.ufrn:ufrn.loco3:jar:sources:0.0.1
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-06-14 16:23:19,697 [Worker-5: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for br.edu.ufrn:ufrn.loco3:jar:0.0.1 is missing, no dependency information available
+2025-06-14 16:23:20,052 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-config/4.2.0/spring-cloud-starter-config-4.2.0-javadoc.jar
+2025-06-14 16:23:20,052 [Worker-3: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download javadoc for org.springframework.cloud:spring-cloud-starter-config:4.2.0
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springframework.cloud:spring-cloud-starter-config:jar:javadoc:4.2.0
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-06-14 16:23:20,053 [Worker-3: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.cloud:spring-cloud-config-client:4.2.0
+2025-06-14 16:23:20,054 [Worker-3: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.commons:commons-lang3:3.17.0
+2025-06-14 16:23:20,054 [Worker-3: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.18.2
+2025-06-14 16:23:20,055 [Worker-3: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.webjars:webjars-locator-core:0.59
+2025-06-14 16:23:20,055 [Worker-3: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for io.dropwizard.metrics:metrics-core:3.2.2
+2025-06-14 16:23:20,058 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:23:20,058 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:23:20,058 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 16:23:20,059 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:23:20,059 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:23:20,059 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:23:20,065 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:23:20,065 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:23:20,065 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 16:23:20,065 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:23:20,066 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:23:20,066 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:23:20,180 [Worker-5: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-q:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-q/pom.xml.
+2025-06-14 16:23:20,268 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/redis/clients/jedis/5.2.0/jedis-5.2.0-sources.jar
+2025-06-14 16:23:20,548 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/redis/clients/jedis/5.2.0/jedis-5.2.0-sources.jar
+2025-06-14 16:23:20,548 [Worker-3: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for redis.clients:jedis:5.2.0
+2025-06-14 16:23:20,775 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-pool2/2.12.0/commons-pool2-2.12.0-sources.jar
+2025-06-14 16:23:20,928 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-pool2/2.12.0/commons-pool2-2.12.0-sources.jar
+2025-06-14 16:23:20,929 [Worker-3: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.commons:commons-pool2:2.12.0
+2025-06-14 16:23:21,163 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/json/json/20240303/json-20240303-sources.jar
+2025-06-14 16:23:21,249 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/json/json/20240303/json-20240303-sources.jar
+2025-06-14 16:23:21,250 [Worker-3: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.json:json:20240303
+2025-06-14 16:23:21,603 [Worker-3: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/br/edu/ufrn/ufrn.loco3/0.0.1/ufrn.loco3-0.0.1-javadoc.jar
+2025-06-14 16:23:21,604 [Worker-3: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download javadoc for br.edu.ufrn:ufrn.loco3:0.0.1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact br.edu.ufrn:ufrn.loco3:jar:javadoc:0.0.1
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-06-14 16:23:21,615 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:23:21,615 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 16:23:21,615 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:23:21,617 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:23:21,617 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:23:21,629 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:23:21,629 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 16:23:21,629 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:23:21,630 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:23:21,631 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:23:21,722 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.collector/src/main/resources
+2025-06-14 16:23:21,722 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.collector/src/main/resources
+2025-06-14 16:23:21,723 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.collector/src/test/resources
+2025-06-14 16:23:22,036 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.collector/src/main/resources
+2025-06-14 16:23:22,036 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.collector/src/main/resources
+2025-06-14 16:23:22,038 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.collector/src/test/resources
+2025-06-14 16:23:22,193 [Worker-13: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.error:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.error/pom.xml.
+2025-06-14 16:23:22,242 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:23:22,242 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:23:22,369 [Worker-13: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/pom.xml.
+2025-06-14 16:23:22,488 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for br.edu.ufrn:ufrn.loco3:jar:0.0.1 is missing, no dependency information available
+2025-06-14 16:23:22,498 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:23:22,498 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:23:22,498 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 16:23:22,498 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 16:23:22,498 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:23:22,499 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:23:22,499 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:23:22,505 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:23:22,505 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:23:22,505 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 16:23:22,505 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 16:23:22,505 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:23:22,506 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:23:22,506 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:23:22,623 [Worker-13: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-q:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-q/pom.xml.
+2025-06-14 16:23:22,658 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:23:22,658 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 16:23:22,658 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 16:23:22,658 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:23:22,659 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:23:22,659 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:23:22,668 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:23:22,668 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 16:23:22,668 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 16:23:22,668 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:23:22,669 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:23:22,669 [Worker-13: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:23:22,784 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.error/src/main/resources
+2025-06-14 16:23:22,784 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.error/src/main/resources
+2025-06-14 16:23:22,785 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.error/src/test/resources
+2025-06-14 16:23:22,928 [Worker-13: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.loco3:1.0.2 @ /home/julio/Codes/YC/Experiments/ycp/yc.loco3/pom.xml.
+2025-06-14 16:23:22,956 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:23:22,957 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:23:22,958 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 16:23:24,067 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.error/src/main/resources
+2025-06-14 16:23:24,067 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.error/src/main/resources
+2025-06-14 16:23:24,068 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.error/src/test/resources
+2025-06-14 16:23:24,162 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:23:24,163 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:23:24,164 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 16:24:01,300 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:24:01,314 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:24:01,315 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 16:27:12,898 [Worker-26: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/pom.xml.
+2025-06-14 16:27:13,606 [Worker-26: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/yc/yc.loco3/0.0.1/yc.loco3-0.0.1.pom
+2025-06-14 16:27:13,607 [Worker-26: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.yc:yc.loco3:jar:0.0.1 is missing, no dependency information available
+2025-06-14 16:27:13,630 [Worker-26: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:27:13,631 [Worker-26: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:27:13,631 [Worker-26: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 16:27:13,631 [Worker-26: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 16:27:13,631 [Worker-26: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:27:13,632 [Worker-26: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:27:13,633 [Worker-26: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:27:13,644 [Worker-26: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:27:13,644 [Worker-26: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:27:13,644 [Worker-26: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 16:27:13,644 [Worker-26: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 16:27:13,644 [Worker-26: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:27:13,646 [Worker-26: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:27:13,646 [Worker-26: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:27:13,831 [Worker-26: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/yc/yc.loco3/0.0.1/yc.loco3-0.0.1.jar
+2025-06-14 16:27:13,881 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:27:13,881 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:27:13,883 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:27:15,262 [Worker-1: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/yc/yc.loco3/0.0.1/yc.loco3-0.0.1-sources.jar
+2025-06-14 16:27:15,262 [Worker-1: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for com.yc:yc.loco3:0.0.1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.yc:yc.loco3:jar:sources:0.0.1
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-06-14 16:27:35,209 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-06-14 16:27:35,332 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/pom.xml.
+2025-06-14 16:27:35,505 [Worker-0: Updating Maven Project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.yc:yc.loco3:jar:0.0.1 is missing, no dependency information available
+2025-06-14 16:27:35,518 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:27:35,519 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:27:35,519 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 16:27:35,519 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 16:27:35,519 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:27:35,520 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:27:35,520 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:27:35,526 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:27:35,526 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:27:35,526 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 16:27:35,526 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 16:27:35,527 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:27:35,527 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:27:35,527 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:27:35,578 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ie.persistence-c/src/main/java
+2025-06-14 16:27:35,579 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ie.persistence-c/src/main/resources
+2025-06-14 16:27:35,579 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ie.persistence-c/src/main/resources
+2025-06-14 16:27:35,579 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ie.persistence-c/src/test/java
+2025-06-14 16:27:35,580 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ie.persistence-c/src/test/resources
+2025-06-14 16:27:35,712 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 0,00 sec 
+2025-06-14 16:27:35,869 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:27:35,869 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:27:35,870 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:27:36,967 [Worker-26: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/yc/yc.loco3/0.0.1/yc.loco3-0.0.1-javadoc.jar
+2025-06-14 16:27:36,968 [Worker-26: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download javadoc for com.yc:yc.loco3:0.0.1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.yc:yc.loco3:jar:javadoc:0.0.1
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-06-14 16:34:22,416 [Worker-33: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/pom.xml.
+2025-06-14 16:34:22,571 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.yc:yc.loco3:jar:0.0.1 is missing, no dependency information available
+2025-06-14 16:34:22,582 [Worker-33: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:34:22,582 [Worker-33: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:34:22,582 [Worker-33: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 16:34:22,582 [Worker-33: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 16:34:22,582 [Worker-33: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:34:22,582 [Worker-33: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:34:22,583 [Worker-33: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:34:22,589 [Worker-33: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:34:22,589 [Worker-33: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:34:22,589 [Worker-33: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 16:34:22,589 [Worker-33: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 16:34:22,589 [Worker-33: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:34:22,589 [Worker-33: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:34:22,590 [Worker-33: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:34:22,648 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:34:22,648 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:34:22,649 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:35:33,621 [Worker-34: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/pom.xml.
+2025-06-14 16:35:33,777 [Worker-34: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:35:33,777 [Worker-34: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:35:33,777 [Worker-34: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 16:35:33,777 [Worker-34: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 16:35:33,777 [Worker-34: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:35:33,778 [Worker-34: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:35:33,778 [Worker-34: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.loco3: com.yc:yc.loco3:1.0.2 with classifier  to /yc.loco3/target/classes
+2025-06-14 16:35:33,778 [Worker-34: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:35:33,840 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:35:33,840 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:35:33,841 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:35:35,133 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:35:35,134 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:35:35,136 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:36:38,392 [Worker-37: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/pom.xml.
+2025-06-14 16:36:38,547 [Worker-37: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:36:38,547 [Worker-37: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:36:38,547 [Worker-37: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 16:36:38,547 [Worker-37: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 16:36:38,547 [Worker-37: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:36:38,548 [Worker-37: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:36:38,548 [Worker-37: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:36:38,594 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:36:38,595 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:36:38,595 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:36:38,958 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:36:38,959 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:36:38,960 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:36:40,114 [Worker-37: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.loco3:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.loco3/pom.xml.
+2025-06-14 16:36:40,236 [Worker-37: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/pom.xml.
+2025-06-14 16:36:40,431 [Worker-37: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:36:40,432 [Worker-37: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:36:40,432 [Worker-37: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 16:36:40,432 [Worker-37: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 16:36:40,432 [Worker-37: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:36:40,433 [Worker-37: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:36:40,433 [Worker-37: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.loco3: com.yc:yc.loco3:0.0.1 with classifier  to /yc.loco3/target/classes
+2025-06-14 16:36:40,433 [Worker-37: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:36:40,484 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:36:40,484 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:36:40,485 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 16:36:40,797 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:36:40,798 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:36:40,799 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:37:24,668 [Worker-34: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-06-14 16:37:24,747 [Worker-34: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.loco3:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.loco3/pom.xml.
+2025-06-14 16:37:24,776 [Worker-34: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /yc.loco3/src/main/java
+2025-06-14 16:37:24,777 [Worker-34: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /yc.loco3/src/main/resources
+2025-06-14 16:37:24,777 [Worker-34: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /yc.loco3/src/main/resources
+2025-06-14 16:37:24,777 [Worker-34: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /yc.loco3/src/test/java
+2025-06-14 16:37:24,777 [Worker-34: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /yc.loco3/src/test/resources
+2025-06-14 16:37:24,807 [Worker-34: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 0,00 sec 
+2025-06-14 16:37:24,985 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:37:24,986 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:37:24,987 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 16:37:26,164 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:37:26,165 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:37:26,166 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:37:48,712 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-12.0.9; built: 2024-05-03T13:03:17.262Z; git: efe8023327e67287f9bfd006700e6a71d45b5dd6; jvm 21.0.3+9-LTS
+2025-06-14 16:37:48,746 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started oeje8n.ContextHandler$CoreContextHandler@22ee2543{/help,/help,b=null,a=AVAILABLE,h=oeje8n.ContextHandler$CoreContextHandler$CoreToNestedHandler@169beddd{STARTED}}
+2025-06-14 16:37:48,746 [Start Help Server] INFO  o.e.j.s.DefaultSessionIdManager - Session workerName=node0
+2025-06-14 16:37:48,754 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@171f3197{HTTP/1.1, (http/1.1)}{127.0.0.1:39927}
+2025-06-14 16:37:48,766 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@7c005438{STARTING}[12.0.9,sto=0] @1001183ms
+2025-06-14 16:38:05,722 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:38:05,726 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:38:05,728 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:38:49,761 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:38:49,764 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:38:49,766 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:39:56,930 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:39:56,933 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:39:56,935 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:40:15,131 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:40:15,134 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:40:15,136 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 16:43:13,507 [Worker-34: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.loco3:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.loco3/pom.xml.
+2025-06-14 16:43:13,555 [Worker-34: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:43:13,664 [Worker-34: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/pom.xml.
+2025-06-14 16:43:13,799 [Worker-34: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 16:43:13,799 [Worker-34: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 16:43:13,799 [Worker-34: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 16:43:13,799 [Worker-34: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 16:43:13,799 [Worker-34: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 16:43:13,800 [Worker-34: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 16:43:13,800 [Worker-34: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.loco3: com.yc:yc.loco3:0.0.1 with classifier  to /yc.loco3/target/classes
+2025-06-14 16:43:13,800 [Worker-34: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 16:43:13,879 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:43:13,879 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:43:13,880 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 16:43:15,010 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:43:15,011 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:43:15,012 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 16:43:30,971 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:43:30,975 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:43:30,977 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 16:43:43,183 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:43:43,186 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:43:43,188 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 16:44:10,116 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:44:10,120 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:44:10,122 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 16:44:24,020 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:44:24,024 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:44:24,025 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:45:22,157 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:45:22,160 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:45:22,161 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:46:37,879 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:46:37,882 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:46:37,884 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:47:10,932 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:47:10,936 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:47:10,937 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:48:00,022 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:48:00,025 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:48:00,027 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:48:05,797 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:48:05,800 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:48:05,802 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:48:25,482 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:48:25,485 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:48:25,487 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 16:50:02,480 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:50:02,483 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:50:02,484 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 16:52:25,322 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:52:25,326 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:52:25,328 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 16:52:44,233 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:52:44,238 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:52:44,240 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 16:56:25,831 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:56:25,834 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:56:25,836 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 16:59:09,304 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 16:59:09,309 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 16:59:09,310 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 17:00:29,388 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 17:00:29,391 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 17:00:29,392 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 17:00:29,420 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 17:00:29,424 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 17:00:29,425 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 17:00:30,650 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@7c005438{STOPPING}[12.0.9,sto=0]
+2025-06-14 17:00:30,653 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@171f3197{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
+2025-06-14 17:02:30,547 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-06-14 17:02:32,186 [Worker-4: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.loco3:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.loco3/pom.xml.
+2025-06-14 17:02:32,277 [Worker-4: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.yc:yc.core-common:jar:0.0.1 is missing, no dependency information available
+2025-06-14 17:02:32,510 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 17:02:32,526 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 17:02:32,534 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 17:02:34,029 [Worker-17: Download sources and javadoc] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.yc:yc.core-common:jar:0.0.1 is missing, no dependency information available
+2025-06-14 17:02:34,194 [Worker-4: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/pom.xml.
+2025-06-14 17:02:35,050 [Worker-17: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/yc/yc.core-common/0.0.1/yc.core-common-0.0.1-sources.jar
+2025-06-14 17:02:35,053 [Worker-4: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.yc:yc.core-common:jar:0.0.1 is missing, no dependency information available
+2025-06-14 17:02:35,054 [Worker-17: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for com.yc:yc.core-common:0.0.1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.yc:yc.core-common:jar:sources:0.0.1
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-06-14 17:02:35,214 [Worker-4: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.loco3: com.yc:yc.loco3:0.0.1 with classifier  to /yc.loco3/target/classes
+2025-06-14 17:02:35,228 [Worker-4: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.loco3: com.yc:yc.loco3:0.0.1 with classifier  to /yc.loco3/target/classes
+2025-06-14 17:02:36,758 [Worker-24: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/yc/yc.core-common/0.0.1/yc.core-common-0.0.1-javadoc.jar
+2025-06-14 17:02:36,760 [Worker-24: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download javadoc for com.yc:yc.core-common:0.0.1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.yc:yc.core-common:jar:javadoc:0.0.1
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-06-14 17:02:39,197 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.loco3:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.loco3/pom.xml.
+2025-06-14 17:02:39,296 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:39,321 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:assistencia:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/assistencia/pom.xml.
+2025-06-14 17:02:39,429 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:39,444 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.error:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.error/pom.xml.
+2025-06-14 17:02:39,455 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 17:02:39,456 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:39,467 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-q:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-q/pom.xml.
+2025-06-14 17:02:39,522 [Worker-23: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for br.edu.ufrn:ufrn.loco3:jar:0.0.1 is missing, no dependency information available
+2025-06-14 17:02:39,534 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:39,534 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 17:02:39,534 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 17:02:39,534 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 17:02:39,535 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 17:02:39,535 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 17:02:39,543 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:39,543 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 17:02:39,543 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 17:02:39,543 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 17:02:39,544 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 17:02:39,544 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 17:02:39,563 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.collector:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.collector/pom.xml.
+2025-06-14 17:02:39,568 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 17:02:39,568 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:39,581 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: com.yc:yc.doc:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.doc/pom.xml.
+2025-06-14 17:02:39,611 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.models:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.models/pom.xml.
+2025-06-14 17:02:39,642 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/pom.xml.
+2025-06-14 17:02:39,667 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:39,667 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:39,667 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 17:02:39,667 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 17:02:39,667 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 17:02:39,668 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 17:02:39,668 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.loco3: com.yc:yc.loco3:0.0.1 with classifier  to /yc.loco3/target/classes
+2025-06-14 17:02:39,668 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 17:02:39,696 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.utils:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.utils/pom.xml.
+2025-06-14 17:02:39,699 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:39,700 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 17:02:39,700 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 17:02:39,711 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:gateway:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/gateway/pom.xml.
+2025-06-14 17:02:39,738 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:39,748 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-crs/pom.xml.
+2025-06-14 17:02:39,766 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: com.yc:yc.core-cqrs:0.0.1 with classifier  to /yc.core-cqrs/target/classes
+2025-06-14 17:02:39,767 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:39,777 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:id.autenticador:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/id.autenticador/pom.xml.
+2025-06-14 17:02:39,791 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:39,801 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.pr:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.pr/pom.xml.
+2025-06-14 17:02:39,807 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 17:02:39,815 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:eureka:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/eureka/pom.xml.
+2025-06-14 17:02:39,866 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:id:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/id/pom.xml.
+2025-06-14 17:02:39,886 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:39,895 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.core-cqrs:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.core-cqrs/pom.xml.
+2025-06-14 17:02:39,901 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:39,911 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.core-common:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.core-common/pom.xml.
+2025-06-14 17:02:39,926 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-q:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-q/pom.xml.
+2025-06-14 17:02:39,944 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:39,944 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 17:02:39,944 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 17:02:39,944 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 17:02:39,945 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 17:02:39,945 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 17:02:39,951 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:39,951 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 17:02:39,952 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 17:02:39,952 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 17:02:39,952 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 17:02:39,952 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 17:02:39,969 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.error:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.error/pom.xml.
+2025-06-14 17:02:39,973 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 17:02:39,974 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:39,983 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.collector:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.collector/pom.xml.
+2025-06-14 17:02:39,987 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 17:02:39,987 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:39,996 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/pom.xml.
+2025-06-14 17:02:40,010 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:40,011 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:40,011 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 17:02:40,011 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 17:02:40,011 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 17:02:40,012 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 17:02:40,012 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.loco3: com.yc:yc.loco3:0.0.1 with classifier  to /yc.loco3/target/classes
+2025-06-14 17:02:40,012 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 17:02:40,019 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.utils:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.utils/pom.xml.
+2025-06-14 17:02:40,022 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:40,022 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 17:02:40,023 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 17:02:40,030 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-crs/pom.xml.
+2025-06-14 17:02:40,043 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: com.yc:yc.core-cqrs:0.0.1 with classifier  to /yc.core-cqrs/target/classes
+2025-06-14 17:02:40,043 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:40,050 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:gateway:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/gateway/pom.xml.
+2025-06-14 17:02:40,063 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:40,070 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.loco3:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.loco3/pom.xml.
+2025-06-14 17:02:40,074 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:40,082 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:assistencia:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/assistencia/pom.xml.
+2025-06-14 17:02:40,096 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:40,105 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:id.autenticador:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/id.autenticador/pom.xml.
+2025-06-14 17:02:40,116 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:40,125 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:id:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/id/pom.xml.
+2025-06-14 17:02:40,137 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:40,144 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.core-cqrs:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.core-cqrs/pom.xml.
+2025-06-14 17:02:40,149 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:40,156 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-q:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-q/pom.xml.
+2025-06-14 17:02:40,169 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:40,170 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 17:02:40,170 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 17:02:40,170 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 17:02:40,171 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 17:02:40,171 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 17:02:40,177 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:40,177 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 17:02:40,177 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 17:02:40,177 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 17:02:40,178 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 17:02:40,178 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 17:02:40,192 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/pom.xml.
+2025-06-14 17:02:40,219 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:40,219 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:40,219 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 17:02:40,219 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 17:02:40,219 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 17:02:40,220 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 17:02:40,220 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.loco3: com.yc:yc.loco3:0.0.1 with classifier  to /yc.loco3/target/classes
+2025-06-14 17:02:40,220 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 17:02:40,227 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.error:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.error/pom.xml.
+2025-06-14 17:02:40,231 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 17:02:40,231 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:40,239 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.collector:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/yc.collector/pom.xml.
+2025-06-14 17:02:40,242 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 17:02:40,242 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:40,249 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:yc.persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-crs/pom.xml.
+2025-06-14 17:02:40,261 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-cqrs: com.yc:yc.core-cqrs:0.0.1 with classifier  to /yc.core-cqrs/target/classes
+2025-06-14 17:02:40,261 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:40,268 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-c:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/pom.xml.
+2025-06-14 17:02:40,281 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.core-common: com.yc:yc.core-common:0.0.1 with classifier  to /yc.core-common/target/classes
+2025-06-14 17:02:40,281 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:40,281 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 17:02:40,281 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 17:02:40,281 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 17:02:40,282 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 17:02:40,282 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.loco3: com.yc:yc.loco3:0.0.1 with classifier  to /yc.loco3/target/classes
+2025-06-14 17:02:40,282 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 17:02:40,289 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yc:persistence-q:0.0.1 @ /home/julio/Codes/YC/Experiments/ycp/ie.persistence-q/pom.xml.
+2025-06-14 17:02:40,303 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:40,303 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 17:02:40,303 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 17:02:40,303 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 17:02:40,304 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 17:02:40,304 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 17:02:40,311 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.doc: com.yc:yc.doc:0.0.1 with classifier  to /yc.doc/target/classes
+2025-06-14 17:02:40,311 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.collector: com.yc:yc.collector:0.0.1 with classifier  to /yc.collector/target/classes
+2025-06-14 17:02:40,311 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.error: com.yc:yc.error:0.0.1 with classifier  to /yc.error/target/classes
+2025-06-14 17:02:40,311 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.pr: com.yc:yc.pr:0.0.1 with classifier  to /yc.pr/target/classes
+2025-06-14 17:02:40,311 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.models: com.yc:yc.models:0.0.1 with classifier  to /yc.models/target/classes
+2025-06-14 17:02:40,312 [Worker-23: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/yc.utils: com.yc:yc.utils:0.0.1 with classifier  to /yc.utils/target/classes
+2025-06-14 17:02:41,680 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 17:02:41,688 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 17:02:41,690 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 17:02:42,386 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 17:02:42,388 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 17:02:42,389 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 17:06:04,090 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 17:06:04,094 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 17:06:04,097 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 17:06:05,406 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 17:06:05,431 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 17:06:05,437 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 17:07:33,902 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 17:07:33,908 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 17:07:33,911 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 17:07:54,451 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 17:07:54,454 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 17:07:54,456 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 17:11:26,130 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 17:11:26,134 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 17:11:26,137 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 17:13:40,388 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 17:13:40,391 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 17:13:40,393 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources
+2025-06-14 17:14:32,437 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 17:14:32,440 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 17:14:32,442 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/yc.loco3/src/test/resources
+2025-06-14 17:14:32,536 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2025-06-14 17:14:32,539 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2025-06-14 17:14:32,541 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/julio/Codes/YC/Experiments/ycp/ie.persistence-c/src/test/resources

@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>br.com.comigo</groupId>
-		<artifactId>modulos</artifactId>
+		<groupId>com.yc</groupId>
+		<artifactId>platform</artifactId>
 		<version>0.0.1</version>
 	</parent>
 	<artifactId>yc.core-cqrs</artifactId>
@@ -25,7 +25,7 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 		</dependency>
-		
+
 		<!-- Spring Context (contém as anotações básicas) -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -57,7 +57,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>br.com.comigo</groupId>
+			<groupId>com.yc</groupId>
 			<artifactId>yc.core-common</artifactId>
 			<version>${project.version}</version>
 			<exclusions>
@@ -102,7 +102,7 @@
 					</execution>
 				</executions>
 				<configuration>
-                    <!-- excludes>
+					<!-- excludes>
                         <exclude>**/*Application.java</exclude>
                     </excludes -->
 					<!--

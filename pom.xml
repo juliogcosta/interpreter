@@ -9,10 +9,10 @@
         <version>3.4.2</version>
         <relativePath />
     </parent>
-    <groupId>br.com.comigo</groupId>
-    <artifactId>modulos</artifactId>
+    <groupId>com.yc</groupId>
+    <artifactId>platform</artifactId>
     <version>0.0.1</version>
-    <name>Comigo - Modulos</name>
+    <name>YC - Modules</name>
     <description></description>
     <properties>
         <project.version>0.0.1</project.version>
@@ -55,13 +55,22 @@
         </dependencies>
     </dependencyManagement>
     <modules>
+        <module>yc.loco3</module>
+        <module>yc.models</module>
+        <module>yc.pr</module>
+        <module>yc.doc</module>
+        <module>yc.utils</module>
+        <module>yc.error</module>
+        <module>yc.collector</module>
         <module>yc.core-common</module>
         <module>yc.core-cqrs</module>
         <module>gateway</module>
         <module>eureka</module>
         <module>id</module>
         <module>id.autenticador</module>
+        <module>ie.persistence-c</module>
+        <module>ie.persistence-q</module>
+        <module>ie.persistence-crs</module>
         <module>assistencia</module>
-        <module>yc.persistence-c</module>
     </modules>
 </project>
